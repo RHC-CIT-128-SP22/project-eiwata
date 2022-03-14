@@ -1,15 +1,25 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6908356&assignment_repo_type=AssignmentRepo)
-# PROJECT TITLE
+# The Call of Cthulhu - Survival Horror Game
 
 CIT 128 Student Directed Project
 
 ## Student Info
 
-Add your Name, CRN, and Semester Year here using unordered bullets in Markdown.
+* Erika Iwata
+* CRN: 37902
+* Spring 2022
 
 ## Program Description
 
-Describe your individual project program and include the goals of the program.
+>Describe your individual project program and include the goals of the program.
+
+The Call of Cthulhu - Survival Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
+
+Some of the goals of this project are:
+- display Game Over screen that gives the user the choice to continue or exit game
+    - when user decides to continue, display a binary decision tree and ask player what point they'd like to revive from
+- dialogue displays on the screen gradually with dialogue sound effects
+- decision timer (10 seconds) or else it autoselects decision A over decision B
 
 ### Video Demonstration
 
