@@ -18,22 +18,29 @@ CIT 128 Student Directed Project
 The Call of Cthulhu - Survival Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
 
 Some of the goals of this project are:
-- display Game Over screen that gives the user the choice to continue or exit game
-    - when user decides to continue, display a binary decision tree and ask player what point they'd like to revive from
-- dialogue displays on the screen gradually with dialogue sound effects
-- decision timer (10 seconds) or else it autoselects decision A over decision B
+- [ ] display Game Over screen that gives the user the choice to continue or exit game
+    - [ ] when user decides to continue, display a binary decision tree and ask player what point they'd like to revive from
+- [ ] dialogue displays on the screen gradually with dialogue sound effects
+- [ ] decision timer (10 seconds) or else it autoselects decision A over decision B
 
 ### Video Demonstration
 
-Add a Link to your video demonstration
+>Add a Link to your video demonstration
 
 ### Install Instructions
 
-Add any install instructions, if needed. This includes how to install included modules or libraries as well as configurations. You may remove this section if no special instructions are required.
+>Add any install instructions, if needed. This includes how to install included modules or libraries as well as configurations. You may remove this section if no special instructions are required.
+
+- Python3
+    - How to install: `brew install python3`
+- Pygame
+    - How to install: `pip install pygame`
 
 ## Software Engineering
 
-Describe the software engineering techniques used for the design and development of this program.
+>Describe the software engineering techniques used for the design and development of this program.
+
+This game was made using the Pygame module. Most of the game was organized into a binary decision tree.
 
 ## Directions and Grading Rubric
 
