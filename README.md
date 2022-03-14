@@ -5,6 +5,8 @@ CIT 128 Student Directed Project
 
 ## Student Info
 
+>Add your Name, CRN, and Semester Year here using unordered bullets in Markdown.
+
 * Erika Iwata
 * CRN: 37902
 * Spring 2022
