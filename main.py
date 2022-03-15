@@ -19,6 +19,11 @@ pygame.display.set_caption("The Call of Cthulhu - Survival Horror Game")
 icon = pygame.image.load('cthulhu.png')
 pygame.display.set_icon(icon)
 
+#background image and title
+background = pygame.image.load("cthulhuBackground.png")
+title = pygame.image.load("title.png")
+startButton = pygame.image.load("start.png")
+
 #Game Loop
 running = True
 while running:
@@ -28,6 +33,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     
-    #black rgb background
-    screen.fill((0, 0, 0))
+    #beginnging game display
+    screen.blit(background, (0,70))
+    screen.blit(title, (40, 50))
+    screen.blit(startButton, (350, 470))
     pygame.display.update()
