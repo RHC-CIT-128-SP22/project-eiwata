@@ -5,10 +5,8 @@
     Student Directed Project
 '''
 
-
 import pygame
 from pygame import mixer
-#import time
 
 #initialize game
 pygame.init()
@@ -34,11 +32,22 @@ startSound = pygame.mixer.Sound("audio/wildBeastRoar.wav")
 mixer.music.play(-1)
 
 def game_intro():
-    #start game display
     screen.blit(startBG, (0,70))
     screen.blit(title, (40, 50))
     screen.blit(startButton, (350, 470))
      
+def click():
+    if event.type == pygame.MOUSEBUTTONDOWN:
+        mouse_pos = pygame.mouse.get_pos()
+
+        #player click start
+        if mouse_pos[0] in list(range(350, 470)) or mouse_pos[1] in list(range(350, 470)):
+            pygame.mixer.Sound.play(startSound)
+            pygame.display.flip()
+
+        #player click option A
+        #player click option B
+
 
 ###############  MAIN GAME LOOP  ################
 running = True
@@ -50,14 +59,11 @@ while running:
             running = False
     
     game_intro()
-
-    if event.type == pygame.MOUSEBUTTONUP:
-        pos = pygame.mouse.get_pos()
-        pygame.mixer.Sound.play(startSound)
-
+    click()
+    
     pygame.display.update()
 
-################  EXIT GAME LOOP ################
+################  EXIT GAME LOOP  ################
 
 
 #stop background music

@@ -20,6 +20,7 @@ The Call of Cthulhu - Survival Horror Game is a Choose Your Own Adventure type g
 Some of the goals of this project are:
 - [ ] display Game Over screen that gives the user the choice to continue or exit game
     - [ ] when user decides to continue, display a binary decision tree and ask player what point they'd like to revive from
+- [ ] current display fades into next display
 - [ ] dialogue displays on the screen gradually with dialogue sound effects
 - [ ] decision timer (10 seconds) or else it autoselects decision A over decision B
 
