@@ -23,7 +23,7 @@ Some of the goals of this project are:
 - [ ] dialogue displays on the screen gradually with dialogue sound effects
 - [ ] when transitioning scenes, display fades into next scene
 - [ ] implement certain scenes where you can go back to a previous scene
-- [ ] game over screen asks if you wants to continue or quit
+- [ ] game over screen asks if you want to continue or quit
 
 ### Video Demonstration
 
