@@ -18,11 +18,12 @@
 The Call of Cthulhu - Survival Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
 
 Some of the goals of this project are:
-- [ ] decision timer (10 seconds) or else it autoselects decision A over decision B
+- [ ] allow user to choose dialogue speed (slow 1x, medium 1.5x, fast 2x)
+- [ ] decision timer (12 seconds) or else it autoselects decision A over decision B
 - [ ] dialogue displays on the screen gradually with dialogue sound effects
 - [ ] when transitioning scenes, display fades into next scene
-- [ ] display Game Over screen that gives the user the choice to continue or exit game
-    - [ ] when user decides to continue, display a binary decision tree and ask player what point they'd like to revive from
+- [ ] implement certain scenes where you can go back to a previous scene
+- [ ] game over screen asks if you wants to continue or quit
 
 ### Video Demonstration
 
