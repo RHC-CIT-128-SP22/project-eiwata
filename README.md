@@ -41,7 +41,7 @@ Some of the goals of this project are:
 
 >Describe the software engineering techniques used for the design and development of this program.
 
-This game was made using the Pygame module. Most of the game was organized into a binary decision tree.
+This game was made using the Pygame module. Most of the game was organized into a linked list.
 
 ## Directions and Grading Rubric
 
