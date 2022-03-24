@@ -15,7 +15,7 @@
 
 >Describe your individual project program and include the goals of the program.
 
-The Call of Cthulhu - Survival Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
+The Call of Cthulhu - Interactive Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
 
 Some of the goals of this project are:
 - [ ] allow user to choose dialogue speed (slow 1x, medium 1.5x, fast 2x)
