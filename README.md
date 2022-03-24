@@ -22,7 +22,6 @@ Some of the goals of this project are:
 - [ ] decision timer (12 seconds) or else it autoselects decision A over decision B
 - [ ] dialogue displays on the screen gradually with dialogue sound effects
 - [ ] when transitioning scenes, display fades into next scene
-- [ ] implement certain scenes where you can go back to a previous scene
 - [ ] game over screen asks if you want to continue or quit
 
 ### Video Demonstration
