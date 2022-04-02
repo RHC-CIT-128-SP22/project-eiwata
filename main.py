@@ -15,22 +15,23 @@ pygame.init()
 mixer.init()
 clock = pygame.time.Clock()
 
-#load display and audio
+#load buttons and audio
+opening = mixer.music.load("audio/BeforeDawn.wav")
 icon = pygame.image.load("pictures/icon.png")
-startBG = pygame.image.load("pictures/startBG.png")
 title = pygame.image.load("pictures/mainTitle.png")
 startButton = pygame.image.load("pictures/startButton.png")
-opening = mixer.music.load("audio/BeforeDawn.wav")
-
-#load more display and audio
-portraitScene = pygame.image.load("pictures/portrait.png")
 conversation = pygame.image.load("pictures/rectangle.png")
+
+#load background images
+startBG = pygame.image.load("pictures/startBG.png")
+portraitScene = pygame.image.load("pictures/portrait.png")
+horrorInClay = pygame.image.load("pictures/horrorInClay.jpg")
 
 #set display and audio
 screen = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("The Call of Cthulhu - Survival Horror Game")
 pygame.display.set_icon(icon)
-mixer.music.set_volume(0.1)
+mixer.music.set_volume(0)
 
 #sound effects
 startSound = pygame.mixer.Sound("audio/wildBeastRoar.wav")
@@ -46,6 +47,7 @@ class Scene:
         self.scene = 'start_screen'
 
     def start_screen(self):
+        #display start screen
         screen.blit(startBG, (0, 70))
         screen.blit(title, (40, 50))
         screen.blit(startButton, (350, 470))
@@ -57,17 +59,17 @@ class Scene:
         
             #if mouse hovering over start button
             if mx in range(350, 450) and my in range(470, 510):
-                #change start button
+                #make start button bold
                 startButton.set_alpha(300)
 
-                #if left click
+                #if click on start button
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     #pygame.mixer.Sound.play(startSound)
                     self.next_scene()
                     self.scene = 'scene_one'
         pygame.display.update()
 
-    def scene_one(self):
+    def scene_one(self):    
         screen.fill((0,0,0))
         screen.blit(portraitScene, (0, 70))
         screen.blit(conversation, (100, 350))
@@ -76,13 +78,34 @@ class Scene:
         screen.blit(text, (170, 370))
         pygame.display.update()
 
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            self.next_scene()
-            self.scene = 'scene_two'
+        pygame.time.delay(1000)
+        text = font.render('[Insert Dialogue]', True, (0, 0, 0))
+        screen.blit(text, (170, 400))
+        pygame.display.update()
+
+        for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                self.next_scene()
+                self.scene = 'scene_two'
         
     def scene_two(self):
         screen.fill((0,0,0))
+        screen.blit(horrorInClay, (0, 70))
+        screen.blit(conversation, (100, 350))
+        font = pygame.font.SysFont('Comic Sans MS', 20)
+        text = font.render('[Insert Dialogue]', True, (0, 0, 0))
+        screen.blit(text, (170, 370))
         pygame.display.update()
+
+        pygame.time.delay(1000)
+        text = font.render('[Insert Dialogue]', True, (0, 0, 0))
+        screen.blit(text, (170, 400))
+        pygame.display.update()
+
+        for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                self.next_scene()
+                pygame.quit()
         
     #transition to next scene
     def next_scene(self):
