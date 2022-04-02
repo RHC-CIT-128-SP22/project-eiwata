@@ -13,17 +13,18 @@ from pygame.locals import *
 #initialize game
 pygame.init()
 mixer.init()
+clock = pygame.time.Clock()
 
 #load display and audio
 icon = pygame.image.load("pictures/icon.png")
 startBG = pygame.image.load("pictures/startBG.png")
 title = pygame.image.load("pictures/mainTitle.png")
-startButtonWhite = pygame.image.load("pictures/startButtonWhite.png")
 startButton = pygame.image.load("pictures/startButton.png")
 opening = mixer.music.load("audio/BeforeDawn.wav")
 
 #load more display and audio
 portraitScene = pygame.image.load("pictures/portrait.png")
+conversation = pygame.image.load("pictures/rectangle.png")
 
 #set display and audio
 screen = pygame.display.set_mode((800, 600))
@@ -40,48 +41,68 @@ mixer.music.play(-1)
 
 #####################  FUNCTION DEFINITIONS  #####################
 
-class Decision:
-    def start_menu(self):
-        play = False
+class Scene:
+    def __init__(self):
+        self.scene = 'start_screen'
 
-        if event.type == pygame.MOUSEMOTION or event.type ==    MOUSEBUTTONDOWN:
+    def start_screen(self):
+        screen.blit(startBG, (0, 70))
+        screen.blit(title, (40, 50))
+        screen.blit(startButton, (350, 470))
+        startButton.set_alpha(150)
+
+        if event.type == pygame.MOUSEMOTION or event.type == pygame.MOUSEBUTTONDOWN:
             #set variables for mouse position
             mx, my = pygame.mouse.get_pos()
         
-            #if mouse hovering over start button position
+            #if mouse hovering over start button
             if mx in range(350, 450) and my in range(470, 510):
                 #change start button
-                screen.blit(startButton, (350, 470))
+                startButton.set_alpha(300)
 
                 #if left click
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     pygame.mixer.Sound.play(startSound)
-                    play = True
-        return play
+                    self.next_scene()
+                    self.scene = 'scene_one'
+        pygame.display.update()
 
-class Scene:
+
+    def scene_one(self):
+        screen.fill((0,0,0))
+        screen.blit(portraitScene, (0, 70))
+        screen.blit(conversation, (100, 350))
+        font = pygame.font.SysFont('Comic Sans MS', 20)
+        text = font.render('[Insert Dialogue]', True, (0, 0, 0))
+        screen.blit(text, (170, 370))
+        pygame.display.update()
+
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            self.next_scene()
+            self.scene = 'scene_two'
+        
+    def scene_two(self):
+        screen.fill((0,0,0))
+        pygame.display.update()
+        
+    #transition to next scene
     def next_scene(self):
-        fade = pygame.Surface((800,600))
-        fade.fill((0,0,0))
+        fade = pygame.Surface((800, 600))
+        fade.fill((0, 0, 0))
         for alpha in range(0, 300):
             fade.set_alpha(alpha)
-            screen.blit(fade, (0,0))
+            screen.blit(fade, (0, 0))
             pygame.display.update()
             pygame.time.delay(5)
 
-    def start_menu(self):
-        screen.blit(startBG, (0,70))
-        screen.blit(title, (40, 50))
-        screen.blit(startButtonWhite, (350, 470))
-        pygame.display.flip()
+    def scene_manager(self):
+        if self.scene == 'start_screen':
+            self.start_screen()
+        if self.scene == 'scene_one':
+            self.scene_one()
+        if self.scene == 'scene_two':
+            self.scene_two()
 
-    def scene_one(self):
-        screen.blit(portraitScene, (0, 70))
-        pygame.display.flip()
-
-
-
-            
 #################  END OF FUNCTION DEFINITIONS  ###################
 
 
@@ -95,18 +116,12 @@ while running:
             running = False
     
     #create objects of class
-    decision = Decision()
     scene = Scene()
 
     #game start
-    scene.start_menu()
-    decision.start_menu()
-   
-    #scene one
-    if decision.start_menu() == True:
-        scene.next_scene()
-        scene.scene_one
+    scene.scene_manager()
     
+    clock.tick(60)
 
 ##########################  EXIT GAME LOOP  ########################
 
