@@ -62,11 +62,10 @@ class Scene:
 
                 #if left click
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    pygame.mixer.Sound.play(startSound)
+                    #pygame.mixer.Sound.play(startSound)
                     self.next_scene()
                     self.scene = 'scene_one'
         pygame.display.update()
-
 
     def scene_one(self):
         screen.fill((0,0,0))
@@ -105,6 +104,8 @@ class Scene:
 
 #################  END OF FUNCTION DEFINITIONS  ###################
 
+#create object of class
+current_game = Scene()
 
 #########################  MAIN GAME LOOP  #########################
 running = True
@@ -114,13 +115,9 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    
-    #create objects of class
-    scene = Scene()
 
     #game start
-    scene.scene_manager()
-    
+    current_game.scene_manager()
     clock.tick(60)
 
 ##########################  EXIT GAME LOOP  ########################
