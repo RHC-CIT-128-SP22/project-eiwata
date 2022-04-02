@@ -1,5 +1,5 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6908356&assignment_repo_type=AssignmentRepo)
-# The Call of Cthulhu - Survival Horror Game
+# The Call of Cthulhu - Interactive Horror Game
 
 >CIT 128 Student Directed Project
 
@@ -15,14 +15,14 @@
 
 >Describe your individual project program and include the goals of the program.
 
-The Call of Cthulhu - Survival Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
+The Call of Cthulhu - Interactive Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
 
 Some of the goals of this project are:
-- [ ] decision timer (10 seconds) or else it autoselects decision A over decision B
+- [ ] allow user to choose dialogue speed (slow 1x, medium 1.5x, fast 2x)
+- [ ] decision timer (12 seconds) or else it autoselects decision A over decision B
 - [ ] dialogue displays on the screen gradually with dialogue sound effects
 - [ ] when transitioning scenes, display fades into next scene
-- [ ] display Game Over screen that gives the user the choice to continue or exit game
-    - [ ] when user decides to continue, display a binary decision tree and ask player what point they'd like to revive from
+- [ ] game over screen asks if you want to continue or quit
 
 ### Video Demonstration
 
@@ -41,7 +41,7 @@ Some of the goals of this project are:
 
 >Describe the software engineering techniques used for the design and development of this program.
 
-This game was made using the Pygame module. Most of the game was organized into a binary decision tree.
+This game was made using the Pygame module. Most of the game was organized into a linked list.
 
 ## Directions and Grading Rubric
 
