@@ -1,7 +1,7 @@
 
 import pygame
-from pygame import *
 
+#initialize game
 pygame.init()
 
 class Display_Scene():
@@ -46,10 +46,10 @@ class Display_Scene():
         self.SCREEN.blit(self.DIAL_BOX, (30, 380))
 
         #display dialogue
-        L1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
-        L2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.SCREEN.blit(L1, (170, 440))
-        self.SCREEN.blit(L2, (170, 490))
+        line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
+        line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
+        self.SCREEN.blit(line1, (170, 440))
+        self.SCREEN.blit(line2, (170, 490))
 
         pygame.display.update()
 
@@ -59,10 +59,10 @@ class Display_Scene():
         self.SCREEN.blit(self.DIAL_BOX, (30, 380))
 
         #display dialogue
-        L1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
-        L2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.SCREEN.blit(L1, (170, 440))
-        self.SCREEN.blit(L2, (170, 490))
+        line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
+        line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
+        self.SCREEN.blit(line1, (170, 440))
+        self.SCREEN.blit(line2, (170, 490))
 
         pygame.display.update()
 
@@ -72,10 +72,10 @@ class Display_Scene():
         self.SCREEN.blit(self.DIAL_BOX, (30, 380))
 
         #display dialogue
-        L1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
-        L2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.SCREEN.blit(L1, (170, 440))
-        self.SCREEN.blit(L2, (170, 490))
+        line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
+        line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
+        self.SCREEN.blit(line1, (170, 440))
+        self.SCREEN.blit(line2, (170, 490))
 
         pygame.display.update()
 

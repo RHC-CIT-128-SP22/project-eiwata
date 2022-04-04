@@ -7,7 +7,11 @@
 
 import pygame
 from pygame import mixer
-from game_features import Game_Features
+from gamefeatures import Game_Features
+
+#initialize game
+pygame.init()
+mixer.init()
 
 def main():
     #initialize variables
@@ -26,7 +30,6 @@ def main():
         curr_game.scene_manager()
 
  ####### END OF GAME LOOP ########
-
 
 if __name__ == '__main__':
     main()

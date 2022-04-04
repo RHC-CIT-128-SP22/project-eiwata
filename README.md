@@ -18,11 +18,15 @@
 The Call of Cthulhu - Interactive Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
 
 Some of the goals of this project are:
-- [ ] allow user to choose dialogue speed (slow 1x, medium 1.5x, fast 2x)
-- [ ] decision timer (12 seconds) or else it autoselects decision A over decision B
-- [ ] dialogue displays on the screen gradually with dialogue sound effects
-- [ ] when transitioning scenes, display fades into next scene
-- [ ] game over screen asks if you want to continue or quit
+    Basics:
+        - [ ] dialogue displays on the screen gradually as user plays through the game
+        - [X] when transitioning scenes, display fades into next scene
+        - [ ] game over screen asks if you want to play again or quit
+            - [ ] if user selects play again, it displays scenes traversed during the previous game iteration and allows user to select point to revive from
+    Special features:
+        - [ ] pause button
+        - [ ] allow user to choose dialogue speed (slow 1x, medium 1.5x, fast 2x)
+        - [ ] decision timer (12 seconds) or else it autoselects decision A over decision B
 
 ### Video Demonstration
 
@@ -41,8 +45,8 @@ Some of the goals of this project are:
 
 >Describe the software engineering techniques used for the design and development of this program.
 
-This game was made using the Pygame module. Most of the game was organized into a linked list.
+This game was made using the Pygame module. Most of the game was organized into a binary search tree.
 
 ## Directions and Grading Rubric
 
-To review the project directions or update the grading rubric review the [DIRECTIONS.md](DIRECTIONS.md) file.
+>To review the project directions or update the grading rubric review the [DIRECTIONS.md](DIRECTIONS.md) file.

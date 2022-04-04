@@ -20,20 +20,20 @@ class Game_Features(Display_Scene):
     def scene_manager(self):
         if self.scene == 'start_screen':
             self.start_screen()
-            self.user_decision('start_screen')
+            self.user_decision(0)
         if self.scene == 'scene_one':
             self.scene_one()
-            self.user_decision('scene_one')
+            self.user_decision(1)
         if self.scene == 'scene_two':
             self.scene_two()
-            self.user_decision('scene_two')
+            self.user_decision(2)
         if self.scene == 'scene_three':
             self.scene_three()
-            self.user_decision('scene_three')
+            self.user_decision(3)
 
     def user_decision(self, scene):
         match scene:
-            case 'start_screen':
+            case 0:
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         pygame.quit()
@@ -55,7 +55,7 @@ class Game_Features(Display_Scene):
                         else:
                             self.START_BUTTON.set_alpha(150)
                 pygame.display.update()
-            case 'scene_one':
+            case 1:
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         pygame.quit()
@@ -63,7 +63,7 @@ class Game_Features(Display_Scene):
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         self.fade_scene()
                         self.scene = 'scene_two'
-            case 'scene_two':
+            case 2:
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         pygame.quit()
@@ -71,7 +71,7 @@ class Game_Features(Display_Scene):
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         self.fade_scene()
                         self.scene = 'scene_three'
-            case 'scene_three':
+            case 3:
                 for event in pygame.event.get():
                     if event.type == pygame.QUIT:
                         pygame.quit()
