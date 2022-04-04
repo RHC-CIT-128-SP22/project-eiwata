@@ -9,19 +9,19 @@ class Display_Scene():
     X, Y = 800, 600
     SCREEN = pygame.display.set_mode((X, Y))
     pygame.display.set_caption("The Call of Cthulhu - Survival Horror Game")
-    ICON = pygame.image.load("pictures/icon.png")
+    ICON = pygame.image.load("assets/icon.png")
     pygame.display.set_icon(ICON)
 
     #load buttons and icons
-    TITLE = pygame.image.load("pictures/mainTitle.png")
-    START_BUTTON = pygame.image.load("pictures/startButton.png")
-    DIAL_BOX = pygame.image.load("pictures/rectangle.png")
+    TITLE = pygame.image.load("assets/mainTitle.png")
+    START_BUTTON = pygame.image.load("assets/startButton.png")
+    DIAL_BOX = pygame.image.load("assets/rectangle.png")
 
     #load background images
-    START_SCREEN = pygame.image.load("pictures/startBG.png")
-    PORTRAIT_SCENE = pygame.image.load("pictures/portrait.png")
-    HORROR_IN_CLAY = pygame.image.load("pictures/horrorInClay.jpg")
-    UNIVERSITY = pygame.image.load("pictures/UNIVERSITY.jpg")
+    START_SCREEN = pygame.image.load("assets/startBG.png")
+    PORTRAIT_SCENE = pygame.image.load("assets/portrait.png")
+    HORROR_IN_CLAY = pygame.image.load("assets/horrorInClay.jpg")
+    UNIVERSITY = pygame.image.load("assets/UNIVERSITY.jpg")
 
     #colors and font
     FONT = pygame.font.SysFont('Comic Sans MS', 17)

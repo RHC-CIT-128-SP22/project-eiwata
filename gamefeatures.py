@@ -9,8 +9,8 @@ pygame.init()
 mixer.init()
 
 #set audio
-OPENING = mixer.music.load("audio/BeforeDawn.wav")
-START_SOUND = pygame.mixer.Sound("audio/wildBeastRoar.wav")
+OPENING = mixer.music.load("assets/BeforeDawn.wav")
+START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
 mixer.music.set_volume(0)
 
 class Game_Features(Display_Scene):
