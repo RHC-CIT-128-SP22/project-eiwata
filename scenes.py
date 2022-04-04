@@ -27,7 +27,7 @@ WHITE = (255, 255, 255)
 
 
 class Display_Scene:
-    #load buttons and audio
+    #load buttons
     TITLE = pygame.image.load("pictures/mainTitle.png")
     START_BUTTON = pygame.image.load("pictures/startButton.png")
     DIAL_BOX = pygame.image.load("pictures/rectangle.png")
@@ -40,6 +40,7 @@ class Display_Scene:
 
     #set transparency
     DIAL_BOX.set_alpha(190)
+    START_BUTTON.set_alpha(150)
 
     def __init__(self):
         self.scene = 'start_screen'
@@ -49,7 +50,6 @@ class Display_Scene:
         SCREEN.blit(self.START_SCREEN, (0, 70))
         SCREEN.blit(self.TITLE, (40, 50))
         SCREEN.blit(self.START_BUTTON, (350, 470))
-        self.START_BUTTON.set_alpha(150)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -69,6 +69,8 @@ class Display_Scene:
                         #pygame.mixer.Sound.play(startSound)
                         self.fade_scene()
                         self.scene = 'scene_one'
+                else:
+                    self.START_BUTTON.set_alpha(150)
         pygame.display.update()
 
     def scene_one(self):   
