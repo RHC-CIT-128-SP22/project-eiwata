@@ -65,7 +65,7 @@ class Display_Scene:
                     self.START_BUTTON.set_alpha(300)
 
                     #if click start button
-                    if event.type == pygame.MOUSEBUTTONDOWN:
+                    if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
                         #pygame.mixer.Sound.play(startSound)
                         self.fade_scene()
                         self.scene = 'scene_one'
