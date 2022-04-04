@@ -27,14 +27,15 @@ The student provided rubric is worth 150 points and is specific to the individua
   * Lines of Code: Write a minimum of 500 - 1000 lines of code. Markdown files and third-party libraries or modules do not count towards the line count but may be used. (20pt)
 * **Student Rubric (150pt)**
   * Fluid Gameplay (70 pt)
-      * goals of game accomplished
-      * no bugs
+      * Goals of game accomplished
+      * Clean and simple UI
+      * No bugs
   * Zybook Concepts Used (40 pt)
-      * multiple concepts were used
-      * concepts were used sensibly
+      * Multiple concepts were used
+      * Concepts were used wisely
   * Clean Code (40 pt)
-      * easy to follow
-      * cohesive
+      * Easy to follow
+      * Cohesive
 
 Total Points: 200
 
