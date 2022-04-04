@@ -19,6 +19,7 @@ The Call of Cthulhu - Interactive Horror Game is a Choose Your Own Adventure typ
 
 ### Some of the goals of this project are:
 Integral Features:
+- [ ] GUI window size is adjustable
 - [ ] Dialogue displays on the screen gradually as user plays through the game
 - [X] Smooth transition between scenes
 - [ ] Game over screen asks if you want to play again or quit
