@@ -7,12 +7,11 @@
 
 import pygame
 from pygame import mixer
-import scenes
-from scenes import Display_Scene
+from game_features import Game_Features
 
 def main():
     #initialize variables
-    curr_game = Display_Scene()
+    curr_game = Game_Features()
 
     mixer.music.play(-1)
 
