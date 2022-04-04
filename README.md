@@ -21,8 +21,8 @@ The Call of Cthulhu - Interactive Horror Game is a Choose Your Own Adventure typ
 Integral Features:
 - [ ] Dialogue displays on the screen gradually as user plays through the game
 - [X] Smooth transition between scenes
-- [ ] Game over screen asks if you want to play again or quit
-    - [ ] If user selects play again, it displays scenes traversed during the previous game iteration and allows user to select point to revive from
+- [ ] GAME OVER screen allows user to select PLAY AGAIN or QUIT
+- [ ] At GAME OVER, if user selects PLAY AGAIN it displays scenes traversed during the previous game iteration and allows user to select point to revive from
 
 Bonus features:
 - [ ] Pause button
