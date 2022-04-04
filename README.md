@@ -26,6 +26,7 @@ Integral Features:
 
 Bonus features:
 - [ ] Pause button
+- [ ] Mute button
 - [ ] Allow user to choose dialogue speed (slow 1x, medium 1.5x, fast 2x)
 - [ ] Decision timer (12 sec) or else it autoselects decision A over decision B
 
