@@ -26,13 +26,13 @@ The student provided rubric is worth 150 points and is specific to the individua
   * GitHub Commits: Weekly programming commits showing progress from Week 9 - Week 16. (8pt)
   * Lines of Code: Write a minimum of 500 - 1000 lines of code. Markdown files and third-party libraries or modules do not count towards the line count but may be used. (20pt)
 * **Student Rubric (150pt)**
-  1. Fluid gameplay (70 pt)
+  * Fluid gameplay (70 pt)
       * goals of game accomplished
       * no bugs
-  2. Zybook concepts used (40 pt)
+  * OOP concepts used (40 pt)
       * multiple concepts were used
       * concepts were used sensibly
-  3. Clean code (40 pt)
+  * Clean code (40 pt)
       * easy to follow
       * cohesive
 
