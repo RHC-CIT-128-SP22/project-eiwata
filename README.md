@@ -23,7 +23,7 @@
 <img
     src = "assets/Cthulhu Book.gif"
     alt = "Cthulhu Book"
-    style = "display: inline-block; max-width: 150 px"
+    style = "display: inline-block; max-width: 100 px"
 >
 </p>
 
