@@ -29,17 +29,15 @@
 
 The Call of Cthulhu - Interactive Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
 
-### Some of the goals of this project are:
+**Some of the goals of this project are:**
 Integral Features:
 - [ ] Dialogue displays on the screen gradually as user plays through the game
 - [X] Smooth transition between scenes
 - [ ] Game Over screen allows user to select Play Again or Quit
-- [ ] At Game Over screen, if user selects Play Again it displays scenes traversed during the previous game iteration and allows user to select point to revive from
+- [ ] If user selects Play Again it displays scenes traversed during the previous game iteration and allows user to select point to revive from
 
-Bonus features:
+Bonus Features:
 - [ ] Pause button
-- [ ] Mute button
-- [ ] Skip button
 - [ ] GUI window size is adjustable
 - [ ] Allow user to choose dialogue speed (slow 1x, medium 1.5x, fast 2x)
 - [ ] Decision timer (12 sec) or else it autoselects decision A over decision B
