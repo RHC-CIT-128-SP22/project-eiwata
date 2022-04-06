@@ -77,7 +77,7 @@ Game_Features()
     .
     .
 ```
-See also: [insert Cthulhu Decision Tree pdf here]
+See also: [insert Cthulhu Decision Tree pdf]
 
 ## Directions and Grading Rubric
 
