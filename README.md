@@ -9,7 +9,7 @@
 <img
     src = "assets/Cthulhu Book.jpg"
     alt = "Cthulhu Book"
-    style = "display: inline-block; max-width: 300 px"
+    style = "display: inline-block; max-width: 200 px"
 >
 </p>
 
