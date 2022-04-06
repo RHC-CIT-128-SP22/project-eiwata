@@ -63,12 +63,20 @@ Bonus Features:
 This game was made using `pygame.py` and organized into the following user - defined modules:
 ```
 main.py
+initgame.py
 gamefeatures.py
 scenes.py
 dialogue.py
-gameinit.py
 ```
 From `main.py`, the `main()` function first created an object of the class `Game_Features()` from `gamefeatures.py`. Then it just called the `scene_manager()` method, which had the story indexed into a binary search tree, and used it to traverse between different nodes of the story.
+```
+Game_Features()
+    .
+    .
+    scene_manager()
+    .
+    .
+```
 
 ## Directions and Grading Rubric
 
