@@ -27,19 +27,20 @@
 >
 </p>
 
-The Call of Cthulhu - Interactive Horror Game is a Choose Your Own Adventure type game based on the book by H.P. Lovecraft. This game is mostly dialogue and allows the player to make decisions which leads the player toward alternate endings of the story.
+The Call of Cthulhu - Interactive Horror Game is a choose your own adventure game based on the book by H.P. Lovecraft. This is a text-based game and allows the user to make decisions which leads the user down different forks toward alternate endings of the story.
 
-**Some of the goals of this project are:**
-Integral Features:
-- [ ] Dialogue displays on the screen gradually as user plays through the game
+Some of the goals of this project are:
+
+Core Features:
+- [ ] Dialogue displays on the screen gradually as user iterates through the game
 - [X] Smooth transition between scenes
-- [ ] Game Over screen allows user to select Play Again or Quit
-- [ ] If user selects Play Again it displays scenes traversed during the previous game iteration and allows user to select point to revive from
+- [ ] Game Over screen allows user to select between Play Again or Quit
+- [ ] If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
 
 Bonus Features:
-- [ ] Pause button
+- [ ] Click to pause
 - [ ] GUI window size is adjustable
-- [ ] Allow user to choose dialogue speed (slow 1x, medium 1.5x, fast 2x)
+- [ ] Allow user to choose the dialogue speed (slow 1x, medium 1.5x, fast 2x)
 - [ ] Decision timer (12 sec) or else it autoselects decision A over decision B
 
 ### Video Demonstration
@@ -59,7 +60,14 @@ Bonus Features:
 
 >Describe the software engineering techniques used for the design and development of this program.
 
-This game was made using the Pygame module. Most of the game was organized into a binary search tree.
+This game was made using `pygame.py` and organized into the following user - defined modules:
+```
+main.py
+gamefeatures.py
+scenes.py
+dialogue.py
+```
+From `main.py`, the main function first created an object of the class `Game_Features()` from `gamefeatures.py`. Then it just used the `scene_manager()` method, which had the story indexed into a binary search tree, and  traversed between different nodes of the story.
 
 ## Directions and Grading Rubric
 
