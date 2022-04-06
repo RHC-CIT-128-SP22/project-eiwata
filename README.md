@@ -3,7 +3,12 @@
 
 >CIT 128 Student Directed Project
 
-![Cthulhu Book](assets/Cthulhu%20Book.jpg)
+<img
+    src = "assets/Cthulhu Book.jpeg"
+    alt = "Cthulhu Book"
+    style = "display: inline-block;margin: 50 auto; max-width: 300 px"
+/>
+
 
 ## Student Info
 
