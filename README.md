@@ -7,9 +7,9 @@
     align = "center"
 >
 <img
-    src = "assets/Cthulhu Book.jpeg"
+    src = "assets/Cthulhu Book.jpg"
     alt = "Cthulhu Book"
-    style = "display: inline-block"
+    style = "display: inline-block; max-width: 300 px"
 >
 </p>
 
