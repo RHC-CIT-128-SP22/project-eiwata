@@ -23,12 +23,12 @@ class Display_Scene():
     HORROR_IN_CLAY = pygame.image.load("assets/horrorInClay.jpg")
     UNIVERSITY = pygame.image.load("assets/UNIVERSITY.jpg")
 
-    #colors and font
+    #declare colors and font
     FONT = pygame.font.SysFont('Comic Sans MS', 17)
     BLACK = (0, 0, 0)
     WHITE = (255, 255, 255)
 
-    #set transparency
+    #set item transparency
     DIAL_BOX.set_alpha(190)
     START_BUTTON.set_alpha(150)
 

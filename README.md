@@ -3,6 +3,8 @@
 
 >CIT 128 Student Directed Project
 
+! [Cthulhu Book](assets/Cthulhu%20Book.jpg)
+
 ## Student Info
 
 >Add your Name, CRN, and Semester Year here using unordered bullets in Markdown.
