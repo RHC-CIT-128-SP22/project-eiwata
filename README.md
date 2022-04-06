@@ -7,7 +7,7 @@
     align = "center"
 >
 <img
-    src = "assets/Cthulhu Book.jpg"
+    src = "assets/Cthulhu Book.gif"
     alt = "Cthulhu Book"
     style = "display: inline-block; max-width: 200 px"
 >
