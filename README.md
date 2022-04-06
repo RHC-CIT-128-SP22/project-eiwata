@@ -3,7 +3,7 @@
 
 >CIT 128 Student Directed Project
 
-! [Cthulhu Book](assets/Cthulhu%20Book.jpg)
+![Cthulhu Book](assets/Cthulhu%20Book.jpg)
 
 ## Student Info
 
