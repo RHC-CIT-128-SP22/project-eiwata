@@ -19,13 +19,14 @@
 
 >Describe your individual project program and include the goals of the program.
 
-
+<p align = "center">
+    
 <img
-    align = "right"
-    src = "assets/large-necronomicon-book-lovecraft-25.jpeg"
+    src = "assets/large-Necronomicon-Handmade-book-cthulhu-lovecraft_17.jpeg"
     alt = "Cthulhu Book"
     width = 200 px
 />
+</p>
 
 
 The Call of Cthulhu - Interactive Horror Game is a choose your own adventure game based on the book by H.P. Lovecraft. This is a text-based game and allows the user to make decisions which leads the user down different forks toward alternate endings of the story.
