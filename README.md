@@ -4,7 +4,7 @@
 <img
     src = "assets/readme_icon.png"
     align = "right"
-    width = "75 px"
+    width = "60 px"
 />
 
 
