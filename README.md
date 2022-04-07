@@ -21,7 +21,7 @@
 
 <p align = "center">
     <img
-        src = "assets/large-Necronomicon-Handmade-book-cthulhu-lovecraft_17.jpeg"
+        src = "assets/book-of-shadows.png"
         alt = "Cthulhu Book"
         width = 300 px
     />
