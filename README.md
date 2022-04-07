@@ -19,11 +19,12 @@
 
 >Describe your individual project program and include the goals of the program.
 
-<p align = "center">
+<p >
     <img
-        src = "assets/book-of-shadows.png"
+        align = "right"
+        src = "assets/large-necronomicon-book-lovecraft-25.jpeg"
         alt = "Cthulhu Book"
-        width = 300 px
+        width = 175 px
     />
 </p>
 
