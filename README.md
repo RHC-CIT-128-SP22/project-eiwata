@@ -22,9 +22,9 @@
 
 <img
     align = "right"
-    src = "assets/Cthulhu Book.gif"
+    src = "assets/large-necronomicon-book-lovecraft-25.jpeg"
     alt = "Cthulhu Book"
-    width = 100 px
+    width = 150 px
 />
 
 
