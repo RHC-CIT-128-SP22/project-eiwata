@@ -63,11 +63,11 @@ Bonus Features:
 - [ ] Allow user to choose the dialogue speed (slow 1x, medium 1.5x, fast 2x)
 - [ ] Decision timer (12 sec) or else it autoselects decision A over decision B
 
-### ![readme_icon](assets/readme_icon.png) Video Demonstration
+### Video Demonstration
 
 >Add a Link to your video demonstration
 
-### ![readme_icon](assets/readme_icon.png) Install Instructions
+### Install Instructions
 
 >Add any install instructions, if needed. This includes how to install included modules or libraries as well as configurations. You may remove this section if no special instructions are required.
 
