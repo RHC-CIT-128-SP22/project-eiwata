@@ -29,9 +29,8 @@ The student provided rubric is worth 150 points and is specific to the individua
   * Overall Quality of Game (100 pt)
       * Goals of game accomplished
       * Simple and intuitive UI
-      * Fluid gameplay
       * Immersive and engaging
-      * No bugs
+      * Fluid gameplay/No bugs found
   * Zybook Concepts Used (25 pt)
       * Multiple concepts were used
       * Concepts were used wisely

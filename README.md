@@ -29,6 +29,17 @@
 
 The Call of Cthulhu - Interactive Horror Game is a choose your own adventure game based on the book by H.P. Lovecraft. This is a text-based game and allows the user to make decisions which leads the user down different forks toward alternate endings of the story.
 
+Source: The Call of Cthulhu and Other Weird Stories
+<br> ISBN: 978-0-14-118234-6
+
+About the Author:
+<br> Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that it does today. Nowadays, he is accredited to be the father of cosmic horror a.k.a. lovecraftian horror and is known to have been one of the most influencial writers in the literary community for horror. Some of the philosophical elements of cosmic horror are: 
+
+Pop Culture Examples of Lovecraftian Themes:
+ * The Thing (1982)
+ * Bird Box (2018)
+ * Junji Ito's works
+
 Some of the goals of this project are:
 
 Core Features:
@@ -39,7 +50,7 @@ Core Features:
 
 Bonus Features:
 - [ ] Click to pause
-- [ ] GUI window size is adjustable
+- [ ] GUI window resizable
 - [ ] Allow user to choose the dialogue speed (slow 1x, medium 1.5x, fast 2x)
 - [ ] Decision timer (12 sec) or else it autoselects decision A over decision B
 
