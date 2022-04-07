@@ -32,15 +32,18 @@ The Call of Cthulhu - Interactive Horror Game is a choose your own adventure gam
 Source: The Call of Cthulhu and Other Weird Stories
 <br> ISBN: 978-0-14-118234-6
 
+__Some Context:__
+
 About the Author:
-<br> Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that it does today. Nowadays, he is accredited to be the father of cosmic horror a.k.a. lovecraftian horror and is known to have been one of the most influencial writers in the literary community for horror. Some of the philosophical elements of cosmic horror are: 
+<br> Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that they do today. Nowadays, he is accredited as being the father of cosmic horror a.k.a. lovecraftian horror and known to have been one of the most influencial figures in the literary community for horror.
+<br> Cosmic horror can be simply described as fear of the unknown or the unknowable.  Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people into madness. Furthermore, many of the creatures in the Cthulhu mythos are thought to extend beyond the notion of good or evil but rather exist as separate entities that force us to reflect on the insignificance of humanity and drive us into a state of existential nihilism.
 
 Pop Culture Examples of Lovecraftian Themes:
  * The Thing (1982)
  * Bird Box (2018)
  * Junji Ito's works
 
-Some of the goals of this project are:
+__Some of the goals of this project are:__
 
 Core Features:
 - [ ] Dialogue displays on the screen gradually as user iterates through the game
