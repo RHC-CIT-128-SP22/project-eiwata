@@ -37,19 +37,19 @@ __Some Context:__
 
 About the Author:
 
+Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that they do today. Nowadays, he is accredited as being the father of cosmic horror a.k.a. lovecraftian horror and known to have been one of the most influencial figures in the literary community for horror.
+
+Cosmic horror can be simply described as fear of the unknown or the unknowable.  Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people insane. Furthermore, many of the creatures in the Cthulhu mythos are thought to extend beyond such binary notions as good or evil but rather exist just as their own separate entities. This idea serves as the base to support his philosophy which involves reflecting upon the vastness of the universe and realising the insignificance of humanity in comparison.
+
 <p
     align = "center"
 >
 <img
-    src = "assets/giphy.gif"
-    alt = "H. P. Lovecraft"
+    src = "assets/DaringSmoothGazelle-size_restricted.gif"
+    alt = "Lovecraft gif"
     style = "display: inline-block; max-width: 100 px"
 >
 </p>
-
-Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that they do today. Nowadays, he is accredited as being the father of cosmic horror a.k.a. lovecraftian horror and known to have been one of the most influencial figures in the literary community for horror.
-
-Cosmic horror can be simply described as fear of the unknown or the unknowable.  Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people insane. Furthermore, many of the creatures in the Cthulhu mythos are thought to extend beyond such binary notions as good or evil but rather exist just as their own separate entities. This idea serves as the base to support his philosophy which involves reflecting upon the vastness of the universe and realising the insignificance of humanity in comparison.
 
 Pop Culture Examples of Lovecraftian Themes:
  * The Thing (1982)
