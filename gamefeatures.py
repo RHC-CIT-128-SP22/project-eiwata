@@ -4,14 +4,8 @@ import pygame
 from pygame import mixer
 from scenes import Display_Scene
 
-#initialize game
 pygame.init()
 mixer.init()
-
-#set audio
-OPENING = mixer.music.load("assets/BeforeDawn.wav")
-START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
-mixer.music.set_volume(0)
 
 class Game_Features(Display_Scene):
     def __init__(self):
@@ -49,7 +43,7 @@ class Game_Features(Display_Scene):
 
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
-                                #pygame.mixer.Sound.play(startSound)
+                                pygame.mixer.Sound.play(self.START_SOUND)
                                 self.fade_scene()
                                 self.scene = 'scene_one'
                         else:

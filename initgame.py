@@ -30,3 +30,6 @@ class Init_Game():
     #set item transparency
     DIAL_BOX.set_alpha(190)
     START_BUTTON.set_alpha(150)
+
+    #set sound fx
+    START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")

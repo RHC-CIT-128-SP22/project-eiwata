@@ -1,9 +1,10 @@
 
 import pygame
+from pygame import mixer
 from initgame import Init_Game
 
-#initialize game
 pygame.init()
+pygame.mixer.init()
 
 class Display_Scene(Init_Game):
 
