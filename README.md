@@ -45,7 +45,7 @@ Cosmic horror can be simply described as fear of the unknown or the unknowable. 
     align = "center"
 >
 <img
-    src = "assets/DaringSmoothGazelle-size_restricted.gif"
+    src = "assets/CyE0.gif"
     alt = "Lovecraft gif"
     style = "display: inline-block; max-width: 100 px"
 >
