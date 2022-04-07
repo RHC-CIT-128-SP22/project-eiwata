@@ -1,12 +1,12 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=6908356&assignment_repo_type=AssignmentRepo)
 
 
-#  ![readme_icon](assets/readme_icon.png) The Call of Cthulhu - Interactive Horror Game
+# The Call of Cthulhu - Interactive Horror Game
 
 >CIT 128 Student Directed Project
 
 
-## Student Info
+## ![readme_icon](assets/readme_icon.png) Student Info
 
 >Add your Name, CRN, and Semester Year here using unordered bullets in Markdown.
 
@@ -15,7 +15,7 @@
 * Spring 2022
 
 
-## Program Description
+## ![readme_icon](assets/readme_icon.png) Program Description
 
 >Describe your individual project program and include the goals of the program.
 
@@ -63,11 +63,11 @@ Bonus Features:
 - [ ] Allow user to choose the dialogue speed (slow 1x, medium 1.5x, fast 2x)
 - [ ] Decision timer (12 sec) or else it autoselects decision A over decision B
 
-### Video Demonstration
+### ![readme_icon](assets/readme_icon.png) Video Demonstration
 
 >Add a Link to your video demonstration
 
-### Install Instructions
+### ![readme_icon](assets/readme_icon.png) Install Instructions
 
 >Add any install instructions, if needed. This includes how to install included modules or libraries as well as configurations. You may remove this section if no special instructions are required.
 
@@ -76,7 +76,7 @@ Bonus Features:
 - Pygame
     - How to install: `pip install pygame`
 
-## Software Engineering
+## ![readme_icon](assets/readme_icon.png) Software Engineering
 
 >Describe the software engineering techniques used for the design and development of this program.
 
@@ -99,6 +99,6 @@ Game_Features()
 ```
 See also: [insert Cthulhu Decision Tree pdf]
 
-## Directions and Grading Rubric
+## ![readme_icon](assets/readme_icon.png) Directions and Grading Rubric
 
 >To review the project directions or update the grading rubric review the [DIRECTIONS.md](DIRECTIONS.md) file.
