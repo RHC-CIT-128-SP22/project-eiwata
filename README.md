@@ -6,16 +6,23 @@
 >CIT 128 Student Directed Project
 
 
-## ![readme_icon](assets/readme_icon.png) Student Info
+## Student Info
 
 >Add your Name, CRN, and Semester Year here using unordered bullets in Markdown.
+
+<img
+    align = "right"
+    src = "assets/icon.png"
+    alt = "Cthulhu Icon"
+    width = "75"
+/>
 
 * Erika Iwata
 * CRN: 37902
 * Spring 2022
 
 
-## ![readme_icon](assets/readme_icon.png) Program Description
+## Program Description
 
 >Describe your individual project program and include the goals of the program.
 
@@ -76,7 +83,7 @@ Bonus Features:
 - Pygame
     - How to install: `pip install pygame`
 
-## ![readme_icon](assets/readme_icon.png) Software Engineering
+## Software Engineering
 
 >Describe the software engineering techniques used for the design and development of this program.
 
@@ -99,6 +106,6 @@ Game_Features()
 ```
 See also: [insert Cthulhu Decision Tree pdf]
 
-## ![readme_icon](assets/readme_icon.png) Directions and Grading Rubric
+## Directions and Grading Rubric
 
 >To review the project directions or update the grading rubric review the [DIRECTIONS.md](DIRECTIONS.md) file.
