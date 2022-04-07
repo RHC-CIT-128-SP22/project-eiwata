@@ -5,8 +5,8 @@
     src = 'assets/icon.png'
     alt = 'cthulhu icon'
     style = float: left; 
-    width = 20 px
-    height =  20 px
+    width = 25 px
+    height =  25 px
 >
 <h1>
 The Call of Cthulhu - Interactive Horror Game
