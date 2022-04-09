@@ -23,7 +23,7 @@ class Init_Game():
     UNIVERSITY = pygame.image.load("assets/UNIVERSITY.jpg")
 
     #declare colors and font
-    FONT = pygame.font.SysFont('Comic Sans MS', 17)
+    FONT = pygame.font.SysFont('Rockwell', 16)
     BLACK = (0, 0, 0)
     WHITE = (255, 255, 255)
 

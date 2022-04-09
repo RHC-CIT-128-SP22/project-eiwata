@@ -13,11 +13,12 @@ def main():
     #initialize variables
     pygame.init()
     pygame.mixer.init()
+
     curr_game = Game_Features()
 
     #set audio
     OPENING = mixer.music.load("assets/BeforeDawn.wav")
-    mixer.music.set_volume(0.5)
+    mixer.music.set_volume(0.7)
 
     #play bgm
     mixer.music.play(-1)
