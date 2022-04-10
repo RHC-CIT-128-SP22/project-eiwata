@@ -36,11 +36,13 @@ class Game_Features(Display_Scene):
                 self.WIN_RESIZED = True
                 self.SCREEN = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (event.w, event.h)), (0, 0))
+                START_BUTTON_POS = pygame.Rect(event.w/2.3, event.h/1.28, event.w/8, event.h/15)
                 self.SCREEN.blit(pygame.transform.scale(self.COLLISION_SCREEN, (event.w, event.h)), (0, 0))
             #if window has been resized 
             elif self.WIN_RESIZED == True:
                 w, h = pygame.display.get_surface().get_size()
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+                START_BUTTON_POS = pygame.Rect(w/2.3, h/1.28, w/8, h/15)
                 self.SCREEN.blit(pygame.transform.scale(self.COLLISION_SCREEN, (w, h)), (0, 0))
             #window is default size
             else:
@@ -62,7 +64,7 @@ class Game_Features(Display_Scene):
 
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
-                                #pygame.mixer.Sound.play(self.START_SOUND)
+                                pygame.mixer.Sound.play(self.START_SOUND)
                                 self.fade_out()
                                 self.scene = 'scene_one'
                         else:

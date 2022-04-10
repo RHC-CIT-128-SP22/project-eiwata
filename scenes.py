@@ -9,8 +9,11 @@ pygame.mixer.init()
 
 class Display_Scene(Init_Game):
     #set collision test variables
-    x, y, w, h = 350, 470, 100, 40
-    START_BUTTON_POS = pygame.Rect(x, y, w, h)
+    #x, y, w, h = 350, 470, 100, 40
+    #START_BUTTON_POS = pygame.Rect(x, y, w, h)
+    w, h = pygame.display.get_surface().get_size()
+    START_BUTTON_POS = pygame.Rect(w/2.3, h/1.28, w/8, h/15)
+
 
     def start_screen(self):
         #display start screen
@@ -18,7 +21,8 @@ class Display_Scene(Init_Game):
         self.PSEUDO_SCREEN.blit(self.START_BUTTON, (350, 470))
 
         #draw collision test rectangle
-        pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS)
+        pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
+
         pygame.display.update()
 
     def scene_one(self):   

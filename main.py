@@ -18,7 +18,7 @@ def main():
 
     #set audio
     OPENING = mixer.music.load("assets/BeforeDawn.wav")
-    mixer.music.set_volume(0)
+    mixer.music.set_volume(0.7)
 
     #play bgm
     mixer.music.play(-1)

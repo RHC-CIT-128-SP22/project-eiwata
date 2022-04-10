@@ -12,13 +12,6 @@ class Init_Game():
     ICON = pygame.image.load("assets/icon.png")
     pygame.display.set_icon(ICON)
 
-    #invisible screen for collision detection
-    COLLISION_SCREEN = pygame.Surface((X, Y))
-    COLLISION_SCREEN.set_alpha(0)
-
-    #visible screen that scales to the size of window
-    PSEUDO_SCREEN = pygame.Surface((X, Y))
-
     #load buttons and icons
     TITLE = pygame.image.load("assets/mainTitle.png")
     START_BUTTON = pygame.image.load("assets/startButton.png")
@@ -41,3 +34,13 @@ class Init_Game():
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
+
+    #invisible screen for collision detection
+    COLLISION_SCREEN = pygame.Surface((X, Y))
+    COLLISION_SCREEN.set_alpha(150)
+
+    #collision detect items
+    START_BUTTON_POS = START_BUTTON.get_rect()
+
+    #visible screen that scales to the size of window
+    PSEUDO_SCREEN = pygame.Surface((X, Y))
