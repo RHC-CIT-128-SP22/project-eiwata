@@ -1,57 +1,65 @@
 
 import pygame
 from pygame import mixer
+from pygame.locals import *
 from initgame import Init_Game
 
 pygame.init()
 pygame.mixer.init()
 
 class Display_Scene(Init_Game):
+    #set collision test variables
+    x, y, w, h = 350, 470, 100, 40
+    START_BUTTON_POS = pygame.Rect(x, y, w, h)
 
     def start_screen(self):
         #display start screen
-        self.SCREEN.blit(self.START_SCREEN, (0, 70))
-        self.SCREEN.blit(self.TITLE, (40, 50))
-        self.SCREEN.blit(self.START_BUTTON, (350, 470))
+        self.PSEUDO_SCREEN.blit(self.START_SCREEN, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.START_BUTTON, (350, 470))
 
+        #draw collision test rectangle
+        pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS)
         pygame.display.update()
 
     def scene_one(self):   
         #display scene one 
-        self.SCREEN.blit(self.PORTRAIT_SCENE, (0, 70))
-        self.SCREEN.blit(self.DIAL_BOX, (30, 380))
+        self.PSEUDO_SCREEN.fill(self.BLACK)
+        self.PSEUDO_SCREEN.blit(self.PORTRAIT_SCENE, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (30, 380))
 
         #display dialogue
         line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
         line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.SCREEN.blit(line1, (170, 450))
-        self.SCREEN.blit(line2, (170, 500))
+        self.PSEUDO_SCREEN.blit(line1, (170, 450))
+        self.PSEUDO_SCREEN.blit(line2, (170, 500))
 
         pygame.display.update()
 
     def scene_two(self):
         #display scene two
-        self.SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
-        self.SCREEN.blit(self.DIAL_BOX, (30, 380))
+        self.PSEUDO_SCREEN.fill(self.BLACK)
+        self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (30, 380))
 
         #display dialogue
         line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
         line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.SCREEN.blit(line1, (170, 450))
-        self.SCREEN.blit(line2, (170, 500))
+        self.PSEUDO_SCREEN.blit(line1, (170, 450))
+        self.PSEUDO_SCREEN.blit(line2, (170, 500))
 
         pygame.display.update()
 
     def scene_three(self):
         #display scene three
-        self.SCREEN.blit(self.UNIVERSITY, (0, 90))
-        self.SCREEN.blit(self.DIAL_BOX, (30, 380))
+        self.PSEUDO_SCREEN.fill(self.BLACK)
+        self.PSEUDO_SCREEN.blit(self.UNIVERSITY, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (30, 380))
 
         #display dialogue
         line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
         line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.SCREEN.blit(line1, (170, 450))
-        self.SCREEN.blit(line2, (170, 500))
+        self.PSEUDO_SCREEN.blit(line1, (170, 450))
+        self.PSEUDO_SCREEN.blit(line2, (170, 500))
 
         pygame.display.update()
 

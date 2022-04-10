@@ -2,14 +2,22 @@
 import pygame
 
 pygame.init()
+pygame.mixer.init()
 
 class Init_Game():
     #create game window
     X, Y = 800, 600
-    SCREEN = pygame.display.set_mode((X, Y))
-    pygame.display.set_caption("The Call of Cthulhu - Survival Horror Game")
+    SCREEN = pygame.display.set_mode((X, Y), pygame.RESIZABLE)
+    pygame.display.set_caption("The Call of Cthulhu - Interactive Horror Game")
     ICON = pygame.image.load("assets/icon.png")
     pygame.display.set_icon(ICON)
+
+    #invisible screen for collision detection
+    COLLISION_SCREEN = pygame.Surface((X, Y))
+    COLLISION_SCREEN.set_alpha(0)
+
+    #visible screen that scales to the size of window
+    PSEUDO_SCREEN = pygame.Surface((X, Y))
 
     #load buttons and icons
     TITLE = pygame.image.load("assets/mainTitle.png")
