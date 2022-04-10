@@ -2,7 +2,7 @@
 
 
 <img
-    src = "assets/readme_icon.png"
+    src = "assets/icon.png"
     align = "right"
     width = "65 px"
 />
