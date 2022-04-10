@@ -39,16 +39,16 @@ class Game_Features(Display_Scene):
                 self.WIN_RESIZED = True
                 self.SCREEN = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (event.w, event.h)), (0, 0))
-                self.START_BUTTON_POS = pygame.Rect(event.w/2.3, event.h/1.28, event.w/8, event.h/15)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
-                self.SCREEN.blit(self.COLLISION_SCREEN, (0,0))
+                if scene == 'start_screen':
+                    self.START_BUTTON_POS = pygame.Rect(event.w/2.3, event.h/1.28, event.w/8, event.h/15)
+                    pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
             #if window has been resized 
             elif self.WIN_RESIZED == True:
                 w, h = pygame.display.get_surface().get_size()
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
-                self.START_BUTTON_POS = pygame.Rect(w/2.3, h/1.28, w/8, h/15)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
-                self.SCREEN.blit(self.COLLISION_SCREEN, (0,0))
+                if scene == 'start_screen':
+                    self.START_BUTTON_POS = pygame.Rect(w/2.3, h/1.28, w/8, h/15)
+                    pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
             #more specific actions per scene
             match scene:
                 case 'start_screen':
@@ -86,6 +86,7 @@ class Game_Features(Display_Scene):
 
     #fade out next scene
     def fade_out(self):
+        #default window size
         if self.WIN_RESIZED == False:
             fade = pygame.Surface((self.X, self.Y))
             self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -94,6 +95,7 @@ class Game_Features(Display_Scene):
                 self.PSEUDO_SCREEN.set_alpha(alpha)
                 self.PSEUDO_SCREEN.blit(fade, (0, 0))
                 pygame.display.update()
+        #custom window size
         else:
             fade = pygame.Surface((self.X, self.Y))
             w, h = pygame.display.get_surface().get_size()

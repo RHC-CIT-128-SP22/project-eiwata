@@ -35,6 +35,9 @@ class Init_Game():
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
 
+    #screen that scales to the size of the window
+    PSEUDO_SCREEN = pygame.Surface((X, Y))
+
     #invisible screen for collision detection
     COLLISION_SCREEN = pygame.Surface((X, Y))
     COLLISION_SCREEN.set_alpha(0)
@@ -43,5 +46,3 @@ class Init_Game():
     w, h = pygame.display.get_surface().get_size()
     START_BUTTON_POS = pygame.Rect(w/2.3, h/1.28, w/8, h/15)
 
-    #visible screen that scales to the size of window
-    PSEUDO_SCREEN = pygame.Surface((X, Y))
