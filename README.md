@@ -66,7 +66,7 @@ Core Features:
 
 Bonus Features:
 - [ ] Click to pause
-- [ ] GUI window resizable
+- [X] GUI window resizable
 - [ ] Allow user to choose the dialogue speed (slow 1x, medium 1.5x, fast 2x)
 - [ ] Decision timer (12 sec) or else it autoselects decision A over decision B
 
