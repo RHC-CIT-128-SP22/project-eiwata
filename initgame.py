@@ -37,10 +37,11 @@ class Init_Game():
 
     #invisible screen for collision detection
     COLLISION_SCREEN = pygame.Surface((X, Y))
-    COLLISION_SCREEN.set_alpha(150)
+    COLLISION_SCREEN.set_alpha(0)
 
-    #collision detect items
-    START_BUTTON_POS = START_BUTTON.get_rect()
+    #set collision test variables
+    w, h = pygame.display.get_surface().get_size()
+    START_BUTTON_POS = pygame.Rect(w/2.3, h/1.28, w/8, h/15)
 
     #visible screen that scales to the size of window
     PSEUDO_SCREEN = pygame.Surface((X, Y))
