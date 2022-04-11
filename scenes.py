@@ -10,7 +10,7 @@ pygame.mixer.init()
 class Display_Scene(Init_Game):
 
     def start_screen(self):
-        #display start screen
+        #display start screen 
         self.PSEUDO_SCREEN.blit(self.START_SCREEN, (0, 70))
         self.PSEUDO_SCREEN.blit(self.TITLE, (50, 50))
         self.PSEUDO_SCREEN.blit(self.START_BUTTON, (self.X/2.25, self.Y/1.23))
@@ -24,12 +24,14 @@ class Display_Scene(Init_Game):
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
 
         #display dialogue
-        line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
-        line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.PSEUDO_SCREEN.blit(line1, (190, 510))
-        self.PSEUDO_SCREEN.blit(line2, (190, 560))
-
+        with open('dialogue.txt', 'r') as f:
+            line1 = self.FONT.render(f.read(17), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line1, (190, 510))
+            f.seek(18)
+            line2 = self.FONT.render(f.read(22), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line2, (190, 560))
         pygame.display.update()
+    
 
     def scene_two(self):
         #display scene two
@@ -38,10 +40,12 @@ class Display_Scene(Init_Game):
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
 
         #display dialogue
-        line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
-        line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.PSEUDO_SCREEN.blit(line1, (190, 510))
-        self.PSEUDO_SCREEN.blit(line2, (190, 560))
+        with open('dialogue.txt', 'r') as f:
+            line1 = self.FONT.render(f.read(17), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line1, (190, 510))
+            f.seek(18)
+            line2 = self.FONT.render(f.read(22), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line2, (190, 560))
 
         pygame.display.update()
 
@@ -52,10 +56,12 @@ class Display_Scene(Init_Game):
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
 
         #display dialogue
-        line1 = self.FONT.render('[Insert Dialogue]', True, self.WHITE)
-        line2 = self.FONT.render('[Insert More Dialogue]', True, self.WHITE)
-        self.PSEUDO_SCREEN.blit(line1, (190, 510))
-        self.PSEUDO_SCREEN.blit(line2, (190, 560))
+        with open('dialogue.txt', 'r') as f:
+            line1 = self.FONT.render(f.read(17), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line1, (190, 510))
+            f.seek(18)
+            line2 = self.FONT.render(f.read(22), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line2, (190, 560))
 
         pygame.display.update()
 
