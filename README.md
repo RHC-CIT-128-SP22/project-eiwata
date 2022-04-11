@@ -101,13 +101,17 @@ Game_Features()
     .
     .
     scene_manager()
-    .
-    .
-         5
-        / \
-      2    6
-     / \
-    1   4
+        .
+        .
+               5
+              / \
+            2    6
+           / \    \
+          1   4    7
+         / \ / 
+        0   3
+        .
+        .
 ```
 See also: [insert Cthulhu Decision Tree pdf]
 
