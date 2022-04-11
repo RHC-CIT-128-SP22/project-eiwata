@@ -87,7 +87,7 @@ Bonus Features:
 
 >Describe the software engineering techniques used for the design and development of this program.
 
-This game was made using `pygame.py` and organized into the following user - defined modules:
+This game was made using `pygame.py` and organized into the following files:
 ```
 main.py
 initgame.py
