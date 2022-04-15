@@ -36,7 +36,7 @@
 </p>
 
 
-The Call of Cthulhu - Interactive Horror Game is a choose your own adventure game based on the book by H.P. Lovecraft. This is a text-based game and allows the user to make decisions which leads the user down different forks toward alternate endings of the story.
+_The Call of Cthulhu - Interactive Horror Game_ is a choose your own adventure game based on the book by H.P. Lovecraft. This is a text-based game and allows the user to make decisions which leads the user down different forks toward alternate endings of the story.
 
 Source: The Call of Cthulhu and Other Weird Stories
 <br> ISBN: 978-0-14-118234-6
@@ -46,9 +46,9 @@ __Some Context:__
 
 About the Author:
 
-Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that they do today. Nowadays, he is accredited as being the father of cosmic horror a.k.a. lovecraftian horror and known to have been one of the most influencial figures in the literary community for horror.
+Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that they do today. Nowadays, he is accredited as being the father of cosmic horror a.k.a. lovecraftian horror and known to have been one of the most influencial figures in the literary community for the horror genre.
 
-Cosmic horror can be simply described as fear of the unknown or the unknowable.  Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people insane. Furthermore, many of the creatures in the Cthulhu mythos are thought to extend beyond such binary notions as good or evil but rather exist just as their own separate entities. This idea serves as the base to support his philosophy which involves reflecting upon the vastness of the universe and realising the insignificance of humanity in comparison.
+Cosmic horror can be described as fear of the unknown or the unimaginable.  Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people into insanity. Furthermore, many of the creatures in the Cthulhu mythos are actually thought to extend beyond such binary notions as good or evil but rather exist just as their own separate entities apart from mankind. This idea serves as the base to support his philosophy which involves reflecting upon the vastness of the universe and realising the insignificance of humanity in comparison.
 
 Pop Culture Examples of Lovecraftian Themes:
  * The Thing (1982)
@@ -96,7 +96,7 @@ scenes.py
 
 dialogue.txt
 ```
-From `main.py`, the `main()` function first created an object of the class `Game_Features()` from `gamefeatures.py`. Then it just called the `scene_manager()` method, which had the story indexed into a binary search tree, and used it to traverse between different nodes of the story.
+From `main.py`, the `main()` function first created an object of the class `Game_Features()` from `gamefeatures.py`. Then it just called the `scene_manager()` method, which had the story indexed into a binary tree, and used it to traverse between different nodes of the story.
 ```
 Game_Features()
     .
