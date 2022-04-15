@@ -25,16 +25,16 @@ class Display_Scene(Init_Game):
 
         #display dialogue
         with open('dialogue.txt', 'r') as f:
-            line1 = self.FONT.render(f.read(17), True, self.WHITE)
+            line1 = self.FONT.render(f.readline(), True, self.WHITE)
             self.PSEUDO_SCREEN.blit(line1, (190, 505))
             f.seek(18)
-            line2 = self.FONT.render(f.read(22), True, self.WHITE)
+            line2 = self.FONT.render(f.readline(), True, self.WHITE)
             self.PSEUDO_SCREEN.blit(line2, (190, 540))
             f.seek(18)
-            line3 = self.FONT.render(f.read(22), True, self.WHITE)
+            line3 = self.FONT.render(f.readline(), True, self.WHITE)
             self.PSEUDO_SCREEN.blit(line3, (190, 575))
             f.seek(18)
-            line4 = self.FONT.render(f.read(22), True, self.WHITE)
+            line4 = self.FONT.render(f.readline(), True, self.WHITE)
             self.PSEUDO_SCREEN.blit(line4, (190, 610))
         pygame.display.update()
     
@@ -47,11 +47,17 @@ class Display_Scene(Init_Game):
 
         #display dialogue
         with open('dialogue.txt', 'r') as f:
-            line1 = self.FONT.render(f.read(17), True, self.WHITE)
-            self.PSEUDO_SCREEN.blit(line1, (190, 510))
+            line1 = self.FONT.render(f.readline(), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line1, (190, 505))
             f.seek(18)
-            line2 = self.FONT.render(f.read(22), True, self.WHITE)
-            self.PSEUDO_SCREEN.blit(line2, (190, 560))
+            line2 = self.FONT.render(f.readline(), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line2, (190, 540))
+            f.seek(18)
+            line3 = self.FONT.render(f.readline(), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line3, (190, 575))
+            f.seek(18)
+            line4 = self.FONT.render(f.readline(), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line4, (190, 610))
 
         pygame.display.update()
 
@@ -63,11 +69,17 @@ class Display_Scene(Init_Game):
 
         #display dialogue
         with open('dialogue.txt', 'r') as f:
-            line1 = self.FONT.render(f.read(17), True, self.WHITE)
-            self.PSEUDO_SCREEN.blit(line1, (190, 510))
+            line1 = self.FONT.render(f.readline(), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line1, (190, 505))
             f.seek(18)
-            line2 = self.FONT.render(f.read(22), True, self.WHITE)
-            self.PSEUDO_SCREEN.blit(line2, (190, 560))
+            line2 = self.FONT.render(f.readline(), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line2, (190, 540))
+            f.seek(18)
+            line3 = self.FONT.render(f.readline(), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line3, (190, 575))
+            f.seek(18)
+            line4 = self.FONT.render(f.readline(), True, self.WHITE)
+            self.PSEUDO_SCREEN.blit(line4, (190, 610))
 
         pygame.display.update()
 

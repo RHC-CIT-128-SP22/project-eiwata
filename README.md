@@ -38,7 +38,7 @@
 
 _The Call of Cthulhu - Interactive Horror Game_ is a choose your own adventure game based on the book by H.P. Lovecraft. This is a text-based game and allows the user to make decisions which leads the user down different forks toward alternate endings of the story.
 
-Source: The Call of Cthulhu and Other Weird Stories
+Source: _The Call of Cthulhu and Other Weird Stories_
 <br> ISBN: 978-0-14-118234-6
 
 
@@ -46,9 +46,11 @@ __Some Context:__
 
 About the Author:
 
-Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that they do today. Nowadays, he is accredited as being the father of cosmic horror a.k.a. lovecraftian horror and known to have been one of the most influencial figures in the literary community for the horror genre.
+Howard Phillips Lovecraft was an early 20th century horror writer. His childhood began with his father getting committed to a psychiatric hospital after a mental breakdown. He died soon after which led to his monther's depression and moving in with his maternal family. His grandfather Whipple Van Buren Phillips took on the role as his father figure and became the person Lovecraft felt closest to in his family. He exposed Lovecraft to literature and told him horror stories that he made up for his grandson's amusement. His grandfather's death however, came shortly before Lovecraft entered high school and left an emotional wound to Lovecraft that he never completely recovered from. He started having suicidal tendencies with nightmares with long nights of insomnia.
 
-Cosmic horror can be described as fear of the unknown or the unimaginable.  Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people into insanity. Furthermore, many of the creatures in the Cthulhu mythos are actually thought to extend beyond such binary notions as good or evil but rather exist just as their own separate entities apart from mankind. This idea serves as the base to support his philosophy which involves reflecting upon the vastness of the universe and realising the insignificance of humanity in comparison.
+He never finished school due to the severity of his mental breakdowns. He was a progidy though and spent much of his time as a recluse just reading books. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that they do today. Nowadays, he is accredited as being the father of cosmic horror a.k.a. lovecraftian horror and known to have been one of the most influencial figures in the literary community for the horror genre.
+
+Cosmic horror can be described as fear of the unknown or the unimaginable.  Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people into insanity. Furthermore, many of the creatures in the Cthulhu Mythos are actually thought to extend beyond such binary notions as good or evil but rather exist just as their own separate entities apart from mankind. This idea serves as the base to support his philosophy which involves reflecting upon the vastness of the universe and realising the insignificance of humanity in comparison.
 
 Pop Culture Examples of Lovecraftian Themes:
  * The Thing (1982)
@@ -93,7 +95,6 @@ main.py
 initgame.py
 gamefeatures.py
 scenes.py
-
 dialogue.txt
 ```
 From `main.py`, the `main()` function first created an object of the class `Game_Features()` from `gamefeatures.py`. Then it just called the `scene_manager()` method, which had the story indexed into a binary tree, and used it to traverse between different nodes of the story.
@@ -111,10 +112,8 @@ Game_Features()
           1   4    7
          / \ / 
         0   3
-        .
-        .
 ```
-See also: [insert Cthulhu Decision Tree pdf]
+_See also:_ [insert Cthulhu Decision Tree pdf]
 
 ## Directions and Grading Rubric
 
