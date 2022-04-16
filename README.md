@@ -145,7 +145,7 @@ Game_Features()
         .
         .
 ```
-_See also:_ [Cthulhu Decision Tree](https://drive.google.com/file/d/12zj2Vb1N1-LHb1GzaTZBDIYC1Pz9u6da/view?usp=sharing)
+_See also:_ [Cthulhu Decision Tree pdf](https://drive.google.com/file/d/1y-Ar-hCq-sWJkWkNjTRm8chB-Nbs8YqH/view?usp=sharing)
 
 ## Directions and Grading Rubric
 
