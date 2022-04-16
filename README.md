@@ -142,6 +142,8 @@ Game_Features()
           18   50
          /    /
         19   51
+        .
+        .
 ```
 _See also:_ [Cthulhu Decision Tree](https://drive.google.com/file/d/12zj2Vb1N1-LHb1GzaTZBDIYC1Pz9u6da/view?usp=sharing)
 
