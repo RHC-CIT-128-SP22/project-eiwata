@@ -17,7 +17,7 @@ def main():
     curr_game = Game_Features()
 
     #set audio
-    OPENING = mixer.music.load("assets/BeforeDawn.wav")
+    OPENING = mixer.music.load("assets/Beginning.mp3")
     mixer.music.set_volume(0.7)
 
     #play bgm

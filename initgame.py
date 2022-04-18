@@ -16,6 +16,7 @@ class Init_Game():
     TITLE = pygame.image.load("assets/title.png")
     START_BUTTON = pygame.image.load("assets/startButton.png")
     DIAL_BOX = pygame.image.load("assets/rectangle.png")
+    BORDER = pygame.image.load("assets/red border.png")
 
     #load background images
     START_SCREEN = pygame.image.load("assets/startBG.png")
@@ -30,6 +31,7 @@ class Init_Game():
 
     #set item transparency
     DIAL_BOX.set_alpha(220)
+    BORDER.set_alpha(220)
     START_BUTTON.set_alpha(150)
 
     #set sound fx
