@@ -31,7 +31,7 @@ class Init_Game():
 
     #set item transparency
     DIAL_BOX.set_alpha(220)
-    BORDER.set_alpha(220)
+    BORDER.set_alpha(200)
     START_BUTTON.set_alpha(150)
 
     #set sound fx
