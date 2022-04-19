@@ -31,7 +31,7 @@
         align = "right"
         src = "assets/large-necronomicon-book-lovecraft-25.jpeg"
         alt = "Cthulhu Book"
-        width = "250"
+        width = "270"
     />
 </p>
 
