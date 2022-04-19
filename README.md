@@ -56,13 +56,6 @@ Howard Phillips Lovecraft was an early 20th century horror writer. At the time, 
 
 Cosmic horror can be described as fear of the unknown or the unimaginable. Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people into insanity. Furthermore, many of the creatures in the Cthulhu Mythos are not known to be evil. They just exist as their own separate entities apart from mankind. Lovecraft's philosophy was a weird mix of anthropocentrism and nihilism and his works involved reflecting upon the vastness of the universe and realising the insignificance of humanity in comparison.
 
-Pop Culture Examples of Lovecraftian Themes:
- * The Thing (1982)
- * Bird Box (2018)
- * Junji Ito's works
-
-
-
 __Some of the goals of this project are:__
 
 Core Features:
