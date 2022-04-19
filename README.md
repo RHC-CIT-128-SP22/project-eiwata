@@ -48,12 +48,19 @@ About the Author:
 
 Howard Phillips Lovecraft was an early 20th century horror writer. At the time, his works were published in _Weird Tales_ magazines and did not receive the amount of recognition that they do today. Because of this, he lived much of his life in poverty and this was actually one of the main causes for his depression. Nowadays, he is accredited as being the father of cosmic horror a.k.a. lovecraftian horror and known to have been one of the most influencial figures in the literary community for the horror genre.
 
+---
+
+"The most merciful thing in the world, I think, is the inability of the human mind to correlate all its contents. We live on a placid island of ignorance in the midst of black seas of infinity, and it was not meant that we should voyage far. The sciences, each straining in its own direction, have hitherto harmed us little but some day the piecing together of dissociated knowledge will open up such terrifying vistas of reality, and of our frightful position therein, that we shall either go mad from the revelation or flee from the deadly light into the peace and safety or a new dark age."
+
+---
+
 Cosmic horror can be described as fear of the unknown or the unimaginable. Often times, the root of fear in cosmic horror is of such a grand/cosmic scale that the mere revelation of their existence is enough to drive people into insanity. Furthermore, many of the creatures in the Cthulhu Mythos are not known to be evil. They just exist as their own separate entities apart from mankind. Lovecraft's philosophy was a weird mix of anthropocentrism and nihilism and his works involved reflecting upon the vastness of the universe and realising the insignificance of humanity in comparison.
 
 Pop Culture Examples of Lovecraftian Themes:
  * The Thing (1982)
  * Bird Box (2018)
  * Junji Ito's works
+
 
 
 __Some of the goals of this project are:__
