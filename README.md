@@ -64,10 +64,9 @@ Core Features:
 - [ ] If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
 
 Bonus Features:
-- [ ] Click to pause
+- [ ] Click to skip scene
 - [X] Resizable GUI window
-- [ ] Allow user to choose the dialogue speed (slow 1x, medium 1.5x, fast 2x)
-- [ ] Decision timer (12 sec) or else it autoselects decision A over decision B
+- [ ] Decision timer (10 sec) or else it autoselects decision A over decision B
 
 ### Video Demonstration
 
