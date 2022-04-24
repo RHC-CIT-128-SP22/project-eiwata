@@ -72,9 +72,6 @@ Bonus Features:
 
 >Add a Link to your video demonstration
 
-<p align = "center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xwtaekgVt9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-
 ### Install Instructions
 
 >Add any install instructions, if needed. This includes how to install included modules or libraries as well as configurations. You may remove this section if no special instructions are required.
