@@ -65,14 +65,10 @@ class Display_Scene(Init_Game):
 
         pygame.display.update()
 
-
-
-
-
     def node6(self):
         #display scene 6
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -89,7 +85,7 @@ class Display_Scene(Init_Game):
     def node7(self):
         #display scene 7
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 37.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -107,14 +103,14 @@ class Display_Scene(Init_Game):
     def node8(self):
         #display scene 8
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
 
         pygame.display.update()
 
     def node9(self):
         #display scene 9
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_2, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_2, (0, 70))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -131,7 +127,7 @@ class Display_Scene(Init_Game):
     def node10(self):
         #display scene 10
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.TOWN, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.TOWN, (0, 54.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -148,7 +144,7 @@ class Display_Scene(Init_Game):
     def node11(self):
         #display scene 11
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -165,7 +161,7 @@ class Display_Scene(Init_Game):
     def node12(self):
         #display scene 12
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.ALONE, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.ALONE, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -183,14 +179,14 @@ class Display_Scene(Init_Game):
     def node13(self):
         #display scene 13
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
 
         pygame.display.update()
 
     def node14(self):
         #display scene 14
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -207,7 +203,7 @@ class Display_Scene(Init_Game):
     def node15(self):
         #display scene 15
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.STATUE, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.STATUE, (0, 16.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -224,7 +220,7 @@ class Display_Scene(Init_Game):
     def node16(self):
         #display scene 16
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 37.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -241,7 +237,7 @@ class Display_Scene(Init_Game):
     def node17(self):
         #display scene 17
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.DOCK, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -259,14 +255,14 @@ class Display_Scene(Init_Game):
     def node18(self):
         #display scene 18
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.DOCK, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
 
         pygame.display.update()
 
     def node19(self):
         #display scene 19
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.DOCK, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -283,7 +279,7 @@ class Display_Scene(Init_Game):
     def node20(self):
         #display scene 20
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.SAIL, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -300,7 +296,7 @@ class Display_Scene(Init_Game):
     def node21(self):
         #display scene 21
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -318,14 +314,14 @@ class Display_Scene(Init_Game):
     def node22(self):
         #display scene 22
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
 
         pygame.display.update()
 
     def node23(self):
         #display scene 23
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
@@ -342,7 +338,7 @@ class Display_Scene(Init_Game):
     def node24(self):
         #display scene 24
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 0))
+        self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (60, 430))
         self.PSEUDO_SCREEN.blit(self.BORDER, (375, 485))
 
