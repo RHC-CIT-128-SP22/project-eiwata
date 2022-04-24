@@ -20,7 +20,6 @@ class Init_Game():
 
     #load background images
     START_SCREEN = pygame.image.load("assets/startBG.png")
-    PORTRAIT_SCENE = pygame.image.load("assets/portrait.png")
     HORROR_IN_CLAY = pygame.image.load("assets/horrorInClay.png")
     UNIVERSITY = pygame.image.load("assets/university.png")
 
