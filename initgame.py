@@ -22,6 +22,18 @@ class Init_Game():
     START_SCREEN = pygame.image.load("assets/startBG.png")
     HORROR_IN_CLAY = pygame.image.load("assets/horrorInClay.png")
     UNIVERSITY = pygame.image.load("assets/university.png")
+    HOUSE = pygame.image.load("assets/cthulhu wallpaper 171.png")
+    INVESTIGATION_1 = pygame.image.load("assets/video-game-call-of-cthulhu-cthulhu-h-p-lovecraft-wallpaper-thumb.png")
+    INVESTIGATION_2 = pygame.image.load("assets/l2bh9dglc7f41.png")
+    TOWN = pygame.image.load("assets/01f9c651478436ed8ff940ea5591620f_550485.png")
+    INVESTIGATION_3 = pygame.image.load("assets/666e378141b7824060579ce896d783c098d5c5db37584015aee1c22cc9133364.png")
+    ALONE = pygame.image.load("assets/call-of-cthulhu-review-523506-32.png")
+    STATUE = pygame.image.load("assets/38-389668_star-on-the-shore-cthulhu.png")
+    DOCK = pygame.image.load("assets/20181026120602_1.png")
+    SAIL = pygame.image.load("assets/coc-boat.png")
+    RLYEH_1 = pygame.image.load("assets/rlyeh-1.png")
+    RLYEH_2 = pygame.image.load("assets/YChlAcTe.png")
+    RLYEH_3 = pygame.image.load("assets/timo-peter-cthulhu-hd-wallpaper-preview.png")
 
     #declare colors and font
     FONT = pygame.font.SysFont('Rockwell', 19)
