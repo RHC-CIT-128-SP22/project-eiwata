@@ -15,6 +15,8 @@ pygame.mixer.init()
 def main():
     #initialize variables
     curr_game = Game_Features()
+    clock = pygame.time.Clock()
+    FPS = 30
 
     #set audio
     OPENING = mixer.music.load("assets/Beginning.mp3")
@@ -30,7 +32,8 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-        
+
+        clock.tick(FPS)
         curr_game.scene_manager()
 
  ####### END OF GAME LOOP ########

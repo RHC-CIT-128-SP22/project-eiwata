@@ -27,6 +27,63 @@ class Game_Features(Display_Scene):
         if self.scene == 'node5':
             self.node5()
             self.user_decision('node5')
+        if self.scene == 'node6':
+            self.node6()
+            self.user_decision('node6')
+        if self.scene == 'node7':
+            self.node7()
+            self.user_decision('node7')
+        if self.scene == 'node8':
+            self.node8()
+            self.user_decision('node8')
+        if self.scene == 'node9':
+            self.node9()
+            self.user_decision('node9')
+        if self.scene == 'node10':
+            self.node10()
+            self.user_decision('node10')
+        if self.scene == 'node11':
+            self.node11()
+            self.user_decision('node11')
+        if self.scene == 'node12':
+            self.node12()
+            self.user_decision('node12')
+        if self.scene == 'node13':
+            self.node13()
+            self.user_decision('node13')
+        if self.scene == 'node14':
+            self.node14()
+            self.user_decision('node14')
+        if self.scene == 'node15':
+            self.node15()
+            self.user_decision('node15')
+        if self.scene == 'node16':
+            self.node16()
+            self.user_decision('node16')
+        if self.scene == 'node17':
+            self.node17()
+            self.user_decision('node17')
+        if self.scene == 'node18':
+            self.node18()
+            self.user_decision('node18')
+        if self.scene == 'node19':
+            self.node19()
+            self.user_decision('node19')
+        if self.scene == 'node20':
+            self.node20()
+            self.user_decision('node20')
+        if self.scene == 'node21':
+            self.node21()
+            self.user_decision('node21')
+        if self.scene == 'node22':
+            self.node22()
+            self.user_decision('node22')
+        if self.scene == 'node23':
+            self.node23()
+            self.user_decision('node23')
+        if self.scene == 'node24':
+            self.node24()
+            self.user_decision('node24')
 
     def user_decision(self, scene):
         if self.WIN_RESIZED == False:
@@ -70,7 +127,7 @@ class Game_Features(Display_Scene):
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 pygame.mixer.Sound.play(self.START_SOUND)
-                                self.fade_out()
+                                self.screen_fader()
                                 self.scene = 'node2'
                         else:
                             self.START_BUTTON.set_alpha(150)
@@ -81,7 +138,7 @@ class Game_Features(Display_Scene):
                         self.scene = 'node3'
                 case 'node3':
                     if event.type == pygame.MOUSEBUTTONDOWN:
-                        self.fade_out()
+                        self.screen_fader()
                         self.scene = 'node4'
                 case 'node4':
                     if event.type == pygame.MOUSEBUTTONDOWN:
@@ -91,7 +148,7 @@ class Game_Features(Display_Scene):
                         pygame.quit()
 
     #fade out next scene
-    def fade_out(self):
+    def screen_fader(self):
         #default window size
         if self.WIN_RESIZED == False:
             fade = pygame.Surface((self.X, self.Y))
