@@ -12,6 +12,9 @@ class Init_Game():
     ICON = pygame.image.load("assets/icon.png")
     pygame.display.set_icon(ICON)
 
+    #create clock
+    clock = pygame.time.Clock()
+
     #load buttons and icons
     TITLE = pygame.image.load("assets/title.png")
     START_BUTTON = pygame.image.load("assets/startButton.png")

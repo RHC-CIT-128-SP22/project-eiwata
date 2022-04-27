@@ -9,6 +9,24 @@ pygame.mixer.init()
 
 class Display_Scene(Init_Game):
 
+    def narrow_screen(self, scene, y):
+        #initialize variables
+        TOP_Y = 0
+        BOTTOM_Y = 700 - y
+
+        match scene:
+            case 5:
+                #display scene 5
+                self.PSEUDO_SCREEN.fill(self.BLACK)
+                self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
+
+                for i in range(y):
+                    TOP_Y += 1
+                    BOTTOM_Y -= 1
+                    top_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, TOP_Y, 1000, 70])
+                    bottom_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, BOTTOM_Y, 1000, 70])
+                    pygame.display.update()
+
     def node1(self):
         #display start screen 
         self.PSEUDO_SCREEN.blit(self.START_SCREEN, (0, 70))
@@ -62,6 +80,9 @@ class Display_Scene(Init_Game):
         #display scene 5
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
+
+        top_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, 70, 1000, 70])
+        bottom_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, 570, 1000, 70])
 
         pygame.display.update()
 
@@ -351,4 +372,5 @@ class Display_Scene(Init_Game):
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             self.PSEUDO_SCREEN.blit(line3, (190, 610))
         pygame.display.update()
+
         

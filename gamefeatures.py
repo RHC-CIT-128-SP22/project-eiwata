@@ -89,6 +89,14 @@ class Game_Features(Display_Scene):
         if self.WIN_RESIZED == False:
             self.SCREEN.blit(self.PSEUDO_SCREEN, (0, 0))
             self.SCREEN.blit(self.COLLISION_SCREEN, (0, 0))
+        #if window has been resized 
+        elif self.WIN_RESIZED == True:
+            w, h = pygame.display.get_surface().get_size()
+            self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+            if scene == 'node1':
+                #visible screen that scales to the size of window
+                self.START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
         for event in pygame.event.get():
             #if user quit game
             if event.type == pygame.QUIT:
@@ -101,14 +109,6 @@ class Game_Features(Display_Scene):
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (event.w, event.h)), (0, 0))
                 if scene == 'node1':
                     self.START_BUTTON_POS = pygame.Rect(event.w/2.25, event.h/1.23, event.w/8.3, event.h/14)
-                    pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
-            #if window has been resized 
-            elif self.WIN_RESIZED == True:
-                w, h = pygame.display.get_surface().get_size()
-                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
-                if scene == 'node1':
-                    #visible screen that scales to the size of window
-                    self.START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
                     pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
             #more specific actions per scene
             match scene:
@@ -143,6 +143,7 @@ class Game_Features(Display_Scene):
                 case 'node4':
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         self.scene = 'node5'
+                        self.narrow_screen(5, 70)
                 case 'node5':
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         pygame.quit()
