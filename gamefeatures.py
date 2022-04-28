@@ -138,14 +138,7 @@ class Game_Features(Display_Scene):
                 self.WIN_RESIZED = True
                 self.SCREEN = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (event.w, event.h)), (0, 0))
-                if scene == 'node1':
-                    self.START_BUTTON_POS = pygame.Rect(event.w/2.25, event.h/1.23, event.w/8.3, event.h/14)
-                    pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
-                if scene == 'node5':
-                    self.TELL_HIM_POS = pygame.Rect(event.w/1.44, event.h/1.17, event.w/3.6, event.h/28)
-                    self.LOOK_INTO_IT_POS = pygame.Rect(event.w/33.3, event.h/1.17, event.w/6.37, event.h/28)
-                    pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TELL_HIM_POS, 3)
-                    pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.LOOK_INTO_IT_POS, 3)
+
             #more specific actions per scene
             match scene:
                 case 'node1':
@@ -153,7 +146,7 @@ class Game_Features(Display_Scene):
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
-        
+
                         #if hovering over start button
                         collision = self.START_BUTTON_POS.collidepoint(mx, my)
                         if collision:
@@ -163,14 +156,13 @@ class Game_Features(Display_Scene):
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 pygame.mixer.Sound.play(self.START_SOUND)
-                                self.screen_fader()
                                 self.scene = 'node2'
                         else:
                             self.START_BUTTON.set_alpha(150)
-
                     pygame.display.update()
                 case 'node2':
                     if event.type == pygame.MOUSEBUTTONDOWN:
+                        self.screen_fader()
                         self.scene = 'node3'
                 case 'node3':
                     if event.type == pygame.MOUSEBUTTONDOWN:
@@ -193,9 +185,13 @@ class Game_Features(Display_Scene):
                         if CHOICE_A:
                             #bold option
                             self.LOOK_INTO_IT.set_alpha(300)
+                            if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                self.scene = 'node6'
                         if CHOICE_B:
                             #bold option
                             self.TELL_HIM.set_alpha(300)
+                            if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                self.scene = 'node7'
                         else:
                             self.LOOK_INTO_IT.set_alpha(100)
                             self.TELL_HIM.set_alpha(100)

@@ -61,12 +61,12 @@ Core Features:
 - [ ] Dialogue displays on the screen gradually as user iterates through the game
 - [X] Smooth transition between scenes
 - [ ] Game Over screen allows user to select between Play Again or Quit
-- [ ] If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
 
 Bonus Features:
 - [X] Click to skip scene
 - [X] Resizable GUI window
 - [ ] Decision timer (10 sec) or else it autoselects decision A over decision B
+- [ ] If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
 
 ### Video Demonstration
 

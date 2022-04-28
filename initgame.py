@@ -52,8 +52,8 @@ class Init_Game():
     DIAL_BOX.set_alpha(220)
     BORDER.set_alpha(200)
     START_BUTTON.set_alpha(150)
-    LOOK_INTO_IT.set_alpha(100)
-    TELL_HIM.set_alpha(100)
+    LOOK_INTO_IT.set_alpha(150)
+    TELL_HIM.set_alpha(150)
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
