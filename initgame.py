@@ -20,6 +20,11 @@ class Init_Game():
     START_BUTTON = pygame.image.load("assets/startButton.png")
     DIAL_BOX = pygame.image.load("assets/rectangle.png")
     BORDER = pygame.image.load("assets/red border.png")
+    WHITE_LINE = pygame.image.load("assets/white line.png")
+
+    #decision choices
+    LOOK_INTO_IT = pygame.image.load("assets/Look into it.png")
+    TELL_HIM = pygame.image.load("assets/Tell him it's nothing.png")
 
     #load background images
     START_SCREEN = pygame.image.load("assets/startBG.png")
@@ -47,6 +52,8 @@ class Init_Game():
     DIAL_BOX.set_alpha(220)
     BORDER.set_alpha(200)
     START_BUTTON.set_alpha(150)
+    LOOK_INTO_IT.set_alpha(100)
+    TELL_HIM.set_alpha(100)
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
@@ -61,4 +68,6 @@ class Init_Game():
     #collision items
     w, h = pygame.display.get_surface().get_size()
     START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
+    TELL_HIM_POS = pygame.Rect(w/1.44, h/1.17, w/3.6, h/28)
+    LOOK_INTO_IT_POS = pygame.Rect(w/33.3, h/1.17, w/6.37, h/28)
 

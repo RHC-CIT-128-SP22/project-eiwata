@@ -14,78 +14,102 @@ class Game_Features(Display_Scene):
     def scene_manager(self):
         if self.scene == 'node1':
             self.node1()
+            self.blit_screen()
             self.user_decision('node1')
         if self.scene == 'node2':
             self.node2()
+            self.blit_screen()
             self.user_decision('node2')
         if self.scene == 'node3':
             self.node3()
+            self.blit_screen()
             self.user_decision('node3')
         if self.scene == 'node4':
             self.node4()
+            self.blit_screen()
             self.user_decision('node4')
         if self.scene == 'node5':
             self.node5()
+            self.blit_screen()
             self.user_decision('node5')
         if self.scene == 'node6':
             self.node6()
+            self.blit_screen()
             self.user_decision('node6')
         if self.scene == 'node7':
             self.node7()
+            self.blit_screen()
             self.user_decision('node7')
         if self.scene == 'node8':
             self.node8()
+            self.blit_screen()
             self.user_decision('node8')
         if self.scene == 'node9':
             self.node9()
+            self.blit_screen()
             self.user_decision('node9')
         if self.scene == 'node10':
             self.node10()
+            self.blit_screen()
             self.user_decision('node10')
         if self.scene == 'node11':
             self.node11()
+            self.blit_screen()
             self.user_decision('node11')
         if self.scene == 'node12':
             self.node12()
+            self.blit_screen()
             self.user_decision('node12')
         if self.scene == 'node13':
             self.node13()
+            self.blit_screen()
             self.user_decision('node13')
         if self.scene == 'node14':
             self.node14()
+            self.blit_screen()
             self.user_decision('node14')
         if self.scene == 'node15':
             self.node15()
+            self.blit_screen()
             self.user_decision('node15')
         if self.scene == 'node16':
             self.node16()
+            self.blit_screen()
             self.user_decision('node16')
         if self.scene == 'node17':
             self.node17()
+            self.blit_screen()
             self.user_decision('node17')
         if self.scene == 'node18':
             self.node18()
+            self.blit_screen()
             self.user_decision('node18')
         if self.scene == 'node19':
             self.node19()
+            self.blit_screen()
             self.user_decision('node19')
         if self.scene == 'node20':
             self.node20()
+            self.blit_screen()
             self.user_decision('node20')
         if self.scene == 'node21':
             self.node21()
+            self.blit_screen()
             self.user_decision('node21')
         if self.scene == 'node22':
             self.node22()
+            self.blit_screen()
             self.user_decision('node22')
         if self.scene == 'node23':
             self.node23()
+            self.blit_screen()
             self.user_decision('node23')
         if self.scene == 'node24':
             self.node24()
+            self.blit_screen()
             self.user_decision('node24')
 
-    def user_decision(self, scene):
+    def blit_screen(self):
         if self.WIN_RESIZED == False:
             self.SCREEN.blit(self.PSEUDO_SCREEN, (0, 0))
             self.SCREEN.blit(self.COLLISION_SCREEN, (0, 0))
@@ -93,10 +117,17 @@ class Game_Features(Display_Scene):
         elif self.WIN_RESIZED == True:
             w, h = pygame.display.get_surface().get_size()
             self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
-            if scene == 'node1':
+            if self.scene == 'node1':
                 #visible screen that scales to the size of window
                 self.START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
                 pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
+            if self.scene == 'node5':
+                self.TELL_HIM_POS = pygame.Rect(w/1.44, h/1.17, w/3.6, h/28)
+                self.LOOK_INTO_IT_POS = pygame.Rect(w/33.3, h/1.17, w/6.37, h/28)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TELL_HIM_POS, 3)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.LOOK_INTO_IT_POS, 3)
+
+    def user_decision(self, scene):
         for event in pygame.event.get():
             #if user quit game
             if event.type == pygame.QUIT:
@@ -110,6 +141,11 @@ class Game_Features(Display_Scene):
                 if scene == 'node1':
                     self.START_BUTTON_POS = pygame.Rect(event.w/2.25, event.h/1.23, event.w/8.3, event.h/14)
                     pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
+                if scene == 'node5':
+                    self.TELL_HIM_POS = pygame.Rect(event.w/1.44, event.h/1.17, event.w/3.6, event.h/28)
+                    self.LOOK_INTO_IT_POS = pygame.Rect(event.w/33.3, event.h/1.17, event.w/6.37, event.h/28)
+                    pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TELL_HIM_POS, 3)
+                    pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.LOOK_INTO_IT_POS, 3)
             #more specific actions per scene
             match scene:
                 case 'node1':
@@ -145,8 +181,24 @@ class Game_Features(Display_Scene):
                         self.scene = 'node5'
                         self.narrow_screen(5, 70)
                 case 'node5':
-                    if event.type == pygame.MOUSEBUTTONDOWN:
-                        pygame.quit()
+                    #if mouse move or click
+                    if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
+                        #get mouse position
+                        mx, my = pygame.mouse.get_pos()
+                        
+                        CHOICE_A = self.LOOK_INTO_IT_POS.collidepoint(mx, my)
+                        CHOICE_B = self.TELL_HIM_POS.collidepoint(mx, my)
+
+                        #if hovering over option
+                        if CHOICE_A:
+                            #bold option
+                            self.LOOK_INTO_IT.set_alpha(300)
+                        if CHOICE_B:
+                            #bold option
+                            self.TELL_HIM.set_alpha(300)
+                        else:
+                            self.LOOK_INTO_IT.set_alpha(100)
+                            self.TELL_HIM.set_alpha(100)
 
     #fade out next scene
     def screen_fader(self):

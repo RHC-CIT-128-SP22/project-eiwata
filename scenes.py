@@ -81,8 +81,12 @@ class Display_Scene(Init_Game):
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
 
-        top_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, 70, 1000, 70])
-        bottom_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, 570, 1000, 70])
+        top_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 70, 1000, 70])
+        bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 570, 1000, 70])
+
+        self.PSEUDO_SCREEN.blit(self.LOOK_INTO_IT, (30, 600))
+        self.PSEUDO_SCREEN.blit(self.TELL_HIM, (695, 600))
+        self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (100, 270))
 
         pygame.display.update()
 
