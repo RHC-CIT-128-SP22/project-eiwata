@@ -21,6 +21,7 @@ class Init_Game():
     DIAL_BOX = pygame.image.load("assets/rectangle.png")
     BORDER = pygame.image.load("assets/red border.png")
     WHITE_LINE = pygame.image.load("assets/white line.png")
+    TENTACLE = pygame.image.load("assets/tentacle-art-invertebrate-tenticles-5a8a929ad57a7d9fc498da38c662a6fc.png")
 
     #decision choices
     LOOK_INTO_IT = pygame.image.load("assets/Look into it.png")
@@ -51,6 +52,7 @@ class Init_Game():
     #set item transparency
     DIAL_BOX.set_alpha(220)
     BORDER.set_alpha(200)
+    TENTACLE.set_alpha(200)
     START_BUTTON.set_alpha(150)
     LOOK_INTO_IT.set_alpha(150)
     TELL_HIM.set_alpha(150)
