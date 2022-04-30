@@ -54,8 +54,8 @@ class Init_Game():
     BORDER.set_alpha(200)
     TENTACLE.set_alpha(200)
     START_BUTTON.set_alpha(150)
-    LOOK_INTO_IT.set_alpha(150)
-    TELL_HIM.set_alpha(150)
+    LOOK_INTO_IT.set_alpha(100)
+    TELL_HIM.set_alpha(100)
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
@@ -70,6 +70,6 @@ class Init_Game():
     #collision items
     w, h = pygame.display.get_surface().get_size()
     START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
-    TELL_HIM_POS = pygame.Rect(w/1.44, h/1.17, w/3.6, h/28)
-    LOOK_INTO_IT_POS = pygame.Rect(w/33.3, h/1.17, w/6.37, h/28)
+    TELL_HIM_POS = pygame.Rect(w/1.47, h/1.17, w/3.34, h/21.88)
+    LOOK_INTO_IT_POS = pygame.Rect(w/33.33, h/1.17, w/5.78, h/22.58)
 

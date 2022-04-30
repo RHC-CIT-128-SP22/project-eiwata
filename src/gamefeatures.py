@@ -2,11 +2,12 @@
 import sys, pygame
 from pygame import mixer
 from scenes import Display_Scene
+from narrator import Narrator
 
 pygame.init()
 mixer.init()
 
-class Game_Features(Display_Scene):
+class Game_Features(Display_Scene, Narrator):
     def __init__(self):
         self.scene = 'node1'
         self.WIN_RESIZED = False
@@ -17,7 +18,7 @@ class Game_Features(Display_Scene):
             self.blit_screen()
             self.user_decision('node1')
         if self.scene == 'node2':
-            self.node2()
+            self.node2(self.WIN_RESIZED)
             self.blit_screen()
             self.user_decision('node2')
         if self.scene == 'node3':
@@ -122,8 +123,8 @@ class Game_Features(Display_Scene):
                 self.START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
                 pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
             if self.scene == 'node5':
-                self.TELL_HIM_POS = pygame.Rect(w/1.44, h/1.17, w/3.6, h/28)
-                self.LOOK_INTO_IT_POS = pygame.Rect(w/33.3, h/1.17, w/6.37, h/28)
+                self.TELL_HIM_POS = pygame.Rect(w/1.47, h/1.17, w/3.34, h/21.88)
+                self.LOOK_INTO_IT_POS = pygame.Rect(w/33.33, h/1.17, w/5.78, h/22.58)
                 pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TELL_HIM_POS, 3)
                 pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.LOOK_INTO_IT_POS, 3)
 
@@ -156,6 +157,9 @@ class Game_Features(Display_Scene):
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 pygame.mixer.Sound.play(self.START_SOUND)
+                                self.SCREEN.fill(self.BLACK)
+                                self.blit_line1('node2', 0)
+                                self.blit_line2('node2', 0)
                                 self.scene = 'node2'
                         else:
                             self.START_BUTTON.set_alpha(150)
@@ -186,11 +190,13 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.LOOK_INTO_IT.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                self.screen_fader()
                                 self.scene = 'node6'
-                        if CHOICE_B:
+                        elif CHOICE_B:
                             #bold option
                             self.TELL_HIM.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                self.screen_fader()
                                 self.scene = 'node7'
                         else:
                             self.LOOK_INTO_IT.set_alpha(100)

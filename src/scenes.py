@@ -17,22 +17,17 @@ class Display_Scene(Init_Game):
 
         pygame.display.update()   
 
-    def node2(self):
+    def node2(self, WIN_RESIZED):
         #display scene 2
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
-        self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
         with open('dialogue.txt', 'r') as f:
+            f.seek(8)
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
-            line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
-            line4 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
-            self.PSEUDO_SCREEN.blit(line1, (190, 510))
-            self.PSEUDO_SCREEN.blit(line2, (190, 545))
-            self.PSEUDO_SCREEN.blit(line3, (190, 580))
-            self.PSEUDO_SCREEN.blit(line4, (190, 615))
+            self.SCREEN.blit(line1, (325, 330))
+            self.SCREEN.blit(line2, (300, 365))
+
         pygame.display.update()
 
     def node3(self):
@@ -44,6 +39,7 @@ class Display_Scene(Init_Game):
 
         #display dialogue
         with open('dialogue.txt', 'r') as f:
+            f.seek(100)
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -83,7 +79,7 @@ class Display_Scene(Init_Game):
         bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 570, 1000, 70])
 
         self.PSEUDO_SCREEN.blit(self.LOOK_INTO_IT, (30, 600))
-        self.PSEUDO_SCREEN.blit(self.TELL_HIM, (695, 600))
+        self.PSEUDO_SCREEN.blit(self.TELL_HIM, (680, 600))
         self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (100, 270))
 
         pygame.display.update()
@@ -110,7 +106,7 @@ class Display_Scene(Init_Game):
     def node7(self):
         #display scene 7
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 37.5))
+        self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
@@ -259,7 +255,7 @@ class Display_Scene(Init_Game):
     def node16(self):
         #display scene 16
         self.PSEUDO_SCREEN.fill(self.BLACK)
-        self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 37.5))
+        self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
@@ -423,3 +419,6 @@ class Display_Scene(Init_Game):
                     top_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, TOP_Y, w, h/10])
                     bottom_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
                     pygame.display.update()
+    
+
+
