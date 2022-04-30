@@ -17,7 +17,7 @@ class Display_Scene(Init_Game):
 
         pygame.display.update()   
 
-    def node2(self, WIN_RESIZED):
+    def node2(self):
         #display scene 2
         self.PSEUDO_SCREEN.fill(self.BLACK)
 
@@ -25,9 +25,11 @@ class Display_Scene(Init_Game):
             f.seek(8)
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
-            self.SCREEN.blit(line1, (325, 330))
-            self.SCREEN.blit(line2, (300, 365))
+            self.PSEUDO_SCREEN.blit(line1, (325, 330))
+            self.PSEUDO_SCREEN.blit(line2, (300, 365))
 
+        w, h = pygame.display.get_surface().get_size()
+        self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
         pygame.display.update()
 
     def node3(self):
@@ -401,6 +403,7 @@ class Display_Scene(Init_Game):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
+    #narrows the screen before decisions
     def narrow_screen(self, scene, y):
         #initialize variables
         TOP_Y = 0

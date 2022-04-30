@@ -13,101 +13,78 @@ class Game_Features(Display_Scene, Narrator):
         self.WIN_RESIZED = False
 
     def scene_manager(self):
+        self.blit_screen()
         if self.scene == 'node1':
             self.node1()
-            self.blit_screen()
             self.user_decision('node1')
         if self.scene == 'node2':
-            self.node2(self.WIN_RESIZED)
-            self.blit_screen()
+            self.node2()
             self.user_decision('node2')
         if self.scene == 'node3':
             self.node3()
-            self.blit_screen()
             self.user_decision('node3')
         if self.scene == 'node4':
             self.node4()
-            self.blit_screen()
             self.user_decision('node4')
         if self.scene == 'node5':
             self.node5()
-            self.blit_screen()
             self.user_decision('node5')
         if self.scene == 'node6':
             self.node6()
-            self.blit_screen()
             self.user_decision('node6')
         if self.scene == 'node7':
             self.node7()
-            self.blit_screen()
             self.user_decision('node7')
         if self.scene == 'node8':
             self.node8()
-            self.blit_screen()
             self.user_decision('node8')
         if self.scene == 'node9':
             self.node9()
-            self.blit_screen()
             self.user_decision('node9')
         if self.scene == 'node10':
             self.node10()
-            self.blit_screen()
             self.user_decision('node10')
         if self.scene == 'node11':
             self.node11()
-            self.blit_screen()
             self.user_decision('node11')
         if self.scene == 'node12':
             self.node12()
-            self.blit_screen()
             self.user_decision('node12')
         if self.scene == 'node13':
             self.node13()
-            self.blit_screen()
             self.user_decision('node13')
         if self.scene == 'node14':
             self.node14()
-            self.blit_screen()
             self.user_decision('node14')
         if self.scene == 'node15':
             self.node15()
-            self.blit_screen()
             self.user_decision('node15')
         if self.scene == 'node16':
             self.node16()
-            self.blit_screen()
             self.user_decision('node16')
         if self.scene == 'node17':
             self.node17()
-            self.blit_screen()
             self.user_decision('node17')
         if self.scene == 'node18':
             self.node18()
-            self.blit_screen()
             self.user_decision('node18')
         if self.scene == 'node19':
             self.node19()
-            self.blit_screen()
             self.user_decision('node19')
         if self.scene == 'node20':
             self.node20()
-            self.blit_screen()
             self.user_decision('node20')
         if self.scene == 'node21':
             self.node21()
-            self.blit_screen()
             self.user_decision('node21')
         if self.scene == 'node22':
             self.node22()
-            self.blit_screen()
             self.user_decision('node22')
         if self.scene == 'node23':
             self.node23()
-            self.blit_screen()
             self.user_decision('node23')
         if self.scene == 'node24':
             self.node24()
-            self.blit_screen()
             self.user_decision('node24')
 
     def blit_screen(self):
@@ -139,7 +116,6 @@ class Game_Features(Display_Scene, Narrator):
                 self.WIN_RESIZED = True
                 self.SCREEN = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (event.w, event.h)), (0, 0))
-
             #more specific actions per scene
             match scene:
                 case 'node1':
@@ -157,9 +133,8 @@ class Game_Features(Display_Scene, Narrator):
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 pygame.mixer.Sound.play(self.START_SOUND)
-                                self.SCREEN.fill(self.BLACK)
-                                self.blit_line1('node2', 0)
-                                self.blit_line2('node2', 0)
+                                self.scene2_blit_line1()
+                                self.scene2_blit_line2()
                                 self.scene = 'node2'
                         else:
                             self.START_BUTTON.set_alpha(150)
@@ -167,6 +142,10 @@ class Game_Features(Display_Scene, Narrator):
                 case 'node2':
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         self.screen_fader()
+                        self.blit_line1('node3', 0)
+                        self.blit_line2('node3', 0)
+                        self.blit_line3('node3', 0)
+                        self.blit_line4('node3', 0)
                         self.scene = 'node3'
                 case 'node3':
                     if event.type == pygame.MOUSEBUTTONDOWN:
