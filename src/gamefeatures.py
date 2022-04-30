@@ -2,15 +2,15 @@
 import sys, pygame
 from pygame import mixer
 from scenes import Display_Scene
-from narrator import Narrator
 
 pygame.init()
 mixer.init()
 
-class Game_Features(Display_Scene, Narrator):
+class Game_Features(Display_Scene):
     def __init__(self):
         self.scene = 'node1'
         self.WIN_RESIZED = False
+        self.scene3_count = 0
 
     def scene_manager(self):
         self.blit_screen()
@@ -21,7 +21,7 @@ class Game_Features(Display_Scene, Narrator):
             self.node2()
             self.user_decision('node2')
         if self.scene == 'node3':
-            self.node3()
+            self.node3(self.scene3_count)
             self.user_decision('node3')
         if self.scene == 'node4':
             self.node4()
@@ -141,16 +141,26 @@ class Game_Features(Display_Scene, Narrator):
                     pygame.display.update()
                 case 'node2':
                     if event.type == pygame.MOUSEBUTTONDOWN:
+                        #scene 3 - display count 0
                         self.screen_fader()
-                        self.blit_line1('node3', 0)
-                        self.blit_line2('node3', 0)
-                        self.blit_line3('node3', 0)
-                        self.blit_line4('node3', 0)
+                        self.blit_line1('node3', self.scene3_count)
+                        self.blit_line2('node3', self.scene3_count)
+                        self.blit_line3('node3', self.scene3_count)
+                        self.blit_line4('node3', self.scene3_count)
+                        self.scene3_count+=1
                         self.scene = 'node3'
                 case 'node3':
                     if event.type == pygame.MOUSEBUTTONDOWN:
-                        self.screen_fader()
-                        self.scene = 'node4'
+                        #scene 3 - display count 1-4
+                        if self.scene3_count <= 4:
+                            self.blit_line1('node3', self.scene3_count)
+                            self.blit_line2('node3', self.scene3_count)
+                            self.blit_line3('node3', self.scene3_count)
+                            self.blit_line4('node3', self.scene3_count)
+                            self.scene3_count+=1
+                        else:
+                            self.screen_fader()
+                            self.scene = 'node4'
                 case 'node4':
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         self.scene = 'node5'

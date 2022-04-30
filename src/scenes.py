@@ -2,12 +2,12 @@
 import pygame
 from pygame import mixer
 from pygame.locals import *
-from initgame import Init_Game
+from narrator import Narrator
 
 pygame.init()
 pygame.mixer.init()
 
-class Display_Scene(Init_Game):
+class Display_Scene(Narrator):
 
     def node1(self):
         #display start screen 
@@ -22,7 +22,7 @@ class Display_Scene(Init_Game):
         self.PSEUDO_SCREEN.fill(self.BLACK)
 
         with open('dialogue.txt', 'r') as f:
-            f.seek(8)
+            f.seek(self.char_counter(3))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             self.PSEUDO_SCREEN.blit(line1, (325, 330))
@@ -32,7 +32,7 @@ class Display_Scene(Init_Game):
         self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
         pygame.display.update()
 
-    def node3(self):
+    def node3(self, count):
         #display scene 3
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.UNIVERSITY, (0, 80))
@@ -41,7 +41,17 @@ class Display_Scene(Init_Game):
 
         #display dialogue
         with open('dialogue.txt', 'r') as f:
-            f.seek(100)
+            match count:
+                case 1:
+                    f.seek(self.char_counter(8))
+                case 2:
+                    f.seek(self.char_counter(12))
+                case 3:
+                    f.seek(self.char_counter(16))
+                case 4:
+                    f.seek(self.char_counter(20))
+                case 5:
+                    f.seek(self.char_counter(24))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -407,7 +417,6 @@ class Display_Scene(Init_Game):
     def narrow_screen(self, scene, y):
         #initialize variables
         TOP_Y = 0
-        BOTTOM_Y = self.h - y
         w, h = pygame.display.get_surface().get_size()
 
         match scene:
@@ -415,6 +424,7 @@ class Display_Scene(Init_Game):
                 #display scene 5
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
+                BOTTOM_Y = self.h - (self.h/10)
 
                 for i in range(y):
                     TOP_Y += 1
