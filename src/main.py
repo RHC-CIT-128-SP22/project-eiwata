@@ -15,7 +15,6 @@ pygame.mixer.init()
 def main():
     #initialize variables
     curr_game = Game_Features()
-    clock = pygame.time.Clock()
 
     #set audio
     OPENING = mixer.music.load("assets/Beginning.mp3")

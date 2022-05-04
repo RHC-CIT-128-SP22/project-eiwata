@@ -25,7 +25,7 @@ class Display_Scene(Narrator):
             f.seek(self.char_counter(3))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
-            self.PSEUDO_SCREEN.blit(line1, (325, 330))
+            self.PSEUDO_SCREEN.blit(line1, (330, 330))
             self.PSEUDO_SCREEN.blit(line2, (300, 365))
 
         w, h = pygame.display.get_surface().get_size()
@@ -33,6 +33,7 @@ class Display_Scene(Narrator):
         pygame.display.update()
 
     def node3(self, count):
+        count -= 1
         #display scene 3
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.UNIVERSITY, (0, 80))
@@ -42,16 +43,14 @@ class Display_Scene(Narrator):
         #display dialogue
         with open('dialogue.txt', 'r') as f:
             match count:
-                case 1:
+                case 0:
                     f.seek(self.char_counter(8))
-                case 2:
+                case 1:
                     f.seek(self.char_counter(12))
-                case 3:
+                case 2:
                     f.seek(self.char_counter(16))
-                case 4:
+                case 3:
                     f.seek(self.char_counter(20))
-                case 5:
-                    f.seek(self.char_counter(24))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -62,7 +61,8 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node4(self):
+    def node4(self, count):
+        count = count - 1
         #display scene 4
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
@@ -71,6 +71,15 @@ class Display_Scene(Narrator):
 
         #display dialogue
         with open('dialogue.txt', 'r') as f:
+            match count:
+                case 0:
+                    f.seek(self.char_counter(27))
+                case 1:
+                    f.seek(self.char_counter(31))
+                case 2:
+                    f.seek(self.char_counter(35))
+                case 3:
+                    f.seek(self.char_counter(39))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -96,7 +105,8 @@ class Display_Scene(Narrator):
 
         pygame.display.update()
 
-    def node6(self):
+    def node6(self, count):
+        count -= 1
         #display scene 6
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
@@ -105,6 +115,13 @@ class Display_Scene(Narrator):
 
         #display dialogue
         with open('dialogue.txt', 'r') as f:
+            match count:
+                case 0:
+                    f.seek(self.char_counter(44))
+                case 1:
+                    f.seek(self.char_counter(48))
+                case 2:
+                    f.seek(self.char_counter(52))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -115,7 +132,8 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node7(self):
+    def node7(self, count):
+        count -= 1
         #display scene 7
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
@@ -124,6 +142,17 @@ class Display_Scene(Narrator):
 
         #display dialogue
         with open('dialogue.txt', 'r') as f:
+            match count:
+                case 0:
+                    f.seek(self.char_counter(59))
+                case 1:
+                    f.seek(self.char_counter(63))
+                case 2:
+                    f.seek(self.char_counter(67))
+                case 3:
+                    f.seek(self.char_counter(71))
+                case 4:
+                    f.seek(self.char_counter(75))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -140,6 +169,13 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
 
+        top_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 70, 1000, 70])
+        bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 570, 1000, 70])
+
+        
+        self.PSEUDO_SCREEN.blit(self.HELP_WITH, (30, 600))
+        self.PSEUDO_SCREEN.blit(self.MAKE_UP, (600, 600))
+        self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (100, 270))
         pygame.display.update()
 
     def node9(self):
@@ -424,14 +460,19 @@ class Display_Scene(Narrator):
                 #display scene 5
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
-                BOTTOM_Y = self.h - (self.h/10)
+                BOTTOM_Y = self.h - y
+            case 8:
+                #display scene 8
+                self.PSEUDO_SCREEN.fill(self.BLACK)
+                self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
+                BOTTOM_Y = self.h - y
 
-                for i in range(y):
-                    TOP_Y += 1
-                    BOTTOM_Y -= 1
-                    top_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, TOP_Y, w, h/10])
-                    bottom_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
-                    pygame.display.update()
+        for i in range(y):
+            TOP_Y += 1
+            BOTTOM_Y -= 1
+            top_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, TOP_Y, w, h/10])
+            bottom_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
+            pygame.display.update()
     
 
 

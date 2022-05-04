@@ -23,6 +23,8 @@ class Init_Game():
     #decision choices
     LOOK_INTO_IT = pygame.image.load("assets/Look into it.png")
     TELL_HIM = pygame.image.load("assets/Tell him it's nothing.png")
+    MAKE_UP = pygame.image.load("assets/Make up excuse to leave.png")
+    HELP_WITH = pygame.image.load("assets/Help with investigation.png")
 
     #load background images
     START_SCREEN = pygame.image.load("assets/startBG.png")
@@ -53,6 +55,8 @@ class Init_Game():
     START_BUTTON.set_alpha(150)
     LOOK_INTO_IT.set_alpha(100)
     TELL_HIM.set_alpha(100)
+    MAKE_UP.set_alpha(100)
+    HELP_WITH.set_alpha(100)
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
@@ -69,3 +73,5 @@ class Init_Game():
     START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
     TELL_HIM_POS = pygame.Rect(w/1.47, h/1.17, w/3.34, h/21.88)
     LOOK_INTO_IT_POS = pygame.Rect(w/33.33, h/1.17, w/5.78, h/22.58)
+    #HELP_WITH_POS = pygame.Rect()
+    #MAKE_UP_POS = pygame.Rect()
