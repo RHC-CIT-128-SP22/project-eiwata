@@ -58,7 +58,7 @@ Pop Culture Examples of Lovecraftian Themes:
 __Some of the goals of this project are:__
 
 Core Features:
-- [ ] Dialogue displays on the screen gradually as user iterates through the game
+- [X] Dialogue displays on the screen gradually as user iterates through the game
 - [X] Smooth transition between scenes
 - [ ] Game Over screen allows user to select between Play Again or Quit
 
