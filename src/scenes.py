@@ -174,7 +174,6 @@ class Display_Scene(Narrator):
         top_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 70, 1000, 70])
         bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 570, 1000, 70])
 
-        
         self.PSEUDO_SCREEN.blit(self.HELP_WITH, (30, 600))
         self.PSEUDO_SCREEN.blit(self.MAKE_UP, (600, 600))
         self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (100, 270))
@@ -289,6 +288,10 @@ class Display_Scene(Narrator):
         top_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 68, 1000, 70])
         bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 570, 1000, 72])
 
+        self.PSEUDO_SCREEN.blit(self.TAKE_THE_GUN, (30, 600))
+        self.PSEUDO_SCREEN.blit(self.RUN_AND_HIDE, (784, 600))
+        self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (100, 270))
+
         pygame.display.update()
 
     def node14(self, count):
@@ -306,7 +309,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(119))
                 case 1:
                     f.seek(self.char_counter(123))
-                case 0:
+                case 2:
                     f.seek(self.char_counter(127))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -409,6 +412,13 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
 
+        top_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 68, 1000, 70])
+        bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 570, 1000, 72])
+
+        self.PSEUDO_SCREEN.blit(self.CONTINUE_VOYAGE, (30, 600))
+        self.PSEUDO_SCREEN.blit(self.JUMP_OFF_SHIP, (775, 600))
+        self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (100, 270))
+
         pygame.display.update()
 
     def node19(self, count):
@@ -498,6 +508,13 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
 
+        top_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 70, 1000, 70])
+        bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 570, 1000, 70])
+
+        self.PSEUDO_SCREEN.blit(self.RUN_AWAY, (30, 600))
+        self.PSEUDO_SCREEN.blit(self.CHARGE_SHIP, (419, 600))
+        self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (100, 270))
+
         pygame.display.update()
 
     def node23(self, count):
@@ -576,6 +593,14 @@ class Display_Scene(Narrator):
                  #display scene 13
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
+            case 18:
+                #display scene 18
+                self.PSEUDO_SCREEN.fill(self.BLACK)
+                self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
+            case 22:
+                #display scene 22
+                self.PSEUDO_SCREEN.fill(self.BLACK)
+                self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
 
         for i in range(y):
             TOP_Y += 1

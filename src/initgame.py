@@ -63,6 +63,12 @@ class Init_Game():
     TELL_HIM.set_alpha(100)
     MAKE_UP.set_alpha(100)
     HELP_WITH.set_alpha(100)
+    TAKE_THE_GUN.set_alpha(100)
+    RUN_AND_HIDE.set_alpha(100)
+    CONTINUE_VOYAGE.set_alpha(100)
+    JUMP_OFF_SHIP.set_alpha(100)
+    RUN_AWAY.set_alpha(100)
+    CHARGE_SHIP.set_alpha(100)
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
@@ -81,3 +87,9 @@ class Init_Game():
     LOOK_INTO_IT_POS = pygame.Rect(w/33.33, h/1.17, w/5.78, h/22.58)
     HELP_WITH_POS = pygame.Rect(w/33.33, h/1.17, w/2.88, h/22.58)
     MAKE_UP_POS = pygame.Rect(w/1.67, h/1.17, w/2.86, h/22.58)
+    TAKE_THE_GUN_POS = pygame.Rect(w/33.33, h/1.17, w/5.18, h/22.58)
+    RUN_AND_HIDE_POS = pygame.Rect(w/1.28, h/1.17, w/5.38, h/22.58)
+    CONTINUE_VOYAGE_POS = pygame.Rect(w/33.33, h/1.17, w/2.29, h/21.88)
+    JUMP_OFF_SHIP_POS = pygame.Rect(w/1.29, h/1.17, w/5.13, h/22.58)
+    RUN_AWAY_POS = pygame.Rect(w/33.33, h/1.17, w/7.04, h/22.58)
+    CHARGE_SHIP_POS = pygame.Rect(w/2.39, h/1.17, w/1.81, h/22.58)
