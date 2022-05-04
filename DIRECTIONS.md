@@ -29,11 +29,11 @@ The student provided rubric is worth 150 points and is specific to the individua
   * Core Features Completed (60 pt)
       * Dialogue displays on the screen gradually as user iterates through the game
       * Smooth transition between scenes
-      * Game Over screen allows user to select between Play Again or Quit
-  * Bonus Features Completed (40 pt)
       * Click to continue
+  * Bonus Features Completed (40 pt)
       * Resizable GUI window
       * Decision timer (10 sec) or else it autoselects decision A over decision B
+      * Game Over screen allows user to select between Play Again or Quit
       * If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
   * Zybook Concepts Used (25 pt)
       * Multiple concepts were used
