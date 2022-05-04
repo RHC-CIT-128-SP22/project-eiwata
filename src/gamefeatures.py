@@ -373,3 +373,4 @@ class Game_Features(Display_Scene):
                 self.PSEUDO_SCREEN.set_alpha(alpha)
                 self.PSEUDO_SCREEN.blit(fade, (0, 0))
                 pygame.display.update()
+                

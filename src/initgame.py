@@ -25,6 +25,12 @@ class Init_Game():
     TELL_HIM = pygame.image.load("assets/Tell him it's nothing.png")
     MAKE_UP = pygame.image.load("assets/Make up excuse to leave.png")
     HELP_WITH = pygame.image.load("assets/Help with investigation.png")
+    TAKE_THE_GUN = pygame.image.load("assets/Take the gun.png")
+    RUN_AND_HIDE = pygame.image.load("assets/Run and hide.png")
+    CONTINUE_VOYAGE = pygame.image.load("assets/Continue the voyage to R'lyeh.png")
+    JUMP_OFF_SHIP = pygame.image.load("assets/Jump off ship.png")
+    RUN_AWAY = pygame.image.load("assets/Run away.png")
+    CHARGE_SHIP = pygame.image.load("assets/Charge ship into the head of Cthulhu.png")
 
     #load background images
     START_SCREEN = pygame.image.load("assets/startBG.png")

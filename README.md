@@ -61,11 +61,11 @@ Core Features:
 - [X] Dialogue displays on the screen gradually as user iterates through the game
 - [X] Smooth transition between scenes
 - [X] Click to continue
+- [ ] Game Over screen allows user to select between Play Again or Quit
 
 Bonus Features:
 - [X] Resizable GUI window
 - [ ] Decision timer (10 sec) or else it autoselects decision A over decision B
-- [ ] Game Over screen allows user to select between Play Again or Quit
 - [ ] If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
 
 ### Video Demonstration
@@ -91,6 +91,7 @@ main.py
 initgame.py
 gamefeatures.py
 scenes.py
+narrator.py
 dialogue.txt
 ```
 From `main.py`, the `main()` function first created an object of the class `Game_Features()` from `gamefeatures.py`. Then it just called the `scene_manager()` method, which had the story indexed into a binary tree, and used it to traverse between different nodes of the story.
