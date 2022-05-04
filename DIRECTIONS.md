@@ -31,7 +31,7 @@ The student provided rubric is worth 150 points and is specific to the individua
       * Smooth transition between scenes
       * Game Over screen allows user to select between Play Again or Quit
   * Bonus Features Completed (40 pt)
-      * Click to skip scene
+      * Click to continue
       * Resizable GUI window
       * Decision timer (10 sec) or else it autoselects decision A over decision B
       * If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
