@@ -14,6 +14,19 @@ class Game_Features(Display_Scene):
         self.scene4_count = 0
         self.scene6_count = 0
         self.scene7_count = 0
+        self.scene9_count = 0
+        self.scene10_count = 0
+        self.scene11_count = 0
+        self.scene12_count = 0
+        self.scene14_count = 0
+        self.scene15_count = 0
+        self.scene16_count = 0
+        self.scene17_count = 0
+        self.scene19_count = 0
+        self.scene20_count = 0
+        self.scene21_count = 0
+        self.scene23_count = 0
+        self.scene24_count = 0
 
     def scene_manager(self):
         self.blit_screen()
@@ -42,52 +55,52 @@ class Game_Features(Display_Scene):
             self.node8()
             self.user_decision('node8')
         if self.scene == 'node9':
-            self.node9()
+            self.node9(self.scene9_count)
             self.user_decision('node9')
         if self.scene == 'node10':
-            self.node10()
+            self.node10(self.scene10_count)
             self.user_decision('node10')
         if self.scene == 'node11':
-            self.node11()
+            self.node11(self.scene11_count)
             self.user_decision('node11')
         if self.scene == 'node12':
-            self.node12()
+            self.node12(self.scene12_count)
             self.user_decision('node12')
         if self.scene == 'node13':
             self.node13()
             self.user_decision('node13')
         if self.scene == 'node14':
-            self.node14()
+            self.node14(self.scene14_count)
             self.user_decision('node14')
         if self.scene == 'node15':
-            self.node15()
+            self.node15(self.scene15_count)
             self.user_decision('node15')
         if self.scene == 'node16':
-            self.node16()
+            self.node16(self.scene16_count)
             self.user_decision('node16')
         if self.scene == 'node17':
-            self.node17()
+            self.node17(self.scene17_count)
             self.user_decision('node17')
         if self.scene == 'node18':
             self.node18()
             self.user_decision('node18')
         if self.scene == 'node19':
-            self.node19()
+            self.node19(self.scene19_count)
             self.user_decision('node19')
         if self.scene == 'node20':
-            self.node20()
+            self.node20(self.scene20_count)
             self.user_decision('node20')
         if self.scene == 'node21':
-            self.node21()
+            self.node21(self.scene21_count)
             self.user_decision('node21')
         if self.scene == 'node22':
             self.node22()
             self.user_decision('node22')
         if self.scene == 'node23':
-            self.node23()
+            self.node23(self.scene23_count)
             self.user_decision('node23')
         if self.scene == 'node24':
-            self.node24()
+            self.node24(self.scene24_count)
             self.user_decision('node24')
 
     def blit_screen(self):
@@ -221,7 +234,8 @@ class Game_Features(Display_Scene):
                             self.TELL_HIM.set_alpha(100)
                 case 'node6':
                     if event.type == pygame.MOUSEBUTTONDOWN:
-                        if self.scene6_count <= 2:
+                        #scene 6 - click 1 - 3
+                        if self.scene6_count <= 3:
                             self.blit_line1('node6', self.scene6_count)
                             self.blit_line2('node6', self.scene6_count)
                             self.blit_line3('node6', self.scene6_count)
@@ -247,8 +261,96 @@ class Game_Features(Display_Scene):
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
                         
-                        #CHOICE_A = self.HELP_WITH_POS.collidepoint(mx, my)
-                        #CHOICE_B = self.MAKE_UP_POS.collidepoint(mx, my)
+                        CHOICE_A = self.HELP_WITH_POS.collidepoint(mx, my)
+                        CHOICE_B = self.MAKE_UP_POS.collidepoint(mx, my)
+                        #if hovering over option
+                        if CHOICE_A:
+                            #bold option
+                            self.HELP_WITH.set_alpha(300)
+                            if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                self.screen_fader()
+                                #scene 9 - click 0
+                                self.blit_line1('node9', self.scene9_count)
+                                self.blit_line2('node9', self.scene9_count)
+                                self.blit_line3('node9', self.scene9_count)
+                                self.blit_line4('node9', self.scene9_count)
+                                self.scene9_count+=1
+                                self.scene = 'node9'
+                        elif CHOICE_B:
+                            #bold option
+                            self.MAKE_UP.set_alpha(300)
+                            if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                self.screen_fader()
+                                #scene 10 - click 0
+                                self.blit_line1('node10', self.scene10_count)
+                                self.blit_line2('node10', self.scene10_count)
+                                self.blit_line3('node10', self.scene10_count)
+                                self.blit_line4('node10', self.scene10_count)
+                                self.scene10_count+=1
+                                self.scene = 'node10'
+                        else:
+                            self.HELP_WITH.set_alpha(100)
+                            self.MAKE_UP.set_alpha(100)
+                case 'node9':
+                    if event.type == pygame.MOUSEBUTTONDOWN:
+                        if self.scene9_count <= 1:
+                            #scene 9 - click 1
+                            self.blit_line1('node9', self.scene9_count)
+                            self.blit_line2('node9', self.scene9_count)
+                            self.blit_line3('node9', self.scene9_count)
+                            self.blit_line4('node9', self.scene9_count)
+                            self.scene9_count+=1
+                        else:
+                            self.screen_fader()
+                            self.blit_line1('node11', self.scene11_count)
+                            self.blit_line2('node11', self.scene11_count)
+                            self.blit_line3('node11', self.scene11_count)
+                            self.blit_line4('node11', self.scene11_count)
+                            self.scene11_count+=1
+                            self.scene = 'node11'
+                case 'node10':
+                    if event.type == pygame.MOUSEBUTTONDOWN:
+                        if self.scene10_count <= 1:
+                            #scene 10 - click 1
+                            self.blit_line1('node10', self.scene10_count)
+                            self.blit_line2('node10', self.scene10_count)
+                            self.blit_line3('node10', self.scene10_count)
+                            self.blit_line4('node10', self.scene10_count)
+                            self.scene10_count+=1
+                        else:
+                            self.screen_fader()
+                            self.blit_line1('node12', self.scene12_count)
+                            self.blit_line2('node12', self.scene12_count)
+                            self.blit_line3('node12', self.scene12_count)
+                            self.blit_line4('node12', self.scene12_count)
+                            self.scene12_count+=1
+                            self.scene = 'node12'
+                case 'node11':
+                    if event.type == pygame.MOUSEBUTTONDOWN:
+                        if self.scene11_count <= 1:
+                            self.blit_line1('node11', self.scene11_count)
+                            self.blit_line2('node11', self.scene11_count)
+                            self.blit_line3('node11', self.scene11_count)
+                            self.blit_line4('node11', self.scene11_count)
+                            self.scene11_count+=1
+                    else:
+                        self.narrow_screen(13, 70)
+                        self.scene = 'node13'
+                case 'node12':
+                    if event.type == pygame.MOUSEBUTTONDOWN:
+                        if self.scene12_count <= 1:
+                            self.blit_line1('node12', self.scene12_count)
+                            self.blit_line2('node12', self.scene12_count)
+                            self.blit_line3('node12', self.scene12_count)
+                            self.blit_line4('node12', self.scene12_count)
+                            self.scene12_count+=1
+                        else:
+                            pygame.quit()
+                            sys.exit('QUIT GAME')
+                case 'node13':
+                    if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
+                        #get mouse position
+                        mx, my = pygame.mouse.get_pos()
 
     #fade out next scene
     def screen_fader(self):

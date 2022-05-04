@@ -73,5 +73,5 @@ class Init_Game():
     START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
     TELL_HIM_POS = pygame.Rect(w/1.47, h/1.17, w/3.34, h/21.88)
     LOOK_INTO_IT_POS = pygame.Rect(w/33.33, h/1.17, w/5.78, h/22.58)
-    #HELP_WITH_POS = pygame.Rect()
-    #MAKE_UP_POS = pygame.Rect()
+    HELP_WITH_POS = pygame.Rect(w/33.33, h/1.17, w/2.88, h/22.58)
+    MAKE_UP_POS = pygame.Rect(w/1.67, h/1.17, w/2.86, h/22.58)
