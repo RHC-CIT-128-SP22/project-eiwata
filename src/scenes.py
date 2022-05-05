@@ -573,6 +573,32 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
+    def game_over(self, scene):
+        fade = pygame.Surface((self.X, self.Y))
+        fade.fill(self.BLACK)
+        fade.set_alpha(20)
+        self.PSEUDO_SCREEN.blit(fade, (0, 0))
+        match scene:
+            case 7:
+                self.HOUSE.set_alpha(30)
+                self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
+            case 12:
+                self.ALONE.set_alpha(30)
+                self.PSEUDO_SCREEN.blit(self.ALONE, (0, 68.5))
+            case 20:
+                self.SAIL.set_alpha(30)
+                self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
+            case 23:
+                self.RLYEH_2.set_alpha(30)
+                self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
+            case 24:
+                self.RLYEH_3.set_alpha(30)
+                self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
+        self.PSEUDO_SCREEN.blit(self.GAME_OVER, (277, 100))
+        #446, 128
+
+        pygame.display.update()
+
     #narrows the screen before decisions
     def narrow_screen(self, scene, y):
         #initialize variables

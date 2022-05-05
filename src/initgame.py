@@ -5,12 +5,14 @@ pygame.init()
 pygame.mixer.init()
 
 class Init_Game():
+
     #create game window
     X, Y = 1000, 700
     SCREEN = pygame.display.set_mode((X, Y), pygame.RESIZABLE)
     pygame.display.set_caption("The Call of Cthulhu - Interactive Horror Game")
     ICON = pygame.image.load("assets/icon.png")
     pygame.display.set_icon(ICON)
+    clock = pygame.time.Clock()
 
     #load buttons and icons
     TITLE = pygame.image.load("assets/title.png")
@@ -19,6 +21,7 @@ class Init_Game():
     BORDER = pygame.image.load("assets/red border.png")
     WHITE_LINE = pygame.image.load("assets/white line.png")
     TENTACLE = pygame.image.load("assets/tentacle-art-invertebrate-tenticles-5a8a929ad57a7d9fc498da38c662a6fc.png")
+    GAME_OVER = pygame.image.load("assets/Game Over.png")
 
     #decision choices
     LOOK_INTO_IT = pygame.image.load("assets/Look into it.png")
@@ -93,3 +96,4 @@ class Init_Game():
     JUMP_OFF_SHIP_POS = pygame.Rect(w/1.29, h/1.17, w/5.13, h/22.58)
     RUN_AWAY_POS = pygame.Rect(w/33.33, h/1.17, w/7.04, h/22.58)
     CHARGE_SHIP_POS = pygame.Rect(w/2.39, h/1.17, w/1.81, h/22.58)
+

@@ -10,7 +10,6 @@ class Narrator(Init_Game):
 
     #create clock
     FPS = 200
-    clock = pygame.time.Clock()
 
     #initialize font and colors
     FONT = pygame.font.SysFont('Rockwell', 19)

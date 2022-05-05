@@ -7,6 +7,7 @@ pygame.init()
 mixer.init()
 
 class Game_Features(Display_Scene):
+
     def __init__(self):
         self.scene = 'node1'
         self.WIN_RESIZED = False
@@ -27,6 +28,7 @@ class Game_Features(Display_Scene):
         self.scene21_count = 0
         self.scene23_count = 0
         self.scene24_count = 0
+        self.game_over_scene = 0
 
     def scene_manager(self):
         self.blit_screen()
@@ -102,6 +104,8 @@ class Game_Features(Display_Scene):
         if self.scene == 'node24':
             self.node24(self.scene24_count)
             self.user_decision('node24')
+        if self.scene == 'game_over':
+            self.game_over(self.game_over_scene)
 
     def blit_screen(self):
         if self.WIN_RESIZED == False:
@@ -154,6 +158,7 @@ class Game_Features(Display_Scene):
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 pygame.mixer.Sound.play(self.START_SOUND)
+                                self.screen_fader()
                                 self.scene2_blit_line1()
                                 self.scene2_blit_line2()
                                 self.scene = 'node2'
@@ -259,8 +264,8 @@ class Game_Features(Display_Scene):
                             self.blit_line4('node7', self.scene7_count)
                             self.scene7_count+=1
                         else:
-                            pygame.quit()
-                            sys.exit('QUIT GAME')
+                            self.game_over_scene = 7
+                            self.scene = 'game_over'
                 case 'node8':
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
                         #get mouse position
@@ -350,8 +355,8 @@ class Game_Features(Display_Scene):
                             self.blit_line4('node12', self.scene12_count)
                             self.scene12_count+=1
                         else:
-                            pygame.quit()
-                            sys.exit('QUIT GAME')
+                            self.game_over_scene = 12
+                            self.scene = 'game_over'
                 case 'node13':
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
                         #get mouse position
@@ -510,8 +515,8 @@ class Game_Features(Display_Scene):
                             self.blit_line4('node20', self.scene20_count)
                             self.scene20_count+=1
                         else:
-                            pygame.quit()
-                            sys.exit('QUIT GAME')
+                            self.game_over_scene = 20
+                            self.scene = 'game_over'
                 case 'node21':
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         if self.scene21_count <= 3:
@@ -567,8 +572,8 @@ class Game_Features(Display_Scene):
                             self.blit_line4('node23', self.scene23_count)
                             self.scene23_count+=1
                         else:
-                            pygame.quit()
-                            sys.exit('QUIT GAME')
+                            self.game_over_scene = 23
+                            self.scene = 'game_over'
                 case 'node24':
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         if self.scene24_count <= 2:
@@ -578,27 +583,27 @@ class Game_Features(Display_Scene):
                             self.blit_line4('node24', self.scene24_count)
                             self.scene24_count+=1
                         else:
-                            pygame.quit()
-                            sys.exit('QUIT GAME')
+                            self.game_over_scene = 24
+                            self.scene = 'game_over'
     #fade out next scene
     def screen_fader(self):
         #default window size
         if self.WIN_RESIZED == False:
             fade = pygame.Surface((self.X, self.Y))
-            self.PSEUDO_SCREEN.fill(self.BLACK)
-            self.SCREEN.blit(self.PSEUDO_SCREEN, (0, 0))
+            fade.fill(self.BLACK)
             for alpha in range(0, 300):
                 self.PSEUDO_SCREEN.set_alpha(alpha)
                 self.PSEUDO_SCREEN.blit(fade, (0, 0))
+                self.SCREEN.blit(self.PSEUDO_SCREEN, (0, 0))
                 pygame.display.update()
         #custom window size
         else:
-            fade = pygame.Surface((self.X, self.Y))
             w, h = pygame.display.get_surface().get_size()
-            self.PSEUDO_SCREEN.fill(self.BLACK)
-            self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+            fade = pygame.Surface((self.X, self.Y))
+            fade.fill(self.BLACK)
             for alpha in range(0, 300):
                 self.PSEUDO_SCREEN.set_alpha(alpha)
                 self.PSEUDO_SCREEN.blit(fade, (0, 0))
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 pygame.display.update()
 
