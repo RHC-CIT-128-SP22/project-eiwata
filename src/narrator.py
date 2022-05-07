@@ -2,6 +2,7 @@
 import pygame
 from initgame import Init_Game
 
+#initialize game
 pygame.init()
 pygame.font.init()
 pygame.mixer.init()
@@ -9,7 +10,7 @@ pygame.mixer.init()
 class Narrator(Init_Game):
 
     #create clock
-    FPS = 200
+    FPS = 80
 
     #initialize font and colors
     FONT = pygame.font.SysFont('Rockwell', 19)
@@ -26,7 +27,7 @@ class Narrator(Init_Game):
     line3_v3 = FONT.render(line3_v2, True, WHITE)
     line4_v3 = FONT.render(line4_v2, True, WHITE)
 
-
+    #display line 1
     def blit_line1(self, scene, count = 0):
         with open('dialogue.txt', 'r') as f:
             match scene:
@@ -237,6 +238,7 @@ class Narrator(Init_Game):
                 self.line1_v2 += line1_v1[letter]
                 pygame.display.update()
 
+    #display line 2
     def blit_line2(self, scene, count = 0):
         with open('dialogue.txt', 'r') as f:
             match scene:
@@ -395,6 +397,7 @@ class Narrator(Init_Game):
                 self.line2_v2 += line2_v1[letter]
                 pygame.display.update()
     
+    #display line 3
     def blit_line3(self, scene, count = 0):
         with open('dialogue.txt', 'r') as f:
             match scene:
@@ -554,6 +557,7 @@ class Narrator(Init_Game):
                 self.line3_v2 += line3_v1[letter]
                 pygame.display.update()
 
+    #display line 4
     def blit_line4(self, scene, count = 0):
         with open('dialogue.txt', 'r') as f:
             match scene:
@@ -715,6 +719,7 @@ class Narrator(Init_Game):
                 self.line4_v2 += line4_v1[letter]
                 pygame.display.update()
 
+    #takes line number as argument and returns number of characters up to that point
     def char_counter(self, n):
         n = n - 1
         with open('dialogue.txt', 'r') as f:
@@ -726,11 +731,11 @@ class Narrator(Init_Game):
             f.seek(0)
         return line_offset[n]
     
+    #display line 1 for node 2
     def scene2_blit_line1(self):
         with open('dialogue.txt', 'r') as f:
             #display scene
             self.SCREEN.fill(self.BLACK)
-
             f.seek(8)
             line1_v1 = f.readline().rstrip('\n')
             line1_v2 = ''
@@ -742,6 +747,7 @@ class Narrator(Init_Game):
                 line1_v2 += line1_v1[letter]
                 pygame.display.update() 
 
+    #display line 2 for node 2
     def scene2_blit_line2(self):
         with open('dialogue.txt', 'r') as f:
             f.seek(48)

@@ -3,6 +3,7 @@ import sys, pygame
 from pygame import mixer
 from scenes import Display_Scene
 
+#initialize game
 pygame.init()
 mixer.init()
 
@@ -129,6 +130,21 @@ class Game_Features(Display_Scene):
                 self.MAKE_UP_POS = pygame.Rect(w/1.67, h/1.17, w/2.86, h/22.58)
                 pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.HELP_WITH_POS, 3)
                 pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.MAKE_UP_POS, 3)
+            if self.scene == 'node13':
+                self.TAKE_THE_GUN_POS = pygame.Rect(w/33.33, h/1.17, w/5.18, h/22.58)
+                self.RUN_AND_HIDE_POS = pygame.Rect(w/1.28, h/1.17, w/5.38, h/22.58)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TAKE_THE_GUN_POS, 3)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.RUN_AND_HIDE_POS, 3)
+            if self.scene == 'node18':
+                self.CONTINUE_VOYAGE_POS = pygame.Rect(w/33.33, h/1.17, w/2.29, h/21.88)
+                self.JUMP_OFF_SHIP_POS = pygame.Rect(w/1.29, h/1.17, w/5.13, h/22.58)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.CONTINUE_VOYAGE_POS, 3)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.JUMP_OFF_SHIP_POS, 3)
+            if self.scene == 'node22':
+                self.RUN_AWAY_POS = pygame.Rect(w/33.33, h/1.17, w/7.04, h/22.58)
+                self.CHARGE_SHIP_POS = pygame.Rect(w/2.39, h/1.17, w/1.81, h/22.58)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.RUN_AWAY_POS, 3)
+                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.CHARGE_SHIP_POS, 3)
 
     def user_decision(self, scene):
         for event in pygame.event.get():

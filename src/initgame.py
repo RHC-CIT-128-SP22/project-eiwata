@@ -1,6 +1,7 @@
 
 import pygame
 
+#initialize game
 pygame.init()
 pygame.mixer.init()
 
@@ -23,7 +24,7 @@ class Init_Game():
     TENTACLE = pygame.image.load("assets/tentacle-art-invertebrate-tenticles-5a8a929ad57a7d9fc498da38c662a6fc.png")
     GAME_OVER = pygame.image.load("assets/Game Over.png")
 
-    #decision choices
+    #load decision choices
     LOOK_INTO_IT = pygame.image.load("assets/Look into it.png")
     TELL_HIM = pygame.image.load("assets/Tell him it's nothing.png")
     MAKE_UP = pygame.image.load("assets/Make up excuse to leave.png")
@@ -52,7 +53,7 @@ class Init_Game():
     RLYEH_2 = pygame.image.load("assets/YChlAcTe.png")
     RLYEH_3 = pygame.image.load("assets/timo-peter-cthulhu-hd-wallpaper-preview.png")
 
-    #declare colors and font
+    #set colors and font
     FONT = pygame.font.SysFont('Rockwell', 19)
     BLACK = (0, 0, 0)
     WHITE = (255, 255, 255)

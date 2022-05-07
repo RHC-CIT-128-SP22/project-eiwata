@@ -26,12 +26,12 @@ The student provided rubric is worth 150 points and is specific to the individua
   * GitHub Commits: Weekly programming commits showing progress from Week 9 - Week 16. (8pt)
   * Lines of Code: Write a minimum of 500 - 1000 lines of code. Markdown files and third-party libraries or modules do not count towards the line count but may be used. (20pt)
 * **Student Rubric (150pt)**
-  * Core Features Completed (80 pt)
+  * Core Features Completed (20 pt each)
       * Dialogue displays on the screen gradually as user iterates through the game
       * Smooth transition between scenes
       * Click to continue
       * Game Over screen allows user to select between Play Again or Quit
-  * Bonus Features Completed (30 pt)
+  * Bonus Features Completed (10 pt each)
       * Resizable GUI window
       * Decision timer (10 sec) or else it autoselects decision A over decision B
       * If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from

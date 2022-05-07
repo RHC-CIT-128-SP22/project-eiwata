@@ -9,6 +9,7 @@ import pygame
 from pygame import mixer
 from gamefeatures import Game_Features
 
+#initialize game
 pygame.init()
 pygame.mixer.init()
 
