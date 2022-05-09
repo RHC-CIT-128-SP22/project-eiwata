@@ -10,7 +10,7 @@ pygame.mixer.init()
 class Narrator(Init_Game):
 
     #create clock
-    FPS = 200
+    FPS = 150
 
     #initialize font and colors
     FONT = pygame.font.SysFont('Rockwell', 19)
@@ -29,12 +29,13 @@ class Narrator(Init_Game):
 
     #display line 1
     def blit_line1(self, scene, count = 0):
+        w, h = pygame.display.get_surface().get_size()
         with open('dialogue.txt', 'r') as f:
             match scene:
                 case 'node3':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.UNIVERSITY, (0, 80))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.UNIVERSITY, (0, 80))
                     match count:
                         case 0:
                             f.seek(self.char_counter(8))
@@ -46,8 +47,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(20))
                 case 'node4':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
                     match count:
                         case 0:
                             f.seek(self.char_counter(27))
@@ -59,8 +60,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(39))
                 case 'node6':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.INVESTIGATION_1, (0, 70))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
                     match count:
                         case 0:
                             f.seek(self.char_counter(44))
@@ -72,8 +73,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(56))
                 case 'node7':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.HOUSE, (0, 62.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(61))
@@ -87,8 +88,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(77))
                 case 'node9':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.INVESTIGATION_2, (0, 70))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.INVESTIGATION_2, (0, 70))
                     match count:
                         case 0:
                             f.seek(self.char_counter(82))
@@ -96,8 +97,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(86))
                 case 'node10':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.TOWN, (0, 54.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.TOWN, (0, 54.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(91))
@@ -105,8 +106,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(95))
                 case 'node11':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(100))
@@ -114,8 +115,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(104))
                 case 'node12':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.ALONE, (0, 68.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.ALONE, (0, 68.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(110))
@@ -123,8 +124,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(114))
                 case 'node14':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(119))
@@ -134,8 +135,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(127))
                 case 'node15':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.STATUE, (0, 16.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.STATUE, (0, 16.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(132))
@@ -149,8 +150,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(148))
                 case 'node16':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.HOUSE, (0, 62.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(153))
@@ -162,8 +163,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(165))
                 case 'node17':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.DOCK, (0, 68.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(170))
@@ -171,8 +172,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(174))
                 case 'node19':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.DOCK, (0, 68.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(181))
@@ -182,8 +183,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(189))
                 case 'node20':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.SAIL, (0, 37.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(194))
@@ -191,8 +192,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(198))
                 case 'node21':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.RLYEH_1, (0, 90))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
                     match count:
                         case 0:
                             f.seek(self.char_counter(204))
@@ -204,8 +205,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(216))
                 case 'node23':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.RLYEH_2, (0, 63.5))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
                     match count:
                         case 0:
                             f.seek(self.char_counter(221))
@@ -217,8 +218,8 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(233))
                 case 'node24':
                     #display scene
-                    self.SCREEN.fill(self.BLACK)
-                    self.SCREEN.blit(self.RLYEH_3, (0, 56))
+                    self.PSEUDO_SCREEN.fill(self.BLACK)
+                    self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
                     match count:
                         case 0:
                             f.seek(self.char_counter(238))
@@ -226,20 +227,22 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(242))
                         case 2:
                             f.seek(self.char_counter(246))
-            self.SCREEN.blit(self.TENTACLE, (150, 450))
-            self.SCREEN.blit(self.DIAL_BOX, (40, 430))
+            self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
+            self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
             line1_v1 = f.readline().rstrip('\n')
             self.line1_v2 = ''
             for letter in range(0, len(line1_v1)):
                 self.clock.tick(self.FPS)
-                self.SCREEN.blit(self.DIAL_BOX, (40, 430))
+                self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
                 self.line1_v3 = self.FONT.render(self.line1_v2+line1_v1[letter], True, self.WHITE)
-                self.SCREEN.blit(self.line1_v3, (190, 510))
+                self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 self.line1_v2 += line1_v1[letter]
                 pygame.display.update()
 
     #display line 2
     def blit_line2(self, scene, count = 0):
+        w, h = pygame.display.get_surface().get_size()
         with open('dialogue.txt', 'r') as f:
             match scene:
                 case 'node3':
@@ -390,15 +393,17 @@ class Narrator(Init_Game):
             self.line2_v2 = ''
             for letter in range(0, len(line2_v1)):
                 self.clock.tick(self.FPS)
-                self.SCREEN.blit(self.DIAL_BOX, (40, 430))
-                self.SCREEN.blit(self.line1_v3, (190, 510))
+                self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
+                self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
                 self.line2_v3 = self.FONT.render(self.line2_v2+line2_v1[letter], True, self.WHITE)
-                self.SCREEN.blit(self.line2_v3, (190, 545))
+                self.PSEUDO_SCREEN.blit(self.line2_v3, (190, 545))
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 self.line2_v2 += line2_v1[letter]
                 pygame.display.update()
     
     #display line 3
     def blit_line3(self, scene, count = 0):
+        w, h = pygame.display.get_surface().get_size()
         with open('dialogue.txt', 'r') as f:
             match scene:
                 case 'node3':
@@ -549,16 +554,18 @@ class Narrator(Init_Game):
             self.line3_v2 = ''
             for letter in range(0, len(line3_v1)):
                 self.clock.tick(self.FPS)
-                self.SCREEN.blit(self.DIAL_BOX, (40, 430))
-                self.SCREEN.blit(self.line1_v3, (190, 510))
-                self.SCREEN.blit(self.line2_v3, (190, 545))
+                self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
+                self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
+                self.PSEUDO_SCREEN.blit(self.line2_v3, (190, 545))
                 self.line3_v3 = self.FONT.render(self.line3_v2+line3_v1[letter], True, self.WHITE)
-                self.SCREEN.blit(self.line3_v3, (190, 580))
+                self.PSEUDO_SCREEN.blit(self.line3_v3, (190, 580))
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 self.line3_v2 += line3_v1[letter]
                 pygame.display.update()
 
     #display line 4
     def blit_line4(self, scene, count = 0):
+        w, h = pygame.display.get_surface().get_size()
         with open('dialogue.txt', 'r') as f:
             match scene:
                 case 'node3':
@@ -709,13 +716,14 @@ class Narrator(Init_Game):
             self.line4_v2 = ''
             for letter in range(0, len(line4_v1)):
                 self.clock.tick(self.FPS)
-                self.SCREEN.blit(self.DIAL_BOX, (40, 430))
-                self.SCREEN.blit(self.DIAL_BOX, (40, 430))
-                self.SCREEN.blit(self.line1_v3, (190, 510))
-                self.SCREEN.blit(self.line2_v3, (190, 545))
-                self.SCREEN.blit(self.line3_v3, (190, 580))
+                self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
+                self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
+                self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
+                self.PSEUDO_SCREEN.blit(self.line2_v3, (190, 545))
+                self.PSEUDO_SCREEN.blit(self.line3_v3, (190, 580))
                 self.line4_v3 = self.FONT.render(self.line4_v2+line4_v1[letter], True, self.WHITE)
-                self.SCREEN.blit(self.line4_v3, (190, 615))
+                self.PSEUDO_SCREEN.blit(self.line4_v3, (190, 615))
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 self.line4_v2 += line4_v1[letter]
                 pygame.display.update()
 
@@ -733,30 +741,34 @@ class Narrator(Init_Game):
     
     #display line 1 for node 2
     def scene2_blit_line1(self):
+        w, h = pygame.display.get_surface().get_size()
         with open('dialogue.txt', 'r') as f:
             #display scene
-            self.SCREEN.fill(self.BLACK)
+            self.PSEUDO_SCREEN.fill(self.BLACK)
             f.seek(8)
             line1_v1 = f.readline().rstrip('\n')
             line1_v2 = ''
             for letter in range(0, len(line1_v1)):
                 self.clock.tick(self.FPS)
-                self.SCREEN.fill(self.BLACK)
+                self.PSEUDO_SCREEN.fill(self.BLACK)
                 line1_v3 = self.FONT.render(line1_v2+line1_v1[letter], True, self.WHITE)
-                self.SCREEN.blit(line1_v3, (330, 330))
+                self.PSEUDO_SCREEN.blit(line1_v3, (330, 330))
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 line1_v2 += line1_v1[letter]
                 pygame.display.update() 
 
     #display line 2 for node 2
     def scene2_blit_line2(self):
+        w, h = pygame.display.get_surface().get_size()
         with open('dialogue.txt', 'r') as f:
             f.seek(48)
             line2_v1 = f.readline().rstrip('\n')
             line2_v2 = ''
             for letter in range(0, len(line2_v1)):
                 self.clock.tick(self.FPS)
-                pygame.draw.rect(self.SCREEN, self.BLACK, pygame.Rect(300, 365, 400, 35))
+                pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, pygame.Rect(300, 365, 400, 35))
                 line2_v3 = self.FONT.render(line2_v2+line2_v1[letter], True, self.WHITE)
-                self.SCREEN.blit(line2_v3, (300, 365))
+                self.PSEUDO_SCREEN.blit(line2_v3, (300, 365))
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 line2_v2 += line2_v1[letter]
                 pygame.display.update()

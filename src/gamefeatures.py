@@ -179,7 +179,7 @@ class Game_Features(Display_Scene):
                                 self.scene2_blit_line2()
                                 self.scene = 'node2'
                         else:
-                            self.START_BUTTON.set_alpha(150)
+                            self.START_BUTTON.set_alpha(120)
                     pygame.display.update()
                 case 'node2':
                     if event.type == pygame.MOUSEBUTTONDOWN:

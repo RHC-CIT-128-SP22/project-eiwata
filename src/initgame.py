@@ -64,7 +64,7 @@ class Init_Game():
     DIAL_BOX.set_alpha(220)
     BORDER.set_alpha(200)
     TENTACLE.set_alpha(200)
-    START_BUTTON.set_alpha(150)
+    START_BUTTON.set_alpha(120)
     LOOK_INTO_IT.set_alpha(100)
     TELL_HIM.set_alpha(100)
     MAKE_UP.set_alpha(100)
