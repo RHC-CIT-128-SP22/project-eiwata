@@ -35,6 +35,8 @@ class Init_Game():
     JUMP_OFF_SHIP = pygame.image.load("assets/Jump off ship.png")
     RUN_AWAY = pygame.image.load("assets/Run away.png")
     CHARGE_SHIP = pygame.image.load("assets/Charge ship into the head of Cthulhu.png")
+    CONTINUE = pygame.image.load("assets/Continue.png")
+    EXIT = pygame.image.load("assets/Exit.png")
 
     #load background images
     START_SCREEN = pygame.image.load("assets/startBG.png")
@@ -73,6 +75,8 @@ class Init_Game():
     JUMP_OFF_SHIP.set_alpha(100)
     RUN_AWAY.set_alpha(100)
     CHARGE_SHIP.set_alpha(100)
+    CONTINUE.set_alpha(60)
+    EXIT.set_alpha(60)
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")

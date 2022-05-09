@@ -10,7 +10,7 @@ pygame.mixer.init()
 class Narrator(Init_Game):
 
     #create clock
-    FPS = 80
+    FPS = 200
 
     #initialize font and colors
     FONT = pygame.font.SysFont('Rockwell', 19)

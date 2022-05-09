@@ -595,6 +595,9 @@ class Display_Scene(Narrator):
                 self.RLYEH_3.set_alpha(30)
                 self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
         self.PSEUDO_SCREEN.blit(self.GAME_OVER, (277, 100))
+        self.PSEUDO_SCREEN.blit(self.CONTINUE, (150, 350))
+        self.PSEUDO_SCREEN.blit(self.EXIT, (700, 350))
+        
         #446, 128
 
         pygame.display.update()

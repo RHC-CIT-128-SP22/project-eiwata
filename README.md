@@ -61,7 +61,7 @@ Core Features:
 - [X] Dialogue displays on the screen gradually as user iterates through the game
 - [X] Smooth transition between scenes
 - [X] Click to continue
-- [ ] Game Over screen allows user to select between Play Again or Quit
+- [X] Game Over screen allows user to select between Play Again or Quit
 
 Bonus Features:
 - [X] Resizable GUI window
