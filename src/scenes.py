@@ -573,23 +573,17 @@ class Display_Scene(Narrator):
     #display game over screen
     def game_over(self, scene):
         w, h = pygame.display.get_surface().get_size()
-        self.PSEUDO_SCREEN.set_alpha(300)
         self.PSEUDO_SCREEN.fill(self.BLACK)
         match scene:
             case 7:
-                self.HOUSE.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
             case 12:
-                self.ALONE.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.ALONE, (0, 68.5))
             case 20:
-                self.SAIL.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
             case 23:
-                self.RLYEH_2.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
             case 24:
-                self.RLYEH_3.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
         self.PSEUDO_SCREEN.blit(self.GAME_OVER, (195, 200))
         self.PSEUDO_SCREEN.blit(self.CONTINUE, (150, 400))

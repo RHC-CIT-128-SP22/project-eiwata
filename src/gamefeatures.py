@@ -12,7 +12,6 @@ class Game_Features(Display_Scene):
     def __init__(self):
         self.scene = 'node1'
         self.WIN_RESIZED = False
-        self.click_count = 0
         self.game_over_scene = 0
 
     def scene_manager(self):
@@ -160,6 +159,7 @@ class Game_Features(Display_Scene):
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 pygame.mixer.Sound.play(self.START_SOUND)
                                 self.screen_fader()
+                                self.START_BUTTON.set_alpha(120)
                                 self.scene2_blit_line1()
                                 self.scene2_blit_line2()
                                 self.scene = 'node2'
@@ -221,6 +221,7 @@ class Game_Features(Display_Scene):
                             self.LOOK_INTO_IT.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.LOOK_INTO_IT.set_alpha(100)
                                 #scene 6 - click 0
                                 self.blit_line1('node6')
                                 self.blit_line2('node6')
@@ -233,6 +234,7 @@ class Game_Features(Display_Scene):
                             self.TELL_HIM.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.TELL_HIM.set_alpha(100)
                                 #scene 7 - click 0
                                 self.blit_line1('node7')
                                 self.blit_line2('node7')
@@ -281,6 +283,7 @@ class Game_Features(Display_Scene):
                             self.HELP_WITH.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.HELP_WITH.set_alpha(100)
                                 #scene 9 - click 0
                                 self.blit_line1('node9')
                                 self.blit_line2('node9')
@@ -293,6 +296,7 @@ class Game_Features(Display_Scene):
                             self.MAKE_UP.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.MAKE_UP.set_alpha(100)
                                 #scene 10 - click 0
                                 self.blit_line1('node10')
                                 self.blit_line2('node10')
@@ -377,6 +381,7 @@ class Game_Features(Display_Scene):
                             self.TAKE_THE_GUN.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.TAKE_THE_GUN.set_alpha(100)
                                 #scene 14 - click 0
                                 self.blit_line1('node14')
                                 self.blit_line2('node14')
@@ -389,6 +394,7 @@ class Game_Features(Display_Scene):
                             self.RUN_AND_HIDE.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.RUN_AND_HIDE.set_alpha(100)
                                 #scene 14 - click 0
                                 self.blit_line1('node14')
                                 self.blit_line2('node14')
@@ -478,6 +484,7 @@ class Game_Features(Display_Scene):
                             self.CONTINUE_VOYAGE.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.CONTINUE_VOYAGE.set_alpha(100)
                                 #scene 19 - click 0
                                 self.blit_line1('node19')
                                 self.blit_line2('node19')
@@ -490,6 +497,7 @@ class Game_Features(Display_Scene):
                             self.JUMP_OFF_SHIP.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.JUMP_OFF_SHIP.set_alpha(100)
                                 #scene 20 - click 0
                                 self.blit_line1('node20')
                                 self.blit_line2('node20')
@@ -556,6 +564,7 @@ class Game_Features(Display_Scene):
                             self.RUN_AWAY.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.RUN_AWAY.set_alpha(100)
                                 #scene 23 - click 0
                                 self.blit_line1('node23')
                                 self.blit_line2('node23')
@@ -568,6 +577,7 @@ class Game_Features(Display_Scene):
                             self.CHARGE_SHIP.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.CHARGE_SHIP.set_alpha(100)
                                 #scene 24 - click 0
                                 self.blit_line1('node24')
                                 self.blit_line2('node24')
@@ -620,6 +630,7 @@ class Game_Features(Display_Scene):
                             self.EXIT.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
+                                self.EXIT.set_alpha(120)
                                 self.scene = 'node1'
                         else:
                             self.CONTINUE.set_alpha(120)

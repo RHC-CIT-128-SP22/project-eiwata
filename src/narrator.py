@@ -73,6 +73,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(56))
                 case 'node7':
                     #display scene
+                    self.HOUSE.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
                     match count:
@@ -115,6 +116,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(104))
                 case 'node12':
                     #display scene
+                    self.ALONE.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.ALONE, (0, 68.5))
                     match count:
@@ -150,6 +152,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(148))
                 case 'node16':
                     #display scene
+                    self.HOUSE.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
                     match count:
@@ -181,6 +184,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(184))
                 case 'node20':
                     #display scene
+                    self.SAIL.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
                     match count:
@@ -203,6 +207,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(213))
                 case 'node23':
                     #display scene
+                    self.RLYEH_2.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
                     match count:
@@ -216,6 +221,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(230))
                 case 'node24':
                     #display scene
+                    self.RLYEH_3.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
                     match count:
