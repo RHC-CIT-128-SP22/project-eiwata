@@ -10,7 +10,7 @@ pygame.mixer.init()
 class Narrator(Init_Game):
 
     #create clock
-    FPS = 150
+    FPS = 2000
 
     #initialize font and colors
     FONT = pygame.font.SysFont('Rockwell', 19)
@@ -176,63 +176,62 @@ class Narrator(Init_Game):
                     self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
                     match count:
                         case 0:
-                            f.seek(self.char_counter(181))
+                            f.seek(self.char_counter(180))
                         case 1:
-                            f.seek(self.char_counter(185))
-                        case 2:
-                            f.seek(self.char_counter(189))
+                            f.seek(self.char_counter(184))
                 case 'node20':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
                     match count:
                         case 0:
-                            f.seek(self.char_counter(194))
+                            f.seek(self.char_counter(191))
                         case 1:
-                            f.seek(self.char_counter(198))
+                            f.seek(self.char_counter(195))
                 case 'node21':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
                     match count:
                         case 0:
-                            f.seek(self.char_counter(204))
+                            f.seek(self.char_counter(201))
                         case 1:
-                            f.seek(self.char_counter(208))
+                            f.seek(self.char_counter(205))
                         case 2:
-                            f.seek(self.char_counter(212))
+                            f.seek(self.char_counter(209))
                         case 3:
-                            f.seek(self.char_counter(216))
+                            f.seek(self.char_counter(213))
                 case 'node23':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
                     match count:
                         case 0:
-                            f.seek(self.char_counter(221))
+                            f.seek(self.char_counter(218))
                         case 1:
-                            f.seek(self.char_counter(225))
+                            f.seek(self.char_counter(222))
                         case 2:
-                            f.seek(self.char_counter(229))
+                            f.seek(self.char_counter(226))
                         case 3:
-                            f.seek(self.char_counter(233))
+                            f.seek(self.char_counter(230))
                 case 'node24':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
                     match count:
                         case 0:
-                            f.seek(self.char_counter(238))
+                            f.seek(self.char_counter(235))
                         case 1:
-                            f.seek(self.char_counter(242))
+                            f.seek(self.char_counter(239))
                         case 2:
-                            f.seek(self.char_counter(246))
+                            f.seek(self.char_counter(243))
             self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
             self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
             line1_v1 = f.readline().rstrip('\n')
             self.line1_v2 = ''
             for letter in range(0, len(line1_v1)):
                 self.clock.tick(self.FPS)
+                self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
                 self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
                 self.line1_v3 = self.FONT.render(self.line1_v2+line1_v1[letter], True, self.WHITE)
                 self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
@@ -350,49 +349,48 @@ class Narrator(Init_Game):
                 case 'node19':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(182))
+                            f.seek(self.char_counter(181))
                         case 1:
-                            f.seek(self.char_counter(186))
-                        case 2:
-                            f.seek(self.char_counter(190))
+                            f.seek(self.char_counter(185))
                 case 'node20':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(195))
+                            f.seek(self.char_counter(192))
                         case 1:
-                            f.seek(self.char_counter(199))
+                            f.seek(self.char_counter(196))
                 case 'node21':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(205))
+                            f.seek(self.char_counter(202))
                         case 1:
-                            f.seek(self.char_counter(209))
+                            f.seek(self.char_counter(206))
                         case 2:
-                            f.seek(self.char_counter(213))
+                            f.seek(self.char_counter(210))
                         case 3:
-                            f.seek(self.char_counter(217))
+                            f.seek(self.char_counter(214))
                 case 'node23':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(222))
+                            f.seek(self.char_counter(219))
                         case 1:
-                            f.seek(self.char_counter(226))
+                            f.seek(self.char_counter(223))
                         case 2:
-                            f.seek(self.char_counter(230))
+                            f.seek(self.char_counter(227))
                         case 3:
-                            f.seek(self.char_counter(234))
+                            f.seek(self.char_counter(231))
                 case 'node24':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(239))
+                            f.seek(self.char_counter(236))
                         case 1:
-                            f.seek(self.char_counter(243))
+                            f.seek(self.char_counter(240))
                         case 2:
-                            f.seek(self.char_counter(247))
+                            f.seek(self.char_counter(244))
             line2_v1 = f.readline().rstrip('\n')
             self.line2_v2 = ''
             for letter in range(0, len(line2_v1)):
                 self.clock.tick(self.FPS)
+                self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
                 self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
                 self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
                 self.line2_v3 = self.FONT.render(self.line2_v2+line2_v1[letter], True, self.WHITE)
@@ -511,49 +509,48 @@ class Narrator(Init_Game):
                 case 'node19':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(183))
+                            f.seek(self.char_counter(182))
                         case 1:
-                            f.seek(self.char_counter(187))
-                        case 2:
-                            f.seek(self.char_counter(191))
+                            f.seek(self.char_counter(186))
                 case 'node20':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(196))
+                            f.seek(self.char_counter(193))
                         case 1:
-                            f.seek(self.char_counter(200))
+                            f.seek(self.char_counter(197))
                 case 'node21':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(206))
+                            f.seek(self.char_counter(203))
                         case 1:
-                            f.seek(self.char_counter(210))
+                            f.seek(self.char_counter(207))
                         case 2:
-                            f.seek(self.char_counter(214))
+                            f.seek(self.char_counter(211))
                         case 3:
-                            f.seek(self.char_counter(218))
+                            f.seek(self.char_counter(215))
                 case 'node23':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(223))
+                            f.seek(self.char_counter(220))
                         case 1:
-                            f.seek(self.char_counter(227))
+                            f.seek(self.char_counter(224))
                         case 2:
-                            f.seek(self.char_counter(231))
+                            f.seek(self.char_counter(228))
                         case 3:
-                            f.seek(self.char_counter(235))
+                            f.seek(self.char_counter(232))
                 case 'node24':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(240))
+                            f.seek(self.char_counter(237))
                         case 1:
-                            f.seek(self.char_counter(244))
+                            f.seek(self.char_counter(241))
                         case 2:
-                            f.seek(self.char_counter(248))
+                            f.seek(self.char_counter(245))
             line3_v1 = f.readline().rstrip('\n')
             self.line3_v2 = ''
             for letter in range(0, len(line3_v1)):
                 self.clock.tick(self.FPS)
+                self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
                 self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
                 self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
                 self.PSEUDO_SCREEN.blit(self.line2_v3, (190, 545))
@@ -673,50 +670,48 @@ class Narrator(Init_Game):
                 case 'node19':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(184))
+                            f.seek(self.char_counter(183))
                         case 1:
-                            f.seek(self.char_counter(188))
-                        case 2:
-                            f.seek(self.char_counter(192))
+                            f.seek(self.char_counter(187))
                 case 'node20':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(197))
+                            f.seek(self.char_counter(194))
                         case 1:
-                            f.seek(self.char_counter(201))
+                            f.seek(self.char_counter(198))
                 case 'node21':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(207))
+                            f.seek(self.char_counter(204))
                         case 1:
-                            f.seek(self.char_counter(211))
+                            f.seek(self.char_counter(208))
                         case 2:
-                            f.seek(self.char_counter(215))
+                            f.seek(self.char_counter(212))
                         case 3:
-                            f.seek(self.char_counter(219))
+                            f.seek(self.char_counter(216))
                 case 'node23':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(224))
+                            f.seek(self.char_counter(221))
                         case 1:
-                            f.seek(self.char_counter(228))
+                            f.seek(self.char_counter(225))
                         case 2:
-                            f.seek(self.char_counter(232))
+                            f.seek(self.char_counter(229))
                         case 3:
-                            f.seek(self.char_counter(236))
+                            f.seek(self.char_counter(233))
                 case 'node24':
                     match count:
                         case 0:
-                            f.seek(self.char_counter(241))
+                            f.seek(self.char_counter(238))
                         case 1:
-                            f.seek(self.char_counter(245))
+                            f.seek(self.char_counter(242))
                         case 2:
-                            f.seek(self.char_counter(249))
+                            f.seek(self.char_counter(246))
             line4_v1 = f.readline().rstrip('\n')
             self.line4_v2 = ''
             for letter in range(0, len(line4_v1)):
                 self.clock.tick(self.FPS)
-                self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
+                self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
                 self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
                 self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
                 self.PSEUDO_SCREEN.blit(self.line2_v3, (190, 545))
@@ -749,7 +744,7 @@ class Narrator(Init_Game):
             line1_v1 = f.readline().rstrip('\n')
             line1_v2 = ''
             for letter in range(0, len(line1_v1)):
-                self.clock.tick(self.FPS)
+                self.clock.tick(80)
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 line1_v3 = self.FONT.render(line1_v2+line1_v1[letter], True, self.WHITE)
                 self.PSEUDO_SCREEN.blit(line1_v3, (330, 330))
@@ -765,7 +760,7 @@ class Narrator(Init_Game):
             line2_v1 = f.readline().rstrip('\n')
             line2_v2 = ''
             for letter in range(0, len(line2_v1)):
-                self.clock.tick(self.FPS)
+                self.clock.tick(80)
                 pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, pygame.Rect(300, 365, 400, 35))
                 line2_v3 = self.FONT.render(line2_v2+line2_v1[letter], True, self.WHITE)
                 self.PSEUDO_SCREEN.blit(line2_v3, (300, 365))

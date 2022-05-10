@@ -14,6 +14,7 @@ pygame.init()
 pygame.mixer.init()
 
 def main():
+    
     #initialize variables
     curr_game = Game_Features()
 

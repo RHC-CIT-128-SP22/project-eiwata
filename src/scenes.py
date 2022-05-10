@@ -171,7 +171,6 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
 
-        top_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 70, 1000, 70])
         bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, 570, 1000, 70])
 
         self.PSEUDO_SCREEN.blit(self.HELP_WITH, (30, 600))
@@ -433,11 +432,9 @@ class Display_Scene(Narrator):
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
-                    f.seek(self.char_counter(181))
+                    f.seek(self.char_counter(180))
                 case 1:
-                    f.seek(self.char_counter(185))
-                case 2:
-                    f.seek(self.char_counter(189))
+                    f.seek(self.char_counter(184))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -460,9 +457,9 @@ class Display_Scene(Narrator):
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
-                    f.seek(self.char_counter(194))
+                    f.seek(self.char_counter(191))
                 case 1:
-                    f.seek(self.char_counter(198))
+                    f.seek(self.char_counter(195))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -485,13 +482,13 @@ class Display_Scene(Narrator):
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
-                    f.seek(self.char_counter(204))
+                    f.seek(self.char_counter(201))
                 case 1:
-                    f.seek(self.char_counter(208))
+                    f.seek(self.char_counter(205))
                 case 2:
-                    f.seek(self.char_counter(212))
+                    f.seek(self.char_counter(209))
                 case 3:
-                    f.seek(self.char_counter(216))
+                    f.seek(self.char_counter(213))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -529,13 +526,13 @@ class Display_Scene(Narrator):
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
-                    f.seek(self.char_counter(221))
+                    f.seek(self.char_counter(218))
                 case 1:
-                    f.seek(self.char_counter(225))
+                    f.seek(self.char_counter(222))
                 case 2:
-                    f.seek(self.char_counter(229))
+                    f.seek(self.char_counter(226))
                 case 3:
-                    f.seek(self.char_counter(233))
+                    f.seek(self.char_counter(230))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -558,11 +555,11 @@ class Display_Scene(Narrator):
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
-                    f.seek(self.char_counter(238))
+                    f.seek(self.char_counter(235))
                 case 1:
-                    f.seek(self.char_counter(242))
+                    f.seek(self.char_counter(239))
                 case 2:
-                    f.seek(self.char_counter(246))
+                    f.seek(self.char_counter(243))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -573,34 +570,63 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
+    #display game over screen
     def game_over(self, scene):
-        fade = pygame.Surface((self.X, self.Y))
-        fade.fill(self.BLACK)
-        fade.set_alpha(20)
-        self.PSEUDO_SCREEN.blit(fade, (0, 0))
+        w, h = pygame.display.get_surface().get_size()
+        self.PSEUDO_SCREEN.set_alpha(300)
+        self.PSEUDO_SCREEN.fill(self.BLACK)
         match scene:
             case 7:
-                self.HOUSE.set_alpha(30)
+                self.HOUSE.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
             case 12:
-                self.ALONE.set_alpha(30)
+                self.ALONE.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.ALONE, (0, 68.5))
             case 20:
-                self.SAIL.set_alpha(30)
+                self.SAIL.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
             case 23:
-                self.RLYEH_2.set_alpha(30)
+                self.RLYEH_2.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
             case 24:
-                self.RLYEH_3.set_alpha(30)
+                self.RLYEH_3.set_alpha(90)
                 self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
-        self.PSEUDO_SCREEN.blit(self.GAME_OVER, (277, 100))
-        self.PSEUDO_SCREEN.blit(self.CONTINUE, (150, 350))
-        self.PSEUDO_SCREEN.blit(self.EXIT, (700, 350))
-        
-        #446, 128
-
+        self.PSEUDO_SCREEN.blit(self.GAME_OVER, (195, 200))
+        self.PSEUDO_SCREEN.blit(self.CONTINUE, (150, 400))
+        self.PSEUDO_SCREEN.blit(self.EXIT, (680, 400))
+        self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
         pygame.display.update()
+
+    #fade into game over screen
+    def game_over_fader(self, scene):
+        w, h = pygame.display.get_surface().get_size()
+        go_fader = pygame.Surface((self.X, self.Y))
+        go_fader.fill(self.BLACK)
+        match scene:
+            case 7:
+                self.HOUSE.set_alpha(90)
+                go_fader.blit(self.HOUSE, (0, 62.5))
+            case 12:
+                self.ALONE.set_alpha(90)
+                go_fader.blit(self.ALONE, (0, 68.5))
+            case 20:
+                self.SAIL.set_alpha(90)
+                go_fader.blit(self.SAIL, (0, 37.5))
+            case 23:
+                self.RLYEH_2.set_alpha(90)
+                go_fader.blit(self.RLYEH_2, (0, 63.5))
+            case 24:
+                self.RLYEH_3.set_alpha(90)
+                go_fader.blit(self.RLYEH_3, (0, 56))
+        go_fader.blit(self.GAME_OVER, (195, 200))
+        go_fader.blit(self.CONTINUE, (150, 400))
+        go_fader.blit(self.EXIT, (680, 400))
+        for alpha in range(0, 300):
+            go_fader.set_alpha(alpha)
+            self.PSEUDO_SCREEN.blit(go_fader, (0, 0))
+            self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+            pygame.display.update()
+
 
     #narrows the screen before decisions
     def narrow_screen(self, scene, y):
@@ -630,13 +656,22 @@ class Display_Scene(Narrator):
                 #display scene 22
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
-
-        for i in range(y):
-            TOP_Y += 1
-            BOTTOM_Y -= 1
-            top_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, TOP_Y, w, h/10])
-            bottom_margin = pygame.draw.rect(self.SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
-            pygame.display.update()
+        if scene != 8:
+            for i in range(y):
+                TOP_Y += 1
+                BOTTOM_Y -= 1
+                self.clock.tick(150)
+                top_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, TOP_Y, w, h/10])
+                bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+                pygame.display.update()
+        else:
+            for i in range(y):
+                BOTTOM_Y -= 1
+                self.clock.tick(150)
+                bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+                pygame.display.update()
     
 
 

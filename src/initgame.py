@@ -75,8 +75,8 @@ class Init_Game():
     JUMP_OFF_SHIP.set_alpha(100)
     RUN_AWAY.set_alpha(100)
     CHARGE_SHIP.set_alpha(100)
-    CONTINUE.set_alpha(60)
-    EXIT.set_alpha(60)
+    CONTINUE.set_alpha(120)
+    EXIT.set_alpha(120)
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
@@ -101,4 +101,6 @@ class Init_Game():
     JUMP_OFF_SHIP_POS = pygame.Rect(w/1.29, h/1.17, w/5.13, h/22.58)
     RUN_AWAY_POS = pygame.Rect(w/33.33, h/1.17, w/7.04, h/22.58)
     CHARGE_SHIP_POS = pygame.Rect(w/2.39, h/1.17, w/1.81, h/22.58)
+    CONTINUE_POS = pygame.Rect(150, 400, 241, 48)
+    EXIT_POS = pygame.Rect(680, 400, 104, 47)
 

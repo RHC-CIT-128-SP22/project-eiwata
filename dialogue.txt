@@ -14,11 +14,11 @@ My uncle was a professor of Semitic Languages at Miskatonic
 University, Arkham. A known figure locally, whom museums came
 to when they needed information regarding ancient inscriptions.
 I must've knocked on his door like ten times before he opened
-just a crack. Immediately, I recognized a strange perplexing look in
-his eyes, one that I've never seen on his face before. When he
+just a crack. Immediately, I recognized a strange perplexing look 
+in his eyes, one that I've never seen on his face before. When he
 asked me what I was doing there I can sense his anxiety from
-behind the door. I told him I haven't heard from him in a while so I
-came down just to make sure he was alright. He looked back 
+behind the door. I told him I haven't heard from him in a while so 
+I came down just to make sure he was alright. He looked back 
 at me with a blank face. I wasn't sure if he was grasping my 
 words but that was when he invited me into his office.
 
@@ -129,23 +129,23 @@ worshippers. Five were killed and two were severely wounded.
 
 
 Node 15
-Back at the headquarters, we started examining the prisoners. Most 
-were sailors largely negroes and mulattoes of the mentally aberrant 
-type. It became apparent early on however, that something more than 
-negro fetichism was going on. As crazy and ignorant as they were, 
-they all held on to the central idea of their loathsome faith.
-They worshipped, so they said, the Great Old Ones who lived ages 
-before there were any men, and who came to the young world out 
-of the sky. Those Old Ones were gone now, inside the earth and 
-under the sea; but their dead bodies had told their secrets in 
-dreams to the first men, who formed a cult which had never died. 
-This was the cult, and the prisoners said it had always existed and 
-always would exist, hidden in distant wastes and dark places all over 
-the world until the time when the great priest Cthulhu, from his 
-dark house in the mighty city of R'lyeh under the waters, should rise 
-and bring the earth again beneath his sway. Some day he would call, 
-when the stars were ready, and the secret cult would always be 
-waiting to liberate him.
+Back at the headquarters, we started examining the prisoners. 
+Most were sailors largely negroes and mulattoes of the mentally 
+aberrant type. It became apparent early on however, that 
+something more than negro fetichism was going on. As crazy and 
+ignorant as they were, they all held on to the central idea of 
+their loathsome faith. They worshipped, so they said, the Great 
+Old Ones who lived ages before there were any men, and who came 
+to the young world out of the sky. Those Old Ones were gone now, 
+inside the earth and under the sea; but their dead bodies had 
+told their secrets in dreams to the first men, who formed a cult 
+which had never died. This was the cult, and the prisoners said 
+it had always existed and always would exist, hidden in distant 
+wastes and dark places all over the world until the time when the 
+great priest Cthulhu, from his dark house in the mighty city of 
+R'lyeh under the waters, should rise and bring the earth again 
+beneath his sway. Some day he would call, when the stars were 
+ready, and the secret cult would always be waiting to liberate him.
 
 
 
@@ -168,8 +168,7 @@ he did remains to be seen, for I have learned much now.
 
 Node 17
 I decided to join Legrasse in a voyage to find R'lyeh using 
-coordinates obtained from one of the books of the 
-cultists.
+coordinates obtained from one of the books of the cultists.
 The realization of my uncle's death plagued my mind
 and I was no longer motivated to investigate the source of
 his worst nightmares which had already begun to haunt me
@@ -178,15 +177,13 @@ what'd become of him in the moments before his passing.
 
 
 Node 19
-It's been three days now since we headed out to 
-find this mythical city of R'lyeh. My mind 
-wanted to tell me that such a place can only exist in 
-nightmares and urban legends but as we 
-traveled closer and closer to those coordinates  
-I became convinced that I would find something 
-there that contradicted everything I'd known about 
-this strange world before and I felt the dread of
-crossing a line that was not meant to be crossed
+It's been three days now since we headed out to find this 
+mythical city of R'lyeh. My mind wanted to tell me that such 
+a place can only exist in nightmares and urban legends but as 
+we traveled closer and closer to those coordinates I became 
+convinced that I would find something there that contradicted 
+everything I'd known about this strange world before and I felt 
+the dread of crossing a line that was not meant to be crossed
 by ordinary men.
 
 
@@ -239,10 +236,14 @@ For a minute I just stood there watching as the great Cthulhu slid
 greasily into the water and began to pursue with vast wave-raising 
 strokes of cosmic potency.
 I grabbed the wheel of the ship but could not find the strength in my 
-arms to turn it as I stood still utterly transfixed. Then, I realized that there 
-was no point in turning away now. Had I miraculously managed to survive 
-this encounter, I do not think my life will be long. As my uncle went, so I 
-shall go. I know too much, and the cult still lives.
-I took one last look at the mighty Cthulhu as it approached the ship in all 
-its frenzy. Then I just closed me eyes.
+arms to turn it as I stood still utterly transfixed. Then, I realized 
+that there was no point in turning away now. Had I miraculously managed 
+to survive this encounter, I do not think my life will be long. As my 
+uncle went, so I shall go. I know too much, and the cult still lives.
+I took one last look at the mighty Cthulhu as it approached the ship 
+in all its frenzy. Then I just closed me eyes.
 
+
+
+
+#eof
