@@ -31,10 +31,10 @@ class Init_Game():
     HELP_WITH = pygame.image.load("assets/Help with investigation.png")
     TAKE_THE_GUN = pygame.image.load("assets/Take the gun.png")
     RUN_AND_HIDE = pygame.image.load("assets/Run and hide.png")
-    CONTINUE_VOYAGE = pygame.image.load("assets/Continue the voyage to R'lyeh.png")
+    CONTINUE_VOYAGE = pygame.image.load("assets/Continue voyage.png")
     JUMP_OFF_SHIP = pygame.image.load("assets/Jump off ship.png")
     RUN_AWAY = pygame.image.load("assets/Run away.png")
-    CHARGE_SHIP = pygame.image.load("assets/Charge ship into the head of Cthulhu.png")
+    ATTACK_IT = pygame.image.load("assets/Attack it.png")
     CONTINUE = pygame.image.load("assets/Continue.png")
     EXIT = pygame.image.load("assets/Exit.png")
 
@@ -61,10 +61,10 @@ class Init_Game():
     WHITE = (255, 255, 255)
 
     #set item transparency
-    DIAL_BOX.set_alpha(220)
-    BORDER.set_alpha(200)
-    TENTACLE.set_alpha(200)
-    START_BUTTON.set_alpha(120)
+    DIAL_BOX.set_alpha(210)
+    BORDER.set_alpha(210)
+    TENTACLE.set_alpha(210)
+    START_BUTTON.set_alpha(150)
     LOOK_INTO_IT.set_alpha(100)
     TELL_HIM.set_alpha(100)
     MAKE_UP.set_alpha(100)
@@ -74,9 +74,10 @@ class Init_Game():
     CONTINUE_VOYAGE.set_alpha(100)
     JUMP_OFF_SHIP.set_alpha(100)
     RUN_AWAY.set_alpha(100)
-    CHARGE_SHIP.set_alpha(100)
-    CONTINUE.set_alpha(120)
-    EXIT.set_alpha(120)
+    ATTACK_IT.set_alpha(100)
+    CONTINUE.set_alpha(90)
+    EXIT.set_alpha(90)
+    GAME_OVER.set_alpha(210)
 
     #set sound fx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
@@ -97,10 +98,15 @@ class Init_Game():
     MAKE_UP_POS = pygame.Rect(w/1.67, h/1.17, w/2.86, h/22.58)
     TAKE_THE_GUN_POS = pygame.Rect(w/33.33, h/1.17, w/5.18, h/22.58)
     RUN_AND_HIDE_POS = pygame.Rect(w/1.28, h/1.17, w/5.38, h/22.58)
-    CONTINUE_VOYAGE_POS = pygame.Rect(w/33.33, h/1.17, w/2.29, h/21.88)
+
+    CONTINUE_VOYAGE_POS = pygame.Rect(w/33.33, h/1.17, w/4.18, h/22.58)
+
     JUMP_OFF_SHIP_POS = pygame.Rect(w/1.29, h/1.17, w/5.13, h/22.58)
-    RUN_AWAY_POS = pygame.Rect(w/33.33, h/1.17, w/7.04, h/22.58)
-    CHARGE_SHIP_POS = pygame.Rect(w/2.39, h/1.17, w/1.81, h/22.58)
-    CONTINUE_POS = pygame.Rect(150, 400, 241, 48)
-    EXIT_POS = pygame.Rect(680, 400, 104, 47)
+
+    ATTACK_IT_POS = pygame.Rect(w/33.33, h/1.17, w/7.41, h/22.58)
+    RUN_AWAY_POS = pygame.Rect(w/1.21, h/1.17, w/7.04, h/22.58)
+    
+
+    CONTINUE_POS = pygame.Rect(w/6.67, h/1.75, w/4.15, h/14.58)
+    EXIT_POS = pygame.Rect(w/1.47, h/1.75, w/9.62, h/14.89)
 

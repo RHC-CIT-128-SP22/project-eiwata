@@ -773,3 +773,4 @@ class Narrator(Init_Game):
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 line2_v2 += line2_v1[letter]
                 pygame.display.update()
+                

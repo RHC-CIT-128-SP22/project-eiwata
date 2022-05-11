@@ -11,124 +11,98 @@ class Game_Features(Display_Scene):
 
     def __init__(self):
         self.scene = 'node1'
-        self.WIN_RESIZED = False
         self.game_over_scene = 0
 
     def scene_manager(self):
         self.blit_screen()
         if self.scene == 'node1':
             self.node1()
-            self.user_decision('node1')
         if self.scene == 'node2':
             self.node2()
-            self.user_decision('node2')
         if self.scene == 'node3':
             self.node3(self.click_count)
-            self.user_decision('node3')
         if self.scene == 'node4':
             self.node4(self.click_count)
-            self.user_decision('node4')
         if self.scene == 'node5':
             self.node5()
-            self.user_decision('node5')
         if self.scene == 'node6':
             self.node6(self.click_count)
-            self.user_decision('node6')
         if self.scene == 'node7':
             self.node7(self.click_count)
-            self.user_decision('node7')
         if self.scene == 'node8':
             self.node8()
-            self.user_decision('node8')
         if self.scene == 'node9':
             self.node9(self.click_count)
-            self.user_decision('node9')
         if self.scene == 'node10':
             self.node10(self.click_count)
-            self.user_decision('node10')
         if self.scene == 'node11':
             self.node11(self.click_count)
-            self.user_decision('node11')
         if self.scene == 'node12':
             self.node12(self.click_count)
-            self.user_decision('node12')
         if self.scene == 'node13':
             self.node13()
-            self.user_decision('node13')
         if self.scene == 'node14':
             self.node14(self.click_count)
-            self.user_decision('node14')
         if self.scene == 'node15':
             self.node15(self.click_count)
-            self.user_decision('node15')
         if self.scene == 'node16':
             self.node16(self.click_count)
-            self.user_decision('node16')
         if self.scene == 'node17':
             self.node17(self.click_count)
-            self.user_decision('node17')
         if self.scene == 'node18':
             self.node18()
-            self.user_decision('node18')
         if self.scene == 'node19':
             self.node19(self.click_count)
-            self.user_decision('node19')
         if self.scene == 'node20':
             self.node20(self.click_count)
-            self.user_decision('node20')
         if self.scene == 'node21':
             self.node21(self.click_count)
-            self.user_decision('node21')
         if self.scene == 'node22':
             self.node22()
-            self.user_decision('node22')
         if self.scene == 'node23':
             self.node23(self.click_count)
-            self.user_decision('node23')
         if self.scene == 'node24':
             self.node24(self.click_count)
-            self.user_decision('node24')
         if self.scene == 'game_over':
             self.game_over(self.game_over_scene)
-            self.user_decision('game_over')
+        self.user_decision(self.scene)
 
     def blit_screen(self):
-        if self.WIN_RESIZED == False:
-            self.SCREEN.blit(self.PSEUDO_SCREEN, (0, 0))
-            self.SCREEN.blit(self.COLLISION_SCREEN, (0, 0))
-        #if window has been resized 
-        elif self.WIN_RESIZED == True:
-            w, h = pygame.display.get_surface().get_size()
-            self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
-            if self.scene == 'node1':
-                #visible screen that scales to the size of window
-                self.START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
-            if self.scene == 'node5':
-                self.TELL_HIM_POS = pygame.Rect(w/1.47, h/1.17, w/3.34, h/21.88)
-                self.LOOK_INTO_IT_POS = pygame.Rect(w/33.33, h/1.17, w/5.78, h/22.58)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TELL_HIM_POS, 3)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.LOOK_INTO_IT_POS, 3)
-            if self.scene == 'node8':
-                self.HELP_WITH_POS = pygame.Rect(w/33.33, h/1.17, w/2.88, h/22.58)
-                self.MAKE_UP_POS = pygame.Rect(w/1.67, h/1.17, w/2.86, h/22.58)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.HELP_WITH_POS, 3)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.MAKE_UP_POS, 3)
-            if self.scene == 'node13':
-                self.TAKE_THE_GUN_POS = pygame.Rect(w/33.33, h/1.17, w/5.18, h/22.58)
-                self.RUN_AND_HIDE_POS = pygame.Rect(w/1.28, h/1.17, w/5.38, h/22.58)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TAKE_THE_GUN_POS, 3)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.RUN_AND_HIDE_POS, 3)
-            if self.scene == 'node18':
-                self.CONTINUE_VOYAGE_POS = pygame.Rect(w/33.33, h/1.17, w/2.29, h/21.88)
-                self.JUMP_OFF_SHIP_POS = pygame.Rect(w/1.29, h/1.17, w/5.13, h/22.58)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.CONTINUE_VOYAGE_POS, 3)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.JUMP_OFF_SHIP_POS, 3)
-            if self.scene == 'node22':
-                self.RUN_AWAY_POS = pygame.Rect(w/33.33, h/1.17, w/7.04, h/22.58)
-                self.CHARGE_SHIP_POS = pygame.Rect(w/2.39, h/1.17, w/1.81, h/22.58)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.RUN_AWAY_POS, 3)
-                pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.CHARGE_SHIP_POS, 3)
+        w, h = pygame.display.get_surface().get_size()
+        self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+        if self.scene == 'node1':
+            self.START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)
+        elif self.scene == 'node5':
+            self.LOOK_INTO_IT_POS = pygame.Rect(w/33.33, h/1.17, w/5.78, h/22.58)
+            self.TELL_HIM_POS = pygame.Rect(w/1.47, h/1.17, w/3.34, h/21.88)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TELL_HIM_POS, 3)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.LOOK_INTO_IT_POS, 3)
+        elif self.scene == 'node8':
+            self.HELP_WITH_POS = pygame.Rect(w/33.33, h/1.17, w/2.88, h/22.58)
+            self.MAKE_UP_POS = pygame.Rect(w/1.67, h/1.17, w/2.86, h/22.58)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.HELP_WITH_POS, 3)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.MAKE_UP_POS, 3)
+        elif self.scene == 'node13':
+            self.TAKE_THE_GUN_POS = pygame.Rect(w/33.33, h/1.17, w/5.18, h/22.58)
+            self.RUN_AND_HIDE_POS = pygame.Rect(w/1.28, h/1.17, w/5.38, h/22.58)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.TAKE_THE_GUN_POS, 3)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.RUN_AND_HIDE_POS, 3)
+        elif self.scene == 'node18':
+            self.CONTINUE_VOYAGE_POS = pygame.Rect(w/33.33, h/1.17, w/4.18, h/22.58)
+            self.JUMP_OFF_SHIP_POS = pygame.Rect(w/1.29, h/1.17, w/5.13, h/22.58)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.CONTINUE_VOYAGE_POS, 3)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.JUMP_OFF_SHIP_POS, 3)
+        elif self.scene == 'node22':
+            self.ATTACK_IT_POS = pygame.Rect(w/33.33, h/1.17, w/7.41, h/22.58)
+            self.RUN_AWAY_POS = pygame.Rect(w/1.21, h/1.17, w/7.04, h/22.58)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.ATTACK_IT_POS, 3)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.RUN_AWAY_POS, 3)
+        elif self.scene == 'game_over':
+            self.CONTINUE_POS = pygame.Rect(w/6.67, h/1.75, w/4.15, h/14.58)
+            self.EXIT_POS = pygame.Rect(w/1.47, h/1.75, w/9.62, h/14.89)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.CONTINUE_POS, 3)
+            pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.EXIT_POS, 3)
 
     def user_decision(self, scene):
         for event in pygame.event.get():
@@ -138,7 +112,6 @@ class Game_Features(Display_Scene):
                 sys.exit('QUIT GAME')
             #if window is being resized
             if (event.type == pygame.VIDEORESIZE):
-                self.WIN_RESIZED = True
                 self.SCREEN = pygame.display.set_mode((event.w, event.h), pygame.RESIZABLE)
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (event.w, event.h)), (0, 0))
             #more specific actions per scene
@@ -164,7 +137,7 @@ class Game_Features(Display_Scene):
                                 self.scene2_blit_line2()
                                 self.scene = 'node2'
                         else:
-                            self.START_BUTTON.set_alpha(120)
+                            self.START_BUTTON.set_alpha(150)
                     pygame.display.update()
                 case 'node2':
                     if event.type == pygame.MOUSEBUTTONDOWN:
@@ -556,15 +529,15 @@ class Game_Features(Display_Scene):
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
 
-                        CHOICE_A = self.RUN_AWAY_POS.collidepoint(mx, my)
-                        CHOICE_B = self.CHARGE_SHIP_POS.collidepoint(mx, my)
+                        CHOICE_A = self.ATTACK_IT_POS.collidepoint(mx, my)
+                        CHOICE_B = self.RUN_AWAY_POS.collidepoint(mx, my)
                         #if hovering over option
                         if CHOICE_A:
                             #bold option
-                            self.RUN_AWAY.set_alpha(300)
+                            self.ATTACK_IT.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
-                                self.RUN_AWAY.set_alpha(100)
+                                self.ATTACK_IT.set_alpha(100)
                                 #scene 23 - click 0
                                 self.blit_line1('node23')
                                 self.blit_line2('node23')
@@ -574,10 +547,10 @@ class Game_Features(Display_Scene):
                                 self.scene = 'node23'
                         elif CHOICE_B:
                             #bold option
-                            self.CHARGE_SHIP.set_alpha(300)
+                            self.RUN_AWAY.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
                                 self.screen_fader()
-                                self.CHARGE_SHIP.set_alpha(100)
+                                self.RUN_AWAY.set_alpha(100)
                                 #scene 24 - click 0
                                 self.blit_line1('node24')
                                 self.blit_line2('node24')
@@ -586,8 +559,8 @@ class Game_Features(Display_Scene):
                                 self.click_count = 1
                                 self.scene = 'node24'
                         else:
+                            self.ATTACK_IT.set_alpha(100)
                             self.RUN_AWAY.set_alpha(100)
-                            self.CHARGE_SHIP.set_alpha(100)
                 case 'node23':
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene 23 - click 1 - 3
@@ -633,15 +606,15 @@ class Game_Features(Display_Scene):
                                 self.EXIT.set_alpha(120)
                                 self.scene = 'node1'
                         else:
-                            self.CONTINUE.set_alpha(120)
-                            self.EXIT.set_alpha(120)
+                            self.CONTINUE.set_alpha(90)
+                            self.EXIT.set_alpha(90)
+
     #fade out next scene
     def screen_fader(self):
         w, h = pygame.display.get_surface().get_size()
         fade = pygame.Surface((self.X, self.Y))
         fade.fill(self.BLACK)
         for alpha in range(0, 300):
-            #fade.set_alpha(alpha)
             self.PSEUDO_SCREEN.set_alpha(alpha)
             self.PSEUDO_SCREEN.blit(fade, (0, 0))
             self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
