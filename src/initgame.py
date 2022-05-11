@@ -79,15 +79,17 @@ class Init_Game():
     EXIT.set_alpha(90)
     GAME_OVER.set_alpha(210)
 
-    #set sound fx
+    #set sfx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
+    DIAL_SOUND = pygame.mixer.Sound("assets/blip5.wav")
+    START_SOUND.set_volume(0.8)
+    DIAL_SOUND.set_volume(0.6)
 
     #screen that scales to the size of the window
     PSEUDO_SCREEN = pygame.Surface((X, Y))
 
     #invisible screen for collision detection
     COLLISION_SCREEN = pygame.Surface((X, Y))
-    COLLISION_SCREEN.set_alpha(0)
 
     #collision items
     w, h = pygame.display.get_surface().get_size()
@@ -98,15 +100,10 @@ class Init_Game():
     MAKE_UP_POS = pygame.Rect(w/1.67, h/1.17, w/2.86, h/22.58)
     TAKE_THE_GUN_POS = pygame.Rect(w/33.33, h/1.17, w/5.18, h/22.58)
     RUN_AND_HIDE_POS = pygame.Rect(w/1.28, h/1.17, w/5.38, h/22.58)
-
     CONTINUE_VOYAGE_POS = pygame.Rect(w/33.33, h/1.17, w/4.18, h/22.58)
-
     JUMP_OFF_SHIP_POS = pygame.Rect(w/1.29, h/1.17, w/5.13, h/22.58)
-
     ATTACK_IT_POS = pygame.Rect(w/33.33, h/1.17, w/7.41, h/22.58)
     RUN_AWAY_POS = pygame.Rect(w/1.21, h/1.17, w/7.04, h/22.58)
-    
-
     CONTINUE_POS = pygame.Rect(w/6.67, h/1.75, w/4.15, h/14.58)
     EXIT_POS = pygame.Rect(w/1.47, h/1.75, w/9.62, h/14.89)
 

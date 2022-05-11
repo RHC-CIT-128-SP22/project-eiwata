@@ -68,8 +68,10 @@ class Game_Features(Display_Scene):
         self.user_decision(self.scene)
 
     def blit_screen(self):
+        #resize display
         w, h = pygame.display.get_surface().get_size()
         self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+        #resize rectangles for collision detection
         if self.scene == 'node1':
             self.START_BUTTON_POS = pygame.Rect(w/2.25, h/1.23, w/8.3, h/14)
             pygame.draw.rect(self.COLLISION_SCREEN, self.WHITE, self.START_BUTTON_POS, 3)

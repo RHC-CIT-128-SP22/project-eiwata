@@ -14,13 +14,13 @@ pygame.init()
 pygame.mixer.init()
 
 def main():
-    
+
     #initialize variables
     curr_game = Game_Features()
 
-    #set audio
+    #set bgm
     OPENING = mixer.music.load("assets/Beginning.mp3")
-    mixer.music.set_volume(0.7)
+    mixer.music.set_volume(0.8)
 
     #play bgm
     mixer.music.play(-1)
