@@ -82,6 +82,7 @@ class Init_Game():
     #set sfx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
     DIAL_SOUND = pygame.mixer.Sound("assets/blip5.wav")
+    SELECT = pygame.mixer.Sound("assets/long pop.wav")
     START_SOUND.set_volume(0.8)
     DIAL_SOUND.set_volume(0.6)
 

@@ -195,6 +195,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.LOOK_INTO_IT.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.LOOK_INTO_IT.set_alpha(100)
                                 #scene 6 - click 0
@@ -208,6 +209,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.TELL_HIM.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.TELL_HIM.set_alpha(100)
                                 #scene 7 - click 0
@@ -257,6 +259,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.HELP_WITH.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.HELP_WITH.set_alpha(100)
                                 #scene 9 - click 0
@@ -270,6 +273,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.MAKE_UP.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.MAKE_UP.set_alpha(100)
                                 #scene 10 - click 0
@@ -355,6 +359,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.TAKE_THE_GUN.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.TAKE_THE_GUN.set_alpha(100)
                                 #scene 14 - click 0
@@ -368,6 +373,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.RUN_AND_HIDE.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.RUN_AND_HIDE.set_alpha(100)
                                 #scene 14 - click 0
@@ -458,6 +464,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.CONTINUE_VOYAGE.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.CONTINUE_VOYAGE.set_alpha(100)
                                 #scene 19 - click 0
@@ -471,6 +478,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.JUMP_OFF_SHIP.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.JUMP_OFF_SHIP.set_alpha(100)
                                 #scene 20 - click 0
@@ -538,6 +546,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.ATTACK_IT.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.ATTACK_IT.set_alpha(100)
                                 #scene 23 - click 0
@@ -551,6 +560,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.RUN_AWAY.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.RUN_AWAY.set_alpha(100)
                                 #scene 24 - click 0
@@ -604,6 +614,7 @@ class Game_Features(Display_Scene):
                             #bold option
                             self.EXIT.set_alpha(300)
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
                                 self.screen_fader()
                                 self.EXIT.set_alpha(120)
                                 self.scene = 'node1'
