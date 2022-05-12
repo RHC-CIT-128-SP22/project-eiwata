@@ -59,12 +59,12 @@ __Some of the goals of this project are:__
 
 Core Features:
 - [X] Dialogue displays on the screen gradually as user iterates through the game
-- [X] Smooth transition between scenes
 - [X] Click to continue
-- [X] Game Over screen allows user to select between Play Again or Quit
+- [X] Start screen and Game Over screen
 
 Bonus Features:
 - [X] Resizable GUI window
+- [X] Smooth transition between scenes
 - [ ] Decision timer (10 sec) or else it autoselects decision A over decision B
 - [ ] If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
 
