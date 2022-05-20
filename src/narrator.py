@@ -29,7 +29,10 @@ class Narrator(Init_Game):
 
     #display line 1
     def blit_line1(self, scene, count = 0):
+        #initialize variables
         w, h = pygame.display.get_surface().get_size()
+
+        #seek line number per scene for every click count
         with open('dialogue.txt', 'r') as f:
             match scene:
                 case 'node3':
@@ -231,6 +234,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(239))
                         case 2:
                             f.seek(self.char_counter(243))
+            #slowly display dialogue by adding char to different versions of line1
             line1_v1 = f.readline().rstrip('\n')
             self.line1_v2 = ''
             blip_count = 0
@@ -242,6 +246,7 @@ class Narrator(Init_Game):
                 self.PSEUDO_SCREEN.blit(self.line1_v3, (190, 510))
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 self.line1_v2 += line1_v1[letter]
+                #sound fx
                 blip_count += 1
                 if blip_count % 5 == 0:
                     pygame.mixer.Sound.play(self.DIAL_SOUND)
@@ -249,7 +254,10 @@ class Narrator(Init_Game):
 
     #display line 2
     def blit_line2(self, scene, count = 0):
+        #initialize variables
         w, h = pygame.display.get_surface().get_size()
+
+        #seek line number per scene for every click count
         with open('dialogue.txt', 'r') as f:
             match scene:
                 case 'node3':
@@ -394,6 +402,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(240))
                         case 2:
                             f.seek(self.char_counter(244))
+            #slowly display dialogue by adding char to different versions of line2
             line2_v1 = f.readline().rstrip('\n')
             self.line2_v2 = ''
             blip_count = 0
@@ -406,6 +415,7 @@ class Narrator(Init_Game):
                 self.PSEUDO_SCREEN.blit(self.line2_v3, (190, 545))
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 self.line2_v2 += line2_v1[letter]
+                #sound fx
                 blip_count += 1
                 if blip_count % 5 == 0:
                     pygame.mixer.Sound.play(self.DIAL_SOUND)
@@ -413,7 +423,10 @@ class Narrator(Init_Game):
     
     #display line 3
     def blit_line3(self, scene, count = 0):
+        #initialize variables
         w, h = pygame.display.get_surface().get_size()
+
+        #seek line number per scene for every click count
         with open('dialogue.txt', 'r') as f:
             match scene:
                 case 'node3':
@@ -558,6 +571,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(241))
                         case 2:
                             f.seek(self.char_counter(245))
+            #slowly display dialogue by adding char to different versions of line3
             line3_v1 = f.readline().rstrip('\n')
             self.line3_v2 = ''
             blip_count = 0
@@ -571,6 +585,7 @@ class Narrator(Init_Game):
                 self.PSEUDO_SCREEN.blit(self.line3_v3, (190, 580))
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 self.line3_v2 += line3_v1[letter]
+                #sound fx
                 blip_count += 1
                 if blip_count % 5 == 0:
                     pygame.mixer.Sound.play(self.DIAL_SOUND)
@@ -578,7 +593,10 @@ class Narrator(Init_Game):
 
     #display line 4
     def blit_line4(self, scene, count = 0):
+        #initialize variables
         w, h = pygame.display.get_surface().get_size()
+
+        #seek line number per scene for every click count
         with open('dialogue.txt', 'r') as f:
             match scene:
                 case 'node3':
@@ -723,6 +741,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(242))
                         case 2:
                             f.seek(self.char_counter(246))
+            #slowly display dialogue by adding char to different versions of line4
             line4_v1 = f.readline().rstrip('\n')
             self.line4_v2 = ''
             blip_count = 0
@@ -737,12 +756,13 @@ class Narrator(Init_Game):
                 self.PSEUDO_SCREEN.blit(self.line4_v3, (190, 615))
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 self.line4_v2 += line4_v1[letter]
+                #sound fx
                 blip_count += 1
                 if blip_count % 5 == 0:
                     pygame.mixer.Sound.play(self.DIAL_SOUND)
                 pygame.display.update()
 
-    #takes line number as argument and returns number of characters up to that point
+    #takes line number and returns char count up to that point
     def char_counter(self, n):
         n = n - 1
         with open('dialogue.txt', 'r') as f:
@@ -756,12 +776,13 @@ class Narrator(Init_Game):
     
     #display line 1 for node 2
     def scene2_blit_line1(self):
+        #initialize variables
         w, h = pygame.display.get_surface().get_size()
         blip_count = 0
         with open('dialogue.txt', 'r') as f:
-            #display scene
             self.PSEUDO_SCREEN.fill(self.BLACK)
             f.seek(8)
+            #slowly display dialogue by adding char to different versions of line1
             line1_v1 = f.readline().rstrip('\n')
             line1_v2 = ''
             for letter in range(0, len(line1_v1)):
@@ -771,6 +792,7 @@ class Narrator(Init_Game):
                 self.PSEUDO_SCREEN.blit(line1_v3, (330, 330))
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 line1_v2 += line1_v1[letter]
+                #sound fx
                 blip_count += 1
                 if blip_count % 5 == 0:
                     pygame.mixer.Sound.play(self.DIAL_SOUND)
@@ -778,10 +800,12 @@ class Narrator(Init_Game):
 
     #display line 2 for node 2
     def scene2_blit_line2(self):
+        #initialize variables
         w, h = pygame.display.get_surface().get_size()
         blip_count = 0
         with open('dialogue.txt', 'r') as f:
             f.seek(48)
+            #slowly display dialogue by adding char to different versions of line2
             line2_v1 = f.readline().rstrip('\n')
             line2_v2 = ''
             for letter in range(0, len(line2_v1)):
@@ -791,6 +815,7 @@ class Narrator(Init_Game):
                 self.PSEUDO_SCREEN.blit(line2_v3, (300, 365))
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 line2_v2 += line2_v1[letter]
+                #sound fx
                 blip_count += 1
                 if blip_count % 5 == 0:
                     pygame.mixer.Sound.play(self.DIAL_SOUND)

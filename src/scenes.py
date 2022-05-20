@@ -21,6 +21,7 @@ class Display_Scene(Narrator):
         #display scene 2
         self.PSEUDO_SCREEN.fill(self.BLACK)
 
+        #display dialogue
         with open('dialogue.txt', 'r') as f:
             f.seek(self.char_counter(3))
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -40,8 +41,8 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
-        with open('dialogue.txt', 'r') as f:
+        #seek line number for every click count
+        with open('dialogue.txt', 'r') as f: 
             match count:
                 case 0:
                     f.seek(self.char_counter(8))
@@ -51,6 +52,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(16))
                 case 3:
                     f.seek(self.char_counter(20))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -69,7 +71,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+       #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -80,6 +82,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(35))
                 case 3:
                     f.seek(self.char_counter(39))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -113,7 +116,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -124,6 +127,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(52))
                 case 3:
                     f.seek(self.char_counter(56))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -142,7 +146,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -155,6 +159,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(73))
                 case 4:
                     f.seek(self.char_counter(77))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -186,13 +191,14 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
                     f.seek(self.char_counter(82))
                 case 1:
                     f.seek(self.char_counter(86))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -211,13 +217,14 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
                     f.seek(self.char_counter(91))
                 case 1:
                     f.seek(self.char_counter(95))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -236,13 +243,14 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
                     f.seek(self.char_counter(100))
                 case 1:
                     f.seek(self.char_counter(104))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -261,13 +269,14 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
                     f.seek(self.char_counter(110))
                 case 1:
                     f.seek(self.char_counter(114))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -301,7 +310,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -310,6 +319,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(123))
                 case 2:
                     f.seek(self.char_counter(127))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -328,7 +338,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -341,6 +351,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(144))
                 case 4:
                     f.seek(self.char_counter(148))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -359,7 +370,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -370,6 +381,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(161))
                 case 3:
                     f.seek(self.char_counter(165))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -388,13 +400,14 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
                     f.seek(self.char_counter(170))
                 case 1:
                     f.seek(self.char_counter(174))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -428,13 +441,14 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
                     f.seek(self.char_counter(180))
                 case 1:
                     f.seek(self.char_counter(184))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -453,13 +467,14 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
                     f.seek(self.char_counter(191))
                 case 1:
                     f.seek(self.char_counter(195))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -478,7 +493,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -489,6 +504,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(209))
                 case 3:
                     f.seek(self.char_counter(213))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -522,7 +538,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -533,6 +549,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(226))
                 case 3:
                     f.seek(self.char_counter(230))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -551,7 +568,7 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
         self.PSEUDO_SCREEN.blit(self.DIAL_BOX, (40, 430))
 
-        #display dialogue
+        #seek line number for every click count
         with open('dialogue.txt', 'r') as f:
             match count:
                 case 0:
@@ -560,6 +577,7 @@ class Display_Scene(Narrator):
                     f.seek(self.char_counter(239))
                 case 2:
                     f.seek(self.char_counter(243))
+            #display dialogue
             line1 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line2 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
             line3 = self.FONT.render(f.readline().rstrip('\n'), True, self.WHITE)
@@ -574,6 +592,7 @@ class Display_Scene(Narrator):
     def game_over(self, scene):
         w, h = pygame.display.get_surface().get_size()
         self.PSEUDO_SCREEN.fill(self.BLACK)
+        #display scene background img
         match scene:
             case 7:
                 self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
@@ -585,6 +604,7 @@ class Display_Scene(Narrator):
                 self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
             case 24:
                 self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
+        #display buttons
         self.PSEUDO_SCREEN.blit(self.GAME_OVER, (195, 200))
         self.PSEUDO_SCREEN.blit(self.CONTINUE, (150, 400))
         self.PSEUDO_SCREEN.blit(self.EXIT, (680, 400))
@@ -593,9 +613,11 @@ class Display_Scene(Narrator):
 
     #fade into game over screen
     def game_over_fader(self, scene):
+        #initialize variables
         w, h = pygame.display.get_surface().get_size()
         go_fader = pygame.Surface((self.X, self.Y))
         go_fader.fill(self.BLACK)
+        #display semi-transparent background img over black window
         match scene:
             case 7:
                 self.HOUSE.set_alpha(90)
@@ -615,6 +637,7 @@ class Display_Scene(Narrator):
         go_fader.blit(self.GAME_OVER, (195, 200))
         go_fader.blit(self.CONTINUE, (150, 400))
         go_fader.blit(self.EXIT, (680, 400))
+        #slowly fade into game over screen
         for alpha in range(0, 300):
             go_fader.set_alpha(alpha)
             self.PSEUDO_SCREEN.blit(go_fader, (0, 0))
@@ -650,7 +673,16 @@ class Display_Scene(Narrator):
                 #display scene 22
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
-        if scene != 8:
+        if scene == 8:
+            #increase only bottom margin (bc top margin cuts off head of inspector)
+            for i in range(y):
+                BOTTOM_Y -= 1
+                self.clock.tick(150)
+                bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
+                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+                pygame.display.update()
+        else:
+            #increase top and bottom margin
             for i in range(y):
                 TOP_Y += 1
                 BOTTOM_Y -= 1
@@ -659,13 +691,5 @@ class Display_Scene(Narrator):
                 bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
                 self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
                 pygame.display.update()
-        else:
-            for i in range(y):
-                BOTTOM_Y -= 1
-                self.clock.tick(150)
-                bottom_margin = pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, [0, BOTTOM_Y, w, h/10])
-                self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
-                pygame.display.update()
-    
 
 

@@ -9,9 +9,45 @@ mixer.init()
 
 class Game_Features(Display_Scene):
 
-    def __init__(self):
-        self.scene = 'node1'
-        self.game_over_scene = 0
+    def __init__(self, scene):
+        self.left = None
+        self.right = None
+        self.scene = scene
+
+    #insert node
+    def insert(self, scene):
+        if self.scene:
+            if scene < self.scene:
+                if self.left is None:
+                    self.left = Game_Features(scene)
+                else:
+                    self.left.insert(scene)
+            else:
+                scene > self.scene
+                if self.right is None:
+                    self.right = Game_Features(scene)
+                else:
+                    self.right.insert(scene)
+        else:
+            self.scene = scene
+
+    #print the tree
+    def printTree(self):
+        if self.left:
+            self.left.printTree()
+        print(self.scene)
+        if self.right:
+            self.right.printTree()
+
+    #inorder traversal
+    #left -> root -> right
+    def inorderTraversal(self, node):
+        res = []
+        if node:
+            res = self.inorderTraversal(node.left)
+            res.append(node.data)
+            res = res + self.inorderTraversal(node.right)
+        return res
 
     def scene_manager(self):
         self.blit_screen()
@@ -622,7 +658,7 @@ class Game_Features(Display_Scene):
                             self.CONTINUE.set_alpha(90)
                             self.EXIT.set_alpha(90)
 
-    #fade out next scene
+    #fade to next scene
     def screen_fader(self):
         w, h = pygame.display.get_surface().get_size()
         fade = pygame.Surface((self.X, self.Y))
