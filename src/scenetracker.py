@@ -1,6 +1,6 @@
 
 
-class Game_Iterator():
+class Scene_Tracker():
 
     def __init__(self, scene):
         self.left = None
@@ -10,14 +10,14 @@ class Game_Iterator():
     #insert node
     def insert(self, scene):
         if self.scene:
-            if scene == self.scene+1:
+            if scene < self.scene:
                 if self.left is None:
-                    self.left = Game_Iterator(scene)
+                    self.left = Scene_Tracker(scene)
                 else:
                     self.left.insert(scene)
-            else:
+            elif scene > self.scene:
                 if self.right is None:
-                    self.right = Game_Iterator(scene)
+                    self.right = Scene_Tracker(scene)
                 else:
                     self.right.insert(scene)
         else:
@@ -33,19 +33,21 @@ class Game_Iterator():
 
     #inorder traversal
     #left -> root -> right
-    def inorderTraversal(self, node):
+    def inorderTraversal(self, root):
         res = []
-        if node:
-            res = self.inorderTraversal(node.left)
-            res.append(node.scene)
-            res = res + self.inorderTraversal(node.right)
+        if root:
+            res = self.inorderTraversal(root.left)
+            res.append(root.scene)
+            res = res + self.inorderTraversal(root.right)
         return res
 
 
-story = Game_Iterator(1)
-story.insert(2)
-story.insert(3)
-story.insert(4)
-story.insert(5)
+story = Scene_Tracker('A')
+story.insert('B')
+story.insert('C')
+story.insert('D')
+story.insert('E')
+story.insert('e')
+story.insert('f')
 print(story.inorderTraversal(story))
 
