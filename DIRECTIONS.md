@@ -34,7 +34,7 @@ The student provided rubric is worth 150 points and is specific to the individua
       * Resizable GUI window
       * Smooth transition between scenes
       * Decision timer (10 sec) or else it autoselects decision A over decision B
-      * If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
+      * If user selects Continue (on the Game Over screen) it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
   * Zybook Concepts Used (25 pt)
       * Multiple concepts were used
       * Concepts were used wisely
