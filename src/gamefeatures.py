@@ -131,15 +131,12 @@ class Game_Features(Display_Scene):
 
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
-                                '''
                                 pygame.mixer.Sound.play(self.START_SOUND)
                                 self.screen_fader()
                                 self.START_BUTTON.set_alpha(120)
                                 self.scene2_blit_line1()
                                 self.scene2_blit_line2()
                                 self.scene = 'node2'
-                                '''
-                                self.scene = 'node5'
                         else:
                             self.START_BUTTON.set_alpha(150)
                     pygame.display.update()
