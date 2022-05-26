@@ -10,7 +10,7 @@ pygame.mixer.init()
 class Narrator(Init_Game):
 
     #create clock
-    FPS = 2000
+    FPS = 200
 
     #initialize font and colors
     FONT = pygame.font.SysFont('Rockwell', 19)
@@ -35,7 +35,7 @@ class Narrator(Init_Game):
         #seek line number per scene for every click count
         with open('dialogue.txt', 'r') as f:
             match scene:
-                case 'node3':
+                case 'C':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.UNIVERSITY, (0, 80))
@@ -48,7 +48,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(16))
                         case 3:
                             f.seek(self.char_counter(20))
-                case 'node4':
+                case 'D':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
@@ -61,7 +61,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(35))
                         case 3:
                             f.seek(self.char_counter(39))
-                case 'node6':
+                case 'F':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
@@ -74,7 +74,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(52))
                         case 3:
                             f.seek(self.char_counter(56))
-                case 'node7':
+                case 'e':
                     #display scene
                     self.HOUSE.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -90,7 +90,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(73))
                         case 4:
                             f.seek(self.char_counter(77))
-                case 'node9':
+                case 'H':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.INVESTIGATION_2, (0, 70))
@@ -99,7 +99,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(82))
                         case 1:
                             f.seek(self.char_counter(86))
-                case 'node10':
+                case 'g':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.TOWN, (0, 54.5))
@@ -108,7 +108,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(91))
                         case 1:
                             f.seek(self.char_counter(95))
-                case 'node11':
+                case 'I':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
@@ -117,7 +117,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(100))
                         case 1:
                             f.seek(self.char_counter(104))
-                case 'node12':
+                case 'f':
                     #display scene
                     self.ALONE.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -127,7 +127,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(110))
                         case 1:
                             f.seek(self.char_counter(114))
-                case 'node14':
+                case 'K':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
@@ -138,7 +138,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(123))
                         case 2:
                             f.seek(self.char_counter(127))
-                case 'node15':
+                case 'L':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.STATUE, (0, 16.5))
@@ -153,7 +153,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(144))
                         case 4:
                             f.seek(self.char_counter(148))
-                case 'node16':
+                case 'M':
                     #display scene
                     self.HOUSE.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -167,7 +167,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(161))
                         case 3:
                             f.seek(self.char_counter(165))
-                case 'node17':
+                case 'N':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
@@ -176,7 +176,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(170))
                         case 1:
                             f.seek(self.char_counter(174))
-                case 'node19':
+                case 'P':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
@@ -185,7 +185,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(180))
                         case 1:
                             f.seek(self.char_counter(184))
-                case 'node20':
+                case 'O':
                     #display scene
                     self.SAIL.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -195,7 +195,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(191))
                         case 1:
                             f.seek(self.char_counter(195))
-                case 'node21':
+                case 'Q':
                     #display scene
                     self.PSEUDO_SCREEN.fill(self.BLACK)
                     self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
@@ -208,7 +208,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(209))
                         case 3:
                             f.seek(self.char_counter(213))
-                case 'node23':
+                case 'S':
                     #display scene
                     self.RLYEH_2.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -222,7 +222,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(226))
                         case 3:
                             f.seek(self.char_counter(230))
-                case 'node24':
+                case 'r':
                     #display scene
                     self.RLYEH_3.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -260,7 +260,7 @@ class Narrator(Init_Game):
         #seek line number per scene for every click count
         with open('dialogue.txt', 'r') as f:
             match scene:
-                case 'node3':
+                case 'C':
                     match count:
                         case 0:
                             f.seek(self.char_counter(9))
@@ -270,7 +270,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(17))
                         case 3:
                             f.seek(self.char_counter(21))
-                case 'node4':
+                case 'D':
                     match count:
                         case 0:
                             f.seek(self.char_counter(28))
@@ -280,7 +280,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(36))
                         case 3:
                             f.seek(self.char_counter(40))
-                case 'node6':
+                case 'F':
                     match count:
                         case 0:
                             f.seek(self.char_counter(45))
@@ -290,7 +290,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(53))
                         case 3:
                             f.seek(self.char_counter(57))
-                case 'node7':
+                case 'e':
                     match count:
                         case 0:
                             f.seek(self.char_counter(62))
@@ -302,31 +302,31 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(74))
                         case 4:
                             f.seek(self.char_counter(78))
-                case 'node9':
+                case 'H':
                     match count:
                         case 0:
                             f.seek(self.char_counter(83))
                         case 1:
                             f.seek(self.char_counter(87))
-                case 'node10':
+                case 'g':
                     match count:
                         case 0:
                             f.seek(self.char_counter(92))
                         case 1:
                             f.seek(self.char_counter(96))
-                case 'node11':
+                case 'I':
                     match count:
                         case 0:
                             f.seek(self.char_counter(101))
                         case 1:
                             f.seek(self.char_counter(105))
-                case 'node12':
+                case 'f':
                     match count:
                         case 0:
                             f.seek(self.char_counter(111))
                         case 1:
                             f.seek(self.char_counter(115))
-                case 'node14':
+                case 'K':
                     match count:
                         case 0:
                             f.seek(self.char_counter(120))
@@ -334,7 +334,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(124))
                         case 2:
                             f.seek(self.char_counter(128))
-                case 'node15':
+                case 'L':
                     match count:
                         case 0:
                             f.seek(self.char_counter(133))
@@ -346,7 +346,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(145))
                         case 4:
                             f.seek(self.char_counter(149))
-                case 'node16':
+                case 'M':
                     match count:
                         case 0:
                             f.seek(self.char_counter(154))
@@ -356,25 +356,25 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(162))
                         case 3:
                             f.seek(self.char_counter(166))
-                case 'node17':
+                case 'N':
                     match count:
                         case 0:
                             f.seek(self.char_counter(171))
                         case 1:
                             f.seek(self.char_counter(175))
-                case 'node19':
+                case 'P':
                     match count:
                         case 0:
                             f.seek(self.char_counter(181))
                         case 1:
                             f.seek(self.char_counter(185))
-                case 'node20':
+                case 'o':
                     match count:
                         case 0:
                             f.seek(self.char_counter(192))
                         case 1:
                             f.seek(self.char_counter(196))
-                case 'node21':
+                case 'Q':
                     match count:
                         case 0:
                             f.seek(self.char_counter(202))
@@ -384,7 +384,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(210))
                         case 3:
                             f.seek(self.char_counter(214))
-                case 'node23':
+                case 'S':
                     match count:
                         case 0:
                             f.seek(self.char_counter(219))
@@ -394,7 +394,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(227))
                         case 3:
                             f.seek(self.char_counter(231))
-                case 'node24':
+                case 'r':
                     match count:
                         case 0:
                             f.seek(self.char_counter(236))
@@ -429,7 +429,7 @@ class Narrator(Init_Game):
         #seek line number per scene for every click count
         with open('dialogue.txt', 'r') as f:
             match scene:
-                case 'node3':
+                case 'C':
                     match count:
                         case 0:
                             f.seek(self.char_counter(10))
@@ -439,7 +439,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(18))
                         case 3:
                             f.seek(self.char_counter(22))
-                case 'node4':
+                case 'D':
                     match count:
                         case 0:
                             f.seek(self.char_counter(29))
@@ -449,7 +449,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(37))
                         case 3:
                             f.seek(self.char_counter(41))
-                case 'node6':
+                case 'F':
                     match count:
                         case 0:
                             f.seek(self.char_counter(46))
@@ -459,7 +459,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(54))
                         case 3:
                             f.seek(self.char_counter(58))
-                case 'node7':
+                case 'e':
                     match count:
                         case 0:
                             f.seek(self.char_counter(63))
@@ -471,31 +471,31 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(75))
                         case 4:
                             f.seek(self.char_counter(79))
-                case 'node9':
+                case 'H':
                     match count:
                         case 0:
                             f.seek(self.char_counter(84))
                         case 1:
                             f.seek(self.char_counter(88))
-                case 'node10':
+                case 'g':
                     match count:
                         case 0:
                             f.seek(self.char_counter(93))
                         case 1:
                             f.seek(self.char_counter(97))
-                case 'node11':
+                case 'I':
                     match count:
                         case 0:
                             f.seek(self.char_counter(102))
                         case 1:
                             f.seek(self.char_counter(106))
-                case 'node12':
+                case 'f':
                     match count:
                         case 0:
                             f.seek(self.char_counter(112))
                         case 1:
                             f.seek(self.char_counter(116))
-                case 'node14':
+                case 'K':
                     match count:
                         case 0:
                             f.seek(self.char_counter(121))
@@ -503,7 +503,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(125))
                         case 2:
                             f.seek(self.char_counter(129))
-                case 'node15':
+                case 'L':
                     match count:
                         case 0:
                             f.seek(self.char_counter(134))
@@ -515,7 +515,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(146))
                         case 4:
                             f.seek(self.char_counter(150))
-                case 'node16':
+                case 'M':
                     match count:
                         case 0:
                             f.seek(self.char_counter(155))
@@ -525,25 +525,25 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(163))
                         case 3:
                             f.seek(self.char_counter(167))
-                case 'node17':
+                case 'N':
                     match count:
                         case 0:
                             f.seek(self.char_counter(172))
                         case 1:
                             f.seek(self.char_counter(176))
-                case 'node19':
+                case 'P':
                     match count:
                         case 0:
                             f.seek(self.char_counter(182))
                         case 1:
                             f.seek(self.char_counter(186))
-                case 'node20':
+                case 'o':
                     match count:
                         case 0:
                             f.seek(self.char_counter(193))
                         case 1:
                             f.seek(self.char_counter(197))
-                case 'node21':
+                case 'Q':
                     match count:
                         case 0:
                             f.seek(self.char_counter(203))
@@ -553,7 +553,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(211))
                         case 3:
                             f.seek(self.char_counter(215))
-                case 'node23':
+                case 'S':
                     match count:
                         case 0:
                             f.seek(self.char_counter(220))
@@ -563,7 +563,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(228))
                         case 3:
                             f.seek(self.char_counter(232))
-                case 'node24':
+                case 'r':
                     match count:
                         case 0:
                             f.seek(self.char_counter(237))
@@ -599,7 +599,7 @@ class Narrator(Init_Game):
         #seek line number per scene for every click count
         with open('dialogue.txt', 'r') as f:
             match scene:
-                case 'node3':
+                case 'C':
                     match count:
                         case 0:
                             f.seek(self.char_counter(11))
@@ -609,7 +609,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(19))
                         case 3:
                             f.seek(self.char_counter(23))
-                case 'node4':
+                case 'D':
                     match count:
                         case 0:
                             f.seek(self.char_counter(30))
@@ -619,7 +619,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(38))
                         case 3:
                             f.seek(self.char_counter(42))
-                case 'node6':
+                case 'F':
                     match count:
                         case 0:
                             f.seek(self.char_counter(47))
@@ -629,7 +629,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(55))
                         case 3:
                             f.seek(self.char_counter(59))
-                case 'node7':
+                case 'e':
                     match count:
                         case 0:
                             f.seek(self.char_counter(64))
@@ -641,31 +641,31 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(76))
                         case 4:
                             f.seek(self.char_counter(80))
-                case 'node9':
+                case 'H':
                     match count:
                         case 0:
                             f.seek(self.char_counter(85))
                         case 1:
                             f.seek(self.char_counter(89))
-                case 'node10':
+                case 'g':
                     match count:
                         case 0:
                             f.seek(self.char_counter(94))
                         case 1:
                             f.seek(self.char_counter(98))
-                case 'node11':
+                case 'I':
                     match count:
                         case 0:
                             f.seek(self.char_counter(103))
                         case 1:
                             f.seek(self.char_counter(107))
-                case 'node12':
+                case 'f':
                     match count:
                         case 0:
                             f.seek(self.char_counter(113))
                         case 1:
                             f.seek(self.char_counter(117))
-                case 'node14':
+                case 'K':
                     match count:
                         case 0:
                             f.seek(self.char_counter(122))
@@ -673,7 +673,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(126))
                         case 2:
                             f.seek(self.char_counter(130))
-                case 'node15':
+                case 'L':
                     match count:
                         case 0:
                             f.seek(self.char_counter(135))
@@ -685,7 +685,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(147))
                         case 4:
                             f.seek(self.char_counter(151))
-                case 'node16':
+                case 'M':
                     match count:
                         case 0:
                             f.seek(self.char_counter(156))
@@ -695,25 +695,25 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(164))
                         case 3:
                             f.seek(self.char_counter(168))
-                case 'node17':
+                case 'N':
                     match count:
                         case 0:
                             f.seek(self.char_counter(173))
                         case 1:
                             f.seek(self.char_counter(177))
-                case 'node19':
+                case 'P':
                     match count:
                         case 0:
                             f.seek(self.char_counter(183))
                         case 1:
                             f.seek(self.char_counter(187))
-                case 'node20':
+                case 'o':
                     match count:
                         case 0:
                             f.seek(self.char_counter(194))
                         case 1:
                             f.seek(self.char_counter(198))
-                case 'node21':
+                case 'Q':
                     match count:
                         case 0:
                             f.seek(self.char_counter(204))
@@ -723,7 +723,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(212))
                         case 3:
                             f.seek(self.char_counter(216))
-                case 'node23':
+                case 'S':
                     match count:
                         case 0:
                             f.seek(self.char_counter(221))
@@ -733,7 +733,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(229))
                         case 3:
                             f.seek(self.char_counter(233))
-                case 'node24':
+                case 'r':
                     match count:
                         case 0:
                             f.seek(self.char_counter(238))
@@ -774,8 +774,8 @@ class Narrator(Init_Game):
             f.seek(0)
         return line_offset[n]
     
-    #display line 1 for node 2
-    def scene2_blit_line1(self):
+    #display line 1 for node B
+    def sceneB_blit_line1(self):
         #initialize variables
         w, h = pygame.display.get_surface().get_size()
         blip_count = 0
@@ -786,7 +786,7 @@ class Narrator(Init_Game):
             line1_v1 = f.readline().rstrip('\n')
             line1_v2 = ''
             for letter in range(0, len(line1_v1)):
-                self.clock.tick(80)
+                self.clock.tick(70)
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 line1_v3 = self.FONT.render(line1_v2+line1_v1[letter], True, self.WHITE)
                 self.PSEUDO_SCREEN.blit(line1_v3, (330, 330))
@@ -798,8 +798,8 @@ class Narrator(Init_Game):
                     pygame.mixer.Sound.play(self.DIAL_SOUND)
                 pygame.display.update() 
 
-    #display line 2 for node 2
-    def scene2_blit_line2(self):
+    #display line 2 for node B
+    def sceneB_blit_line2(self):
         #initialize variables
         w, h = pygame.display.get_surface().get_size()
         blip_count = 0
@@ -809,7 +809,7 @@ class Narrator(Init_Game):
             line2_v1 = f.readline().rstrip('\n')
             line2_v2 = ''
             for letter in range(0, len(line2_v1)):
-                self.clock.tick(80)
+                self.clock.tick(70)
                 pygame.draw.rect(self.PSEUDO_SCREEN, self.BLACK, pygame.Rect(300, 365, 400, 35))
                 line2_v3 = self.FONT.render(line2_v2+line2_v1[letter], True, self.WHITE)
                 self.PSEUDO_SCREEN.blit(line2_v3, (300, 365))

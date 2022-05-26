@@ -19,7 +19,6 @@ class Init_Game():
     TITLE = pygame.image.load("assets/title.png")
     START_BUTTON = pygame.image.load("assets/startButton.png")
     DIAL_BOX = pygame.image.load("assets/rectangle.png")
-    BORDER = pygame.image.load("assets/red border.png")
     WHITE_LINE = pygame.image.load("assets/white line.png")
     BLACK_LINE = pygame.image.load("assets/black line.png")
     TENTACLE = pygame.image.load("assets/tentacle-art-invertebrate-tenticles-5a8a929ad57a7d9fc498da38c662a6fc.png")
@@ -63,7 +62,6 @@ class Init_Game():
 
     #set item transparency
     DIAL_BOX.set_alpha(210)
-    BORDER.set_alpha(210)
     TENTACLE.set_alpha(210)
     START_BUTTON.set_alpha(150)
     LOOK_INTO_IT.set_alpha(100)

@@ -12,7 +12,7 @@ class Display_Scene(Narrator):
     x_left = -290
     x_right = 864
 
-    def node1(self):
+    def nodeA(self):
         #display start screen 
         self.PSEUDO_SCREEN.blit(self.START_SCREEN, (0, 70))
         self.PSEUDO_SCREEN.blit(self.TITLE, (50, 50))
@@ -20,8 +20,8 @@ class Display_Scene(Narrator):
 
         pygame.display.update()   
 
-    def node2(self):
-        #display scene 2
+    def nodeB(self):
+        #display scene B
         self.PSEUDO_SCREEN.fill(self.BLACK)
 
         #display dialogue
@@ -36,9 +36,9 @@ class Display_Scene(Narrator):
         self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
         pygame.display.update()
 
-    def node3(self, count):
+    def nodeC(self, count):
         count -= 1
-        #display scene 3
+        #display scene C
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.UNIVERSITY, (0, 80))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -66,9 +66,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node4(self, count):
+    def nodeD(self, count):
         count = count - 1
-        #display scene 4
+        #display scene D
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -97,8 +97,8 @@ class Display_Scene(Narrator):
         pygame.display.update()
 
     #DECISION SCENE
-    def node5(self):
-        #display scene 5
+    def nodeE(self):
+        #display scene E
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
 
@@ -113,9 +113,9 @@ class Display_Scene(Narrator):
 
         pygame.display.update()
 
-    def node6(self, count):
+    def nodeF(self, count):
         count -= 1
-        #display scene 6
+        #display scene F
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -143,9 +143,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node7(self, count):
+    def nodee(self, count):
         count -= 1
-        #display scene 7
+        #display scene e
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -176,8 +176,8 @@ class Display_Scene(Narrator):
         pygame.display.update()
 
     #DECISION SCENE
-    def node8(self):
-        #display scene 8
+    def nodeG(self):
+        #display scene G
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
 
@@ -190,9 +190,9 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_right, 660))
         pygame.display.update()
 
-    def node9(self, count):
+    def nodeH(self, count):
         count-=1
-        #display scene 9
+        #display scene H
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_2, (0, 70))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -216,9 +216,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node10(self, count):
+    def nodeg(self, count):
         count -= 1
-        #display scene 10
+        #display scene g
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.TOWN, (0, 54.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -242,9 +242,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node11(self, count):
+    def nodeI(self, count):
         count -= 1
-        #display scene 11
+        #display scene I
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -268,9 +268,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node12(self, count):
+    def nodef(self, count):
         count -= 1
-        #display scene 12
+        #display scene f
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.ALONE, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -295,8 +295,8 @@ class Display_Scene(Narrator):
         pygame.display.update()
 
     #DECISION SCENE
-    def node13(self):
-        #display scene 13
+    def nodeJ(self):
+        #display scene J
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
 
@@ -311,9 +311,9 @@ class Display_Scene(Narrator):
 
         pygame.display.update()
 
-    def node14(self, count):
+    def nodeK(self, count):
         count -= 1
-        #display scene 14
+        #display scene K
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -339,9 +339,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node15(self, count):
+    def nodeL(self, count):
         count -= 1
-        #display scene 15
+        #display scene L
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.STATUE, (0, 16.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -371,9 +371,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node16(self, count):
+    def nodeM(self, count):
         count -= 1
-        #display scene 16
+        #display scene M
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -401,9 +401,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node17(self, count):
+    def nodeN(self, count):
         count -= 1
-        #display scene 17
+        #display scene N
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -428,8 +428,8 @@ class Display_Scene(Narrator):
         pygame.display.update()
 
     #DECISION SCENE
-    def node18(self):
-        #display scene 18
+    def nodeO(self):
+        #display scene O
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
 
@@ -444,9 +444,9 @@ class Display_Scene(Narrator):
 
         pygame.display.update()
 
-    def node19(self, count):
+    def nodeP(self, count):
         count -= 1
-        #display scene 19
+        #display scene P
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -470,9 +470,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node20(self, count):
+    def nodeo(self, count):
         count -= 1
-        #display scene 20
+        #display scene o
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -496,9 +496,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node21(self, count):
+    def nodeQ(self, count):
         count -= 1
-        #display scene 21
+        #display scene Q
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -527,8 +527,8 @@ class Display_Scene(Narrator):
         pygame.display.update()
 
     #DECISION SCENE
-    def node22(self):
-        #display scene 22
+    def nodeR(self):
+        #display scene R
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
 
@@ -543,9 +543,9 @@ class Display_Scene(Narrator):
 
         pygame.display.update()
 
-    def node23(self, count):
+    def nodeS(self, count):
         count -= 1
-        #display scene 23
+        #display scene S
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -573,9 +573,9 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
 
-    def node24(self, count):
+    def noder(self, count):
         count -= 1
-        #display scene 24
+        #display scene r
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
         self.PSEUDO_SCREEN.blit(self.TENTACLE, (150, 450))
@@ -607,15 +607,15 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.fill(self.BLACK)
         #display scene background img
         match scene:
-            case 7:
+            case 'e':
                 self.PSEUDO_SCREEN.blit(self.HOUSE, (0, 62.5))
-            case 12:
+            case 'f':
                 self.PSEUDO_SCREEN.blit(self.ALONE, (0, 68.5))
-            case 20:
+            case 'o':
                 self.PSEUDO_SCREEN.blit(self.SAIL, (0, 37.5))
-            case 23:
+            case 'S':
                 self.PSEUDO_SCREEN.blit(self.RLYEH_2, (0, 63.5))
-            case 24:
+            case 'r':
                 self.PSEUDO_SCREEN.blit(self.RLYEH_3, (0, 56))
         #display buttons
         self.PSEUDO_SCREEN.blit(self.GAME_OVER, (195, 200))
@@ -632,19 +632,19 @@ class Display_Scene(Narrator):
         go_fader.fill(self.BLACK)
         #display semi-transparent background img over black window
         match scene:
-            case 7:
+            case 'e':
                 self.HOUSE.set_alpha(90)
                 go_fader.blit(self.HOUSE, (0, 62.5))
-            case 12:
+            case 'f':
                 self.ALONE.set_alpha(90)
                 go_fader.blit(self.ALONE, (0, 68.5))
-            case 20:
+            case 'o':
                 self.SAIL.set_alpha(90)
                 go_fader.blit(self.SAIL, (0, 37.5))
-            case 23:
+            case 'S':
                 self.RLYEH_2.set_alpha(90)
                 go_fader.blit(self.RLYEH_2, (0, 63.5))
-            case 24:
+            case 'r':
                 self.RLYEH_3.set_alpha(90)
                 go_fader.blit(self.RLYEH_3, (0, 56))
         go_fader.blit(self.GAME_OVER, (195, 200))
@@ -666,27 +666,27 @@ class Display_Scene(Narrator):
         BOTTOM_Y = self.h - y
 
         match scene:
-            case 5:
-                #display scene 5
+            case 'E':
+                #display scene E
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
-            case 8:
-                #display scene 8
+            case 'G':
+                #display scene G
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
-            case 13:
-                 #display scene 13
+            case 'J':
+                 #display scene J
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
-            case 18:
-                #display scene 18
+            case 'O':
+                #display scene O
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
-            case 22:
-                #display scene 22
+            case 'R':
+                #display scene R
                 self.PSEUDO_SCREEN.fill(self.BLACK)
                 self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
-        if scene == 8:
+        if scene == 'G':
             #increase only bottom margin (bc top margin cuts off head of inspector)
             for i in range(y):
                 BOTTOM_Y -= 1
