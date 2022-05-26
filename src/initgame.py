@@ -22,7 +22,6 @@ class Init_Game():
     BORDER = pygame.image.load("assets/red border.png")
     WHITE_LINE = pygame.image.load("assets/white line.png")
     BLACK_LINE = pygame.image.load("assets/black line.png")
-    RED_ARROW = pygame.image.load("assets/red arrow.png")
     TENTACLE = pygame.image.load("assets/tentacle-art-invertebrate-tenticles-5a8a929ad57a7d9fc498da38c662a6fc.png")
     GAME_OVER = pygame.image.load("assets/Game Over.png")
 
