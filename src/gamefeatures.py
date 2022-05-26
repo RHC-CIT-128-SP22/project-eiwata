@@ -131,12 +131,15 @@ class Game_Features(Display_Scene):
 
                             #if click start button
                             if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                '''
                                 pygame.mixer.Sound.play(self.START_SOUND)
                                 self.screen_fader()
                                 self.START_BUTTON.set_alpha(120)
                                 self.scene2_blit_line1()
                                 self.scene2_blit_line2()
                                 self.scene = 'node2'
+                                '''
+                                self.scene = 'node5'
                         else:
                             self.START_BUTTON.set_alpha(150)
                     pygame.display.update()
@@ -202,6 +205,10 @@ class Game_Features(Display_Scene):
                             self.scene = 'node6'
                     #if mouse move or click
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 1
+                            self.x_right -= 1
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
                         
@@ -290,6 +297,10 @@ class Game_Features(Display_Scene):
                             self.click_count = 1
                             self.scene = 'node9'
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 1
+                            self.x_right -= 1
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
                         
@@ -413,6 +424,10 @@ class Game_Features(Display_Scene):
                             self.click_count = 1
                             self.scene = 'node14'
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 1
+                            self.x_right -= 1
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
 
@@ -539,6 +554,10 @@ class Game_Features(Display_Scene):
                             self.click_count = 1
                             self.scene = 'node19'
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 1
+                            self.x_right -= 1
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
 
@@ -644,6 +663,10 @@ class Game_Features(Display_Scene):
                             self.click_count = 1
                             self.scene = 'node23'
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 1
+                            self.x_right -= 1
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
 
