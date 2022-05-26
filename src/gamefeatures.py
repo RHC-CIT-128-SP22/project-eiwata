@@ -2,12 +2,13 @@
 import sys, pygame
 from pygame import mixer
 from scenes import Display_Scene
+from scenetracker import Scene_Tracker
 
 #initialize game
 pygame.init()
 mixer.init()
 
-class Game_Features(Display_Scene):
+class Game_Features(Display_Scene, Scene_Tracker):
 
     def __init__(self):
         self.scene = 'A'
@@ -206,6 +207,7 @@ class Game_Features(Display_Scene):
                         if self.x_left < 100:
                             self.x_left += 1
                             self.x_right -= 1
+                            self.clock.tick(60)
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
                         
@@ -298,6 +300,7 @@ class Game_Features(Display_Scene):
                         if self.x_left < 100:
                             self.x_left += 1
                             self.x_right -= 1
+                            self.clock.tick(60)
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
                         
@@ -409,6 +412,7 @@ class Game_Features(Display_Scene):
                         if self.x_left < 100:
                             self.x_left += 2
                             self.x_right -= 2
+                            self.clock.tick(60)
                         else:
                             self.TAKE_THE_GUN.set_alpha(300)
                             pygame.mixer.Sound.play(self.SELECT)
@@ -555,6 +559,7 @@ class Game_Features(Display_Scene):
                         if self.x_left < 100:
                             self.x_left += 1
                             self.x_right -= 1
+                            self.clock.tick(60)
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
 
@@ -664,6 +669,7 @@ class Game_Features(Display_Scene):
                         if self.x_left < 100:
                             self.x_left += 1
                             self.x_right -= 1
+                            self.clock.tick(60)
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
 
