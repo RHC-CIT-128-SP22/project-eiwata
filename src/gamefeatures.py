@@ -181,6 +181,25 @@ class Game_Features(Display_Scene):
                             self.scene = 'node5'
                             self.narrow_screen(5, 70)
                 case 'node5':
+                    timer_interval = 50 # 0.5 sec
+                    timer_event = pygame.USEREVENT
+                    pygame.time.set_timer(timer_event, timer_interval)
+                    if event.type == timer_event:
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 2
+                            self.x_right -= 2
+                        else:
+                            self.LOOK_INTO_IT.set_alpha(300)
+                            pygame.mixer.Sound.play(self.SELECT)
+                            self.screen_fader()
+                            #scene 6 - click 0
+                            self.blit_line1('node6')
+                            self.blit_line2('node6')
+                            self.blit_line3('node6')
+                            self.blit_line4('node6')
+                            self.click_count = 1
+                            self.scene = 'node6'
                     #if mouse move or click
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
                         #get mouse position
@@ -222,6 +241,8 @@ class Game_Features(Display_Scene):
                             self.LOOK_INTO_IT.set_alpha(100)
                             self.TELL_HIM.set_alpha(100)
                 case 'node6':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene 6 - click 1 - 3
                         if self.click_count <= 3:
@@ -234,6 +255,8 @@ class Game_Features(Display_Scene):
                             self.narrow_screen(8, 70)
                             self.scene = 'node8'
                 case 'node7':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene 7 - click 1 - 4
                         if self.click_count <= 4:
@@ -247,6 +270,25 @@ class Game_Features(Display_Scene):
                             self.game_over_fader(self.game_over_scene)
                             self.scene = 'game_over'
                 case 'node8':
+                    timer_interval = 50 # 0.5 sec
+                    timer_event = pygame.USEREVENT
+                    pygame.time.set_timer(timer_event, timer_interval)
+                    if event.type == timer_event:
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 2
+                            self.x_right -= 2
+                        else:
+                            self.HELP_WITH.set_alpha(300)
+                            pygame.mixer.Sound.play(self.SELECT)
+                            self.screen_fader()
+                            #scene 9 - click 0
+                            self.blit_line1('node9')
+                            self.blit_line2('node9')
+                            self.blit_line3('node9')
+                            self.blit_line4('node9')
+                            self.click_count = 1
+                            self.scene = 'node9'
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
@@ -286,6 +328,8 @@ class Game_Features(Display_Scene):
                             self.HELP_WITH.set_alpha(100)
                             self.MAKE_UP.set_alpha(100)
                 case 'node9':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         if self.click_count <= 1:
                             #scene 9 - click 1
@@ -304,6 +348,8 @@ class Game_Features(Display_Scene):
                             self.click_count = 1
                             self.scene = 'node11'
                 case 'node10':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         if self.click_count <= 1:
                             #scene 10 - click 1
@@ -347,6 +393,25 @@ class Game_Features(Display_Scene):
                             self.game_over_fader(self.game_over_scene)
                             self.scene = 'game_over'
                 case 'node13':
+                    timer_interval = 50 # 0.5 sec
+                    timer_event = pygame.USEREVENT
+                    pygame.time.set_timer(timer_event, timer_interval)
+                    if event.type == timer_event:
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 2
+                            self.x_right -= 2
+                        else:
+                            self.TAKE_THE_GUN.set_alpha(300)
+                            pygame.mixer.Sound.play(self.SELECT)
+                            self.screen_fader()
+                            #scene 14 - click 0
+                            self.blit_line1('node14')
+                            self.blit_line2('node14')
+                            self.blit_line3('node14')
+                            self.blit_line4('node14')
+                            self.click_count = 1
+                            self.scene = 'node14'
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
@@ -386,6 +451,8 @@ class Game_Features(Display_Scene):
                             self.TAKE_THE_GUN.set_alpha(100)
                             self.RUN_AND_HIDE.set_alpha(100)
                 case 'node14':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene 14 - click 1 - 2
                         if self.click_count <= 2:
@@ -452,6 +519,25 @@ class Game_Features(Display_Scene):
                             self.narrow_screen('node18', 70)
                             self.scene = 'node18'
                 case 'node18':
+                    timer_interval = 50 # 0.5 sec
+                    timer_event = pygame.USEREVENT
+                    pygame.time.set_timer(timer_event, timer_interval)
+                    if event.type == timer_event:
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 2
+                            self.x_right -= 2
+                        else:
+                            self.CONTINUE_VOYAGE.set_alpha(300)
+                            pygame.mixer.Sound.play(self.SELECT)
+                            self.screen_fader()
+                            #scene 19 - click 0
+                            self.blit_line1('node19')
+                            self.blit_line2('node19')
+                            self.blit_line3('node19')
+                            self.blit_line4('node19')
+                            self.click_count = 1
+                            self.scene = 'node19'
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
@@ -491,6 +577,8 @@ class Game_Features(Display_Scene):
                             self.CONTINUE_VOYAGE.set_alpha(100)
                             self.JUMP_OFF_SHIP.set_alpha(100)
                 case 'node19':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene 19 - click 1
                         if self.click_count <= 1:
@@ -509,6 +597,8 @@ class Game_Features(Display_Scene):
                             self.click_count = 1
                             self.scene = 'node21'
                 case 'node20':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene 20 - click 1
                         if self.click_count <= 1:
@@ -534,6 +624,25 @@ class Game_Features(Display_Scene):
                             self.narrow_screen('node22', 90)
                             self.scene = 'node22'
                 case 'node22':
+                    timer_interval = 50 # 0.5 sec
+                    timer_event = pygame.USEREVENT
+                    pygame.time.set_timer(timer_event, timer_interval)
+                    if event.type == timer_event:
+                        #stop if black lines reach white line midpoint
+                        if self.x_left < 100:
+                            self.x_left += 2
+                            self.x_right -= 2
+                        else:
+                            self.ATTACK_IT.set_alpha(300)
+                            pygame.mixer.Sound.play(self.SELECT)
+                            self.screen_fader()
+                            #scene 23 - click 0
+                            self.blit_line1('node23')
+                            self.blit_line2('node23')
+                            self.blit_line3('node23')
+                            self.blit_line4('node23')
+                            self.click_count = 1
+                            self.scene = 'node23'
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
                         #get mouse position
                         mx, my = pygame.mouse.get_pos()
@@ -573,6 +682,8 @@ class Game_Features(Display_Scene):
                             self.ATTACK_IT.set_alpha(100)
                             self.RUN_AWAY.set_alpha(100)
                 case 'node23':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene 23 - click 1 - 3
                         if self.click_count <= 3:
@@ -586,6 +697,8 @@ class Game_Features(Display_Scene):
                             self.game_over_fader(self.game_over_scene)
                             self.scene = 'game_over'
                 case 'node24':
+                    self.x_left = -290
+                    self.x_right = 864
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene 24 - click 1 - 2
                         if self.click_count <= 2:

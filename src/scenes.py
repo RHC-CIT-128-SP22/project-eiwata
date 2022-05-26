@@ -9,6 +9,9 @@ pygame.mixer.init()
 
 class Display_Scene(Narrator):
 
+    x_left = -290
+    x_right = 864
+
     def node1(self):
         #display start screen 
         self.PSEUDO_SCREEN.blit(self.START_SCREEN, (0, 70))
@@ -105,6 +108,8 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.LOOK_INTO_IT, (30, 600))
         self.PSEUDO_SCREEN.blit(self.TELL_HIM, (680, 600))
         self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (136.5, 665))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_left, 660))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_right, 660))
 
         pygame.display.update()
 
@@ -181,6 +186,8 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.HELP_WITH, (30, 600))
         self.PSEUDO_SCREEN.blit(self.MAKE_UP, (600, 600))
         self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (136.5, 665))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_left, 660))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_right, 660))
         pygame.display.update()
 
     def node9(self, count):
@@ -299,6 +306,8 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.TAKE_THE_GUN, (30, 600))
         self.PSEUDO_SCREEN.blit(self.RUN_AND_HIDE, (784, 600))
         self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (136.5, 665))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_left, 660))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_right, 660))
 
         pygame.display.update()
 
@@ -430,6 +439,8 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.CONTINUE_VOYAGE, (30, 600))
         self.PSEUDO_SCREEN.blit(self.JUMP_OFF_SHIP, (775, 600))
         self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (136.5, 665))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_left, 660))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_right, 660))
 
         pygame.display.update()
 
@@ -527,6 +538,8 @@ class Display_Scene(Narrator):
         self.PSEUDO_SCREEN.blit(self.RUN_AWAY, (828, 600))
         self.PSEUDO_SCREEN.blit(self.ATTACK_IT, (30, 600))
         self.PSEUDO_SCREEN.blit(self.WHITE_LINE, (136.5, 665))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_left, 660))
+        self.PSEUDO_SCREEN.blit(self.BLACK_LINE, (self.x_right, 660))
 
         pygame.display.update()
 

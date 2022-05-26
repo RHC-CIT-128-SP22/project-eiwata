@@ -65,7 +65,7 @@ Core Features:
 Bonus Features:
 - [X] Resizable GUI window
 - [X] Smooth transition between scenes
-- [ ] Decision timer (10 sec) or else it autoselects decision A over decision B
+- [X] Decision timer (10 sec) or else it autoselects decision A over decision B
 - [ ] If user selects Play Again it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
 
 ### Video Demonstration
