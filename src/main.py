@@ -16,8 +16,7 @@ pygame.mixer.init()
 def main():
 
     #initialize variables
-    scene = 1
-    curr_game = Game_Features(scene)
+    curr_game = Game_Features()
 
     #set bgm
     OPENING = mixer.music.load("assets/Beginning.mp3")
