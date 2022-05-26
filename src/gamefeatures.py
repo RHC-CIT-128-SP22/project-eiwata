@@ -2,13 +2,12 @@
 import sys, pygame
 from pygame import mixer
 from scenes import Display_Scene
-from scenetracker import Scene_Tracker
 
 #initialize game
 pygame.init()
 mixer.init()
 
-class Game_Features(Display_Scene, Scene_Tracker):
+class Game_Features(Display_Scene):
 
     def __init__(self):
         self.scene = 'A'
@@ -64,7 +63,9 @@ class Game_Features(Display_Scene, Scene_Tracker):
         if self.scene == 'r':
             self.noder(self.click_count)
         if self.scene == 'game_over':
-            self.game_over(self.game_over_scene)
+            self.game_over(self.go_scene)
+        if self.scene == 'play_again':
+            self.play_again(self.scene)
         self.user_decision(self.scene)
 
     def blit_screen(self):
@@ -191,7 +192,6 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.x_left += 2
                             self.x_right -= 2
                         else:
-                            self.LOOK_INTO_IT.set_alpha(300)
                             pygame.mixer.Sound.play(self.SELECT)
                             self.screen_fader()
                             #scene F - click 0
@@ -272,8 +272,8 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.blit_line4('e', self.click_count)
                             self.click_count +=1
                         else:
-                            self.game_over_scene = 'e'
-                            self.game_over_fader(self.game_over_scene)
+                            self.go_scene = 'e'
+                            self.game_over_fader(self.go_scene)
                             self.scene = 'game_over'
                 case 'G':
                     timer_interval = 50 # 0.5 sec
@@ -285,7 +285,6 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.x_left += 2
                             self.x_right -= 2
                         else:
-                            self.HELP_WITH.set_alpha(300)
                             pygame.mixer.Sound.play(self.SELECT)
                             self.screen_fader()
                             #scene H - click 0
@@ -400,8 +399,8 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.blit_line4('f', self.click_count)
                             self.click_count+=1
                         else:
-                            self.game_over_scene = 'f'
-                            self.game_over_fader(self.game_over_scene)
+                            self.go_scene = 'f'
+                            self.game_over_fader(self.go_scene)
                             self.scene = 'game_over'
                 case 'J':
                     timer_interval = 50 # 0.5 sec
@@ -414,7 +413,6 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.x_right -= 2
                             self.clock.tick(60)
                         else:
-                            self.TAKE_THE_GUN.set_alpha(300)
                             pygame.mixer.Sound.play(self.SELECT)
                             self.screen_fader()
                             #scene K - click 0
@@ -544,7 +542,6 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.x_left += 2
                             self.x_right -= 2
                         else:
-                            self.CONTINUE_VOYAGE.set_alpha(300)
                             pygame.mixer.Sound.play(self.SELECT)
                             self.screen_fader()
                             #scene P - click 0
@@ -629,8 +626,8 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.blit_line4('o', self.click_count)
                             self.click_count+=1
                         else:
-                            self.game_over_scene = 'o'
-                            self.game_over_fader(self.game_over_scene)
+                            self.go_scene = 'o'
+                            self.game_over_fader(self.go_scene)
                             self.scene = 'game_over'
                 case 'Q':
                     if event.type == pygame.MOUSEBUTTONDOWN:
@@ -654,7 +651,6 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.x_left += 2
                             self.x_right -= 2
                         else:
-                            self.ATTACK_IT.set_alpha(300)
                             pygame.mixer.Sound.play(self.SELECT)
                             self.screen_fader()
                             #scene S - click 0
@@ -719,8 +715,8 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.blit_line4('S', self.click_count)
                             self.click_count+=1
                         else:
-                            self.game_over_scene = 'S'
-                            self.game_over_fader(self.game_over_scene)
+                            self.go_scene = 'S'
+                            self.game_over_fader(self.go_scene)
                             self.scene = 'game_over'
                 case 'r':
                     self.x_left = -290
@@ -734,8 +730,8 @@ class Game_Features(Display_Scene, Scene_Tracker):
                             self.blit_line4('r', self.click_count)
                             self.click_count+=1
                         else:
-                            self.game_over_scene = 'r'
-                            self.game_over_fader(self.game_over_scene)
+                            self.go_scene = 'r'
+                            self.game_over_fader(self.go_scene)
                             self.scene = 'game_over'
                 case 'game_over':
                     if (event.type == pygame.MOUSEMOTION) or (event.type == pygame.MOUSEBUTTONDOWN):
@@ -748,6 +744,7 @@ class Game_Features(Display_Scene, Scene_Tracker):
                         if CHOICE_A:
                             #bold option
                             self.CONTINUE.set_alpha(300)
+
                         elif CHOICE_B:
                             #bold option
                             self.EXIT.set_alpha(300)

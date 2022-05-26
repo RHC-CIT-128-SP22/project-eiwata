@@ -185,7 +185,7 @@ class Narrator(Init_Game):
                             f.seek(self.char_counter(180))
                         case 1:
                             f.seek(self.char_counter(184))
-                case 'O':
+                case 'o':
                     #display scene
                     self.SAIL.set_alpha(300)
                     self.PSEUDO_SCREEN.fill(self.BLACK)

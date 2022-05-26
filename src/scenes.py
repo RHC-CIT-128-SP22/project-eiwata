@@ -3,11 +3,12 @@ import pygame
 from pygame import mixer
 from pygame.locals import *
 from narrator import Narrator
+from scenetracker import Scene_Tracker
 
 pygame.init()
 pygame.mixer.init()
 
-class Display_Scene(Narrator):
+class Display_Scene(Narrator, Scene_Tracker):
 
     x_left = -290
     x_right = 864
@@ -600,6 +601,10 @@ class Display_Scene(Narrator):
             self.PSEUDO_SCREEN.blit(line3, (190, 580))
             self.PSEUDO_SCREEN.blit(line4, (190, 615))
         pygame.display.update()
+    
+    #after user selects Continue on Game Over screen, display scenes traversed during previous iteration of game
+    def play_again(self, scene):
+        w, h = pygame.display.get_surface().get_size()
 
     #display game over screen
     def game_over(self, scene):
@@ -653,8 +658,7 @@ class Display_Scene(Narrator):
         #slowly fade into game over screen
         for alpha in range(0, 300):
             go_fader.set_alpha(alpha)
-            self.PSEUDO_SCREEN.blit(go_fader, (0, 0))
-            self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))
+            self.SCREEN.blit(pygame.transform.scale(go_fader, (w, h)), (0, 0))
             pygame.display.update()
 
 
