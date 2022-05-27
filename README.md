@@ -110,7 +110,7 @@ Display_Scene(Narrator, Scene_Tracker):
         self.story.insert('B')
         .
     def scene_C(self):
-        self.story.insert('B')
+        self.story.insert('C')
         .
     def play_again(self):
         .
