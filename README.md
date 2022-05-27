@@ -71,9 +71,9 @@ Bonus Features:
 ### Video Demonstration
 
 >Add a Link to your video demonstration
-<div align = "right">
+<div align = "left">
         <a href = "https://youtu.be/CT-vGxStvVk">
-        <img src = assets/youtube.png width = 700>
+        <img src = assets/youtube.png width = 500>
         </a>
 </div>
 
