@@ -77,7 +77,7 @@ Bonus Features:
         </a>
 </div>
 
-Install Instructions
+## Install Instructions
 
 >Add any install instructions, if needed. This includes how to install included modules or libraries as well as configurations. You may remove this section if no special instructions are required.
 
