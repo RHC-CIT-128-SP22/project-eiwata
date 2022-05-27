@@ -101,6 +101,44 @@ At the end of the game, the Game Over screen will display and give the user the 
 ```
 Scene_Tracker():
     .
+       A
+        \
+         B
+          \
+           C
+            \
+             D
+              \
+               E
+              / \
+             e   F
+                  \
+                   G
+                  / \
+                 g   H
+                /     \
+               f       I
+                        \
+                         J
+                          \
+                           K
+                            \
+                             L
+                              \
+                               M
+                                \
+                                 N
+                                  \
+                                   O
+                                 /  \
+                                o    P
+                                      \
+                                       Q
+                                        \
+                                         R
+                                       /  \
+                                      r    S
+    .
     .
 Display_Scene(Narrator, Scene_Tracker):
     .
@@ -114,7 +152,6 @@ Display_Scene(Narrator, Scene_Tracker):
         .
     def play_again(self):
         .
-        .
            A
             \
              B
@@ -124,34 +161,8 @@ Display_Scene(Narrator, Scene_Tracker):
                  D
                   \
                    E
-                  / \
-                 e   F
-                      \
-                       G
-                      / \
-                     g   H
-                    /     \
-                   f       I
-                            \
-                             J
-                              \
-                               K
-                                \
-                                 L
-                                  \
-                                   M
-                                    \
-                                     N
-                                      \
-                                       O
-                                     /  \
-                                    o    P
-                                          \
-                                           Q
-                                            \
-                                             R
-                                           /  \
-                                          r    S
+                  /
+                 e
         .
         .
 ```
