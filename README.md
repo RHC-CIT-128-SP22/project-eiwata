@@ -72,7 +72,7 @@ Bonus Features:
 
 >Add a Link to your video demonstration
 
-[![Youtube Demo]("assets/youtube.png")](https://youtu.be/CT-vGxStvVk)
+[![Youtube Demo](assets/youtube.png)](https://youtu.be/CT-vGxStvVk)
 
 ### Install Instructions
 
