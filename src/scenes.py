@@ -1,17 +1,51 @@
 
 import pygame
-from pygame import mixer
 from pygame.locals import *
 from narrator import Narrator
-from scenetracker import Scene_Tracker
 
 pygame.init()
 pygame.mixer.init()
 
+
+class Scene_Tracker():
+
+    def __init__(self, scene):
+        self.left = None
+        self.right = None
+        self.scene = scene
+
+    #insert node
+    def insert(self, scene):
+        if self.scene:
+            if scene < self.scene:
+                if self.left is None:
+                    self.left = Scene_Tracker(scene)
+                else:
+                    self.left.insert(scene)
+            elif scene > self.scene:
+                if self.right is None:
+                    self.right = Scene_Tracker(scene)
+                else:
+                    self.right.insert(scene)
+        else:
+            self.scene = scene
+
+    #inorder traversal
+    def inorderTraversal(self, root):
+        res = []
+        if root:
+            res = self.inorderTraversal(root.left)
+            res.append(root.scene)
+            res = res + self.inorderTraversal(root.right)
+        return res
+
+
 class Display_Scene(Narrator, Scene_Tracker):
 
+    #initialize variables for black lines that cover the white line during decision scenes
     x_left = -290
     x_right = 864
+    story = Scene_Tracker('A')
 
     def nodeA(self):
         #display start screen 
@@ -22,6 +56,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()   
 
     def nodeB(self):
+        self.story.insert('B')
         #display scene B
         self.PSEUDO_SCREEN.fill(self.BLACK)
 
@@ -38,6 +73,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeC(self, count):
+        self.story.insert('C')
         count -= 1
         #display scene C
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -68,6 +104,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeD(self, count):
+        self.story.insert('D')
         count = count - 1
         #display scene D
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -99,6 +136,7 @@ class Display_Scene(Narrator, Scene_Tracker):
 
     #DECISION SCENE
     def nodeE(self):
+        self.story.insert('E')
         #display scene E
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.HORROR_IN_CLAY, (0, 70))
@@ -115,6 +153,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeF(self, count):
+        self.story.insert('F')
         count -= 1
         #display scene F
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -145,6 +184,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodee(self, count):
+        self.story.insert('e')
         count -= 1
         #display scene e
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -178,6 +218,7 @@ class Display_Scene(Narrator, Scene_Tracker):
 
     #DECISION SCENE
     def nodeG(self):
+        self.story.insert('G')
         #display scene G
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_1, (0, 70))
@@ -192,6 +233,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeH(self, count):
+        self.story.insert('H')
         count-=1
         #display scene H
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -218,6 +260,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeg(self, count):
+        self.story.insert('g')
         count -= 1
         #display scene g
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -244,6 +287,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeI(self, count):
+        self.story.insert('I')
         count -= 1
         #display scene I
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -270,6 +314,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodef(self, count):
+        self.story.insert('f')
         count -= 1
         #display scene f
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -297,6 +342,7 @@ class Display_Scene(Narrator, Scene_Tracker):
 
     #DECISION SCENE
     def nodeJ(self):
+        self.story.insert('J')
         #display scene J
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.INVESTIGATION_3, (0, 68.5))
@@ -313,6 +359,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeK(self, count):
+        self.story.insert('K')
         count -= 1
         #display scene K
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -341,6 +388,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeL(self, count):
+        self.story.insert('L')
         count -= 1
         #display scene L
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -373,6 +421,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeM(self, count):
+        self.story.insert('M')
         count -= 1
         #display scene M
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -403,6 +452,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeN(self, count):
+        self.story.insert('N')
         count -= 1
         #display scene N
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -430,6 +480,7 @@ class Display_Scene(Narrator, Scene_Tracker):
 
     #DECISION SCENE
     def nodeO(self):
+        self.story.insert('O')
         #display scene O
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.DOCK, (0, 68.5))
@@ -446,6 +497,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeP(self, count):
+        self.story.insert('P')
         count -= 1
         #display scene P
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -472,6 +524,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeo(self, count):
+        self.story.insert('o')
         count -= 1
         #display scene o
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -498,6 +551,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeQ(self, count):
+        self.story.insert('Q')
         count -= 1
         #display scene Q
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -529,6 +583,7 @@ class Display_Scene(Narrator, Scene_Tracker):
 
     #DECISION SCENE
     def nodeR(self):
+        self.story.insert('R')
         #display scene R
         self.PSEUDO_SCREEN.fill(self.BLACK)
         self.PSEUDO_SCREEN.blit(self.RLYEH_1, (0, 90))
@@ -545,6 +600,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def nodeS(self, count):
+        self.story.insert('S')
         count -= 1
         #display scene S
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -575,6 +631,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
 
     def noder(self, count):
+        self.story.insert('r')
         count -= 1
         #display scene r
         self.PSEUDO_SCREEN.fill(self.BLACK)
@@ -603,8 +660,36 @@ class Display_Scene(Narrator, Scene_Tracker):
         pygame.display.update()
     
     #after user selects Continue on Game Over screen, display scenes traversed during previous iteration of game
-    def play_again(self, scene):
-        w, h = pygame.display.get_surface().get_size()
+    def play_again(self):
+        #display play again screen
+        self.PSEUDO_SCREEN.fill(self.BLACK)
+        directions = self.FONT.render('Select a story point to start from:', True, self.WHITE)
+        self.PSEUDO_SCREEN.blit(directions, (350, 225))
+        self.PSEUDO_SCREEN.blit(self.MINI_LINE, (300, 400))
+        self.PSEUDO_SCREEN.blit(self.MINI_LINE, (600, 400))
+        #match by story nodes that were traversed
+        match self.story.inorderTraversal(self.story):
+            #revive from scene e
+            case ['A','B', 'C', 'D', 'E', 'e']:
+                self.PSEUDO_SCREEN.blit(self.MINI_A, (100, 350))
+                self.PSEUDO_SCREEN.blit(self.MINI_C, (400, 350))
+                self.PSEUDO_SCREEN.blit(self.MINI_D, (700, 350))
+            #revive from scene f
+            case ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'f', 'g']:
+                self.PSEUDO_SCREEN.blit(self.MINI_C, (100, 350))
+                self.PSEUDO_SCREEN.blit(self.MINI_D, (400, 350))
+                self.PSEUDO_SCREEN.blit(self.MINI_F, (700, 350))
+            #revive from scene o
+            case ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'o']:
+                self.PSEUDO_SCREEN.blit(self.MINI_F, (100, 350))
+                self.PSEUDO_SCREEN.blit(self.MINI_H, (400, 350))
+                self.PSEUDO_SCREEN.blit(self.MINI_L, (700, 350))
+            #revive from scene S or r
+            case ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S' | 'r']:
+                self.PSEUDO_SCREEN.blit(self.MINI_H, (100, 350))
+                self.PSEUDO_SCREEN.blit(self.MINI_L, (400, 350))
+                self.PSEUDO_SCREEN.blit(self.MINI_Q, (700, 350))
+        pygame.display.update()
 
     #display game over screen
     def game_over(self, scene):
@@ -657,6 +742,7 @@ class Display_Scene(Narrator, Scene_Tracker):
         go_fader.blit(self.EXIT, (680, 400))
         #slowly fade into game over screen
         for alpha in range(0, 300):
+            self.clock.tick(70)
             go_fader.set_alpha(alpha)
             self.SCREEN.blit(pygame.transform.scale(go_fader, (w, h)), (0, 0))
             pygame.display.update()

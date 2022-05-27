@@ -65,7 +65,7 @@ class Game_Features(Display_Scene):
         if self.scene == 'game_over':
             self.game_over(self.go_scene)
         if self.scene == 'play_again':
-            self.play_again(self.scene)
+            self.play_again()
         self.user_decision(self.scene)
 
     def blit_screen(self):
@@ -744,6 +744,11 @@ class Game_Features(Display_Scene):
                         if CHOICE_A:
                             #bold option
                             self.CONTINUE.set_alpha(300)
+                            if (event.type == pygame.MOUSEBUTTONDOWN) and (event.button == 1):
+                                pygame.mixer.Sound.play(self.SELECT)
+                                self.screen_fader()
+                                self.CONTINUE.set_alpha(120)
+                                self.scene = 'play_again'
 
                         elif CHOICE_B:
                             #bold option
@@ -763,6 +768,7 @@ class Game_Features(Display_Scene):
         fade = pygame.Surface((self.X, self.Y))
         fade.fill(self.BLACK)
         for alpha in range(0, 300):
+            self.clock.tick(100)
             self.PSEUDO_SCREEN.set_alpha(alpha)
             self.PSEUDO_SCREEN.blit(fade, (0, 0))
             self.SCREEN.blit(pygame.transform.scale(self.PSEUDO_SCREEN, (w, h)), (0, 0))

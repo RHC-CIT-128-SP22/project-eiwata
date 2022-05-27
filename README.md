@@ -94,12 +94,25 @@ scenes.py
 narrator.py
 dialogue.txt
 ```
-From `main.py`, the `main()` function first created an object of the class `Game_Features()` from `gamefeatures.py`. Then it just called the `scene_manager()` method, which had the story indexed into a binary tree, and used it to traverse between different nodes of the story.
+From `main.py`, the `main()` function first creates an object of the class `Game_Features()` from `gamefeatures.py`. Then it just calls the `scene_manager()` method and uses it to traverse between different scenes of the story.
+
+Additionally, the class `Scene_Tracker()` from `scene.py` generates a binary tree for the story. The class `Display_Scene()` also from `scene.py` inherits `Scene_Tracker()` and creates an object of the class called `story = Scene_Tracker('A')` and proceeds to add in nodes as it traverses through different scenes. 
+At the end of the game, the Game Over screen will display and give the user the option to select between Continue and Exit. If the user selects Continue, it goes to the `play_again()` method in `Display_Scene()` which looks at the nodes in the binary tree for the previous iteration of the game and displays some of the scenes that were traversed during the last game play to allow the user to select a story point to revive from.
 ```
-Game_Features()
+Scene_Tracker():
     .
     .
-    scene_manager()
+Display_Scene(Narrator, Scene_Tracker):
+    .
+    story = Scene_Tracker('A')
+    .
+    def scene_B(self):
+        self.story.insert('B')
+        .
+    def scene_C(self):
+        self.story.insert('B')
+        .
+    def play_again(self):
         .
         .
            A

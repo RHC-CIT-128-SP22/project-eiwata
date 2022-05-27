@@ -55,6 +55,16 @@ class Init_Game():
     RLYEH_2 = pygame.image.load("assets/YChlAcTe.png")
     RLYEH_3 = pygame.image.load("assets/timo-peter-cthulhu-hd-wallpaper-preview.png")
 
+    #load mini imgs for save point
+    MINI_LINE = pygame.image.load("assets/mini white line.png")
+    MINI_A = pygame.image.load("assets/mini cthulhu background.png")
+    MINI_C = pygame.image.load("assets/mini university.png")
+    MINI_D = pygame.image.load("assets/mini horror in clay.png")
+    MINI_F = pygame.image.load("assets/mini investigation 1.png")
+    MINI_H = pygame.image.load("assets/mini investigation 2.png")
+    MINI_L = pygame.image.load("assets/mini statue.png")
+    MINI_Q = pygame.image.load("assets/mini rlyeh 1.png")
+
     #set colors and font
     FONT = pygame.font.SysFont('Rockwell', 19)
     BLACK = (0, 0, 0)
@@ -77,6 +87,15 @@ class Init_Game():
     CONTINUE.set_alpha(90)
     EXIT.set_alpha(90)
     GAME_OVER.set_alpha(210)
+    '''
+    MINI_A.set_alpha(120)
+    MINI_C.set_alpha(120)
+    MINI_D.set_alpha(120)
+    MINI_F.set_alpha(120)
+    MINI_H.set_alpha(120)
+    MINI_L.set_alpha(120)
+    MINI_Q.set_alpha(120)
+    '''
 
     #set sfx
     START_SOUND = pygame.mixer.Sound("assets/wildBeastRoar.wav")
