@@ -71,10 +71,13 @@ Bonus Features:
 ### Video Demonstration
 
 >Add a Link to your video demonstration
+<div align = "center">
+        <a href = "https://youtu.be/CT-vGxStvVk">
+        <img src = assets/youtube.png width = 750>
+        </a>
+</div>
 
-[![Youtube Demo](assets/youtube.png)](https://youtu.be/CT-vGxStvVk)
-
-### Install Instructions
+Install Instructions
 
 >Add any install instructions, if needed. This includes how to install included modules or libraries as well as configurations. You may remove this section if no special instructions are required.
 
