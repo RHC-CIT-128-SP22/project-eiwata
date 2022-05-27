@@ -73,7 +73,7 @@ Bonus Features:
 >Add a Link to your video demonstration
 <div align = "left">
         <a href = "https://youtu.be/CT-vGxStvVk">
-        <img src = assets/youtube.png width = 500>
+        <img src = assets/youtube.png width = 600>
         </a>
 </div>
 
