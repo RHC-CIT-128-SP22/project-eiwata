@@ -386,9 +386,9 @@ class Game_Features(Display_Scene):
                             self.blit_line3('I', self.click_count)
                             self.blit_line4('I', self.click_count)
                             self.click_count+=1
-                    else:
-                        self.narrow_screen('J', 70)
-                        self.scene = 'J'
+                        else:
+                            self.narrow_screen('J', 70)
+                            self.scene = 'J'
                 case 'f':
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         #scene f - click 1
