@@ -26,11 +26,22 @@ The student provided rubric is worth 150 points and is specific to the individua
   * GitHub Commits: Weekly programming commits showing progress from Week 9 - Week 16. (8pt)
   * Lines of Code: Write a minimum of 500 - 1000 lines of code. Markdown files and third-party libraries or modules do not count towards the line count but may be used. (20pt)
 * **Student Rubric (150pt)**
-  * Sub Grading Description 1 (X pt)
-  * Sub Grading Description 2 (X pt)
-  * Sub Grading Description 3 (X pt)
-  * Sub Grading Description 4 (X pt)
-  * Sub Grading Description 5 (X pt)
+  * Core Features Completed (20 pt each)
+      * Dialogue displays on the screen gradually as user iterates through the game
+      * Click to continue
+      * Start screen and Game Over screen
+  * Bonus Features Completed (10 pt each)
+      * Resizable GUI window
+      * Smooth transition between scenes
+      * Decision timer (10 sec) or else it autoselects decision A over decision B
+      * If user selects Continue, on the Game Over screen, it displays scenes traversed during the previous iteration of the game and allows the user to select a story point to revive from
+  * Zybook Concepts Used (25 pt)
+      * Multiple concepts were used
+      * Concepts were used wisely
+  * Clean Code (25 pt)
+      * Readable
+      * Highly cohesive
+      * Low coupling
 
 Total Points: 200
 
